@@ -1,0 +1,45 @@
+= Signal Fitting Results =
+
+--- Signal var1 ---
+Initial: Amp=941 
+Mean=0.182444 
+Sigma=0.993217
+
+Fitted: Amp=955.591 
+Fitted Mean=0.187641 
+Fitted Sigma=1.00014 
+Fitted Chi^2/NDF=0.86812 
+Fit Probablity=0.600614
+
+--- Signal var2 ---
+Initial: Amp=960 
+Mean=0.28426 
+Sigma=1.00378
+
+Fitted: Amp=950.05 
+Fitted Mean=0.285862 
+Fitted Sigma=1.00595 
+Fitted Chi^2/NDF=0.672587 
+Fit Probablity=0.833135
+
+--- Signal var3 ---
+Initial: Amp=978 
+Mean=0.378936 
+Sigma=0.992068
+
+Fitted: Amp=962.385 
+Fitted Mean=0.381476 
+Fitted Sigma=0.991765 
+Fitted Chi^2/NDF=1.26185 
+Fit Probablity=0.211803
+
+--- Signal var4 ---
+Initial: Amp=858 
+Mean=0.771216 
+Sigma=1.08296
+
+Fitted: Amp=874.915 
+Fitted Mean=0.771315 
+Fitted Sigma=1.08968 
+Fitted Chi^2/NDF=1.58391 
+Fit Probablity=0.0591545

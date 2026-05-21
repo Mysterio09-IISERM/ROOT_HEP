@@ -1,0 +1,41 @@
+= Background Fitting Results =
+
+--- Background var1 ---
+Initial: Amp=340.901
+Mean=-0.20563
+Sigma=0.995147
+Fitted Amp=199.761
+Fitted Mean=-0.200837
+Fitted Sigma=0.901676
+Fitted Chi2/NDF=89.5915
+Fit Prob=0
+
+--- Background var2 ---
+Initial: Amp=336.085
+Mean=-0.294324
+Sigma=0.999965
+Fitted Amp=342.138
+Fitted Mean=-0.278388
+Fitted Sigma=1.00742
+Fitted Chi2/NDF=96.0244
+Fit Prob=0
+
+--- Background var3 ---
+Initial: Amp=384.208
+Mean=-0.424249
+Sigma=0.996054
+Fitted Amp=345.568
+Fitted Mean=-0.424626
+Fitted Sigma=0.993418
+Fitted Chi2/NDF=190.389
+Fit Prob=0
+
+--- Background var4 ---
+Initial: Amp=331.511
+Mean=-0.501875
+Sigma=1.09395
+Fitted Amp=231.747
+Fitted Mean=-0.0189277
+Fitted Sigma=0.102147
+Fitted Chi2/NDF=11.9163
+Fit Prob=1.09573e-46
