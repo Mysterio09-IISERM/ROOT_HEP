@@ -204,48 +204,37 @@ void Newtest(){
     // =====================================================
 
     c->cd(1);
-
-    RooPlot *frame1 =
-        mass.frame();
-
-    data.plotOn(frame1);
-
-    frame1->SetTitle(
-        "Raw Mass Distribution"
-    );
-
+    RooPlot *frame1 = mass.frame();
+    data.plotOn(frame1, Name("data1"));  // give it a name
+    frame1->SetTitle("Raw Mass Distribution");
     frame1->Draw();
+
+    // add manual TLegend
+    TLegend *leg1 = new TLegend(0.6, 0.85, 0.9, 0.9);
+    leg1->AddEntry(frame1->findObject("data1"), "Data", "ep");
+    leg1->Draw();
 
     // =====================================================
     // PANEL 2 : FULL FIT
     // =====================================================
 
     c->cd(2);
-
-    RooPlot *frame2 =
-        mass.frame();
-
-    data.plotOn(frame2);
-
-    model.plotOn(frame2);
-
-    model.plotOn(
-        frame2,
-        Components(background),
-        LineColor(kGreen)
-    );
-
-    /*model.plotOn(
-        frame2,
-        Components(signal),
-        LineColor(kRed)
-    );*/
-
-    frame2->SetTitle(
-        "Signal + Background Fit"
-    );
-
+    RooPlot *frame2 = mass.frame();
+    data.plotOn(frame2, Name("data2"));
+    model.plotOn(frame2, Name("fullfit"));
+    model.plotOn(frame2, Components(background), 
+                LineColor(kGreen), Name("bkg"));
+    model.plotOn(frame2, Components(signal), 
+                LineColor(kRed), Name("sig"));
+    frame2->SetTitle("Signal + Background Fit");
     frame2->Draw();
+
+    TLegend *leg2 = new TLegend(0.6, 0.65, 0.9, 0.9);
+    leg2->AddEntry(frame2->findObject("data2"),  "Data",       "ep");
+    leg2->AddEntry(frame2->findObject("fullfit"),"Full Fit",   "l");
+    leg2->AddEntry(frame2->findObject("bkg"),    "Background", "l");
+    leg2->AddEntry(frame2->findObject("sig"),    "Signal",     "l");
+    leg2->Draw();
 
     // =====================================================
     // PANEL 3 : BACKGROUND SUBTRACTED SIGNAL
@@ -307,7 +296,18 @@ void Newtest(){
 
     hsig->SetMarkerStyle(20);
 
-    hsig->Draw("E1");
+    //hsig->Draw("E1");
+
+    // after hsig->Draw("E1")
+    gPad->Update();
+    TPaveStats *st = (TPaveStats*)hsig->FindObject("stats");
+    if (st) {
+        st->SetName("stats");
+        // either remove it entirely
+        st->SetOptStat(0);  // hide stat box
+        // or rename it
+        st->SetLabel("Background Subtracted");
+}
 
     // =====================================================
     // FITTED SIGNAL SHAPE
@@ -336,7 +336,16 @@ void Newtest(){
 
     fsig->SetLineWidth(2);
 
+    gStyle->SetOptStat(0);  // suppress weird stat box
+    hsig->Draw("E1");
     fsig->Draw("same");
+
+    TLegend *leg3 = new TLegend(0.6, 0.75, 0.9, 0.9);
+    leg3->AddEntry(hsig, "Bkg Subtracted", "ep");
+    leg3->AddEntry(fsig, "Signal Fit",     "l");
+    leg3->Draw();
+
+
 
     // =====================================================
     // UPDATE
@@ -347,6 +356,16 @@ void Newtest(){
     c->Update();
 
     gPad->Update();
+
+    ofstream out("../Txt_files/Newtestresult.txt");
+
+    out << "Fit Results:" << endl;
+    out << "Mass: " << mean.getVal() << "+/-" << mean.getError() << " GeV" << endl;
+    out << "Width: " << width.getVal() << "+/-" << width.getError() << " GeV" << endl;
+    out << "Signal Events: " << nsig.getVal() << "+/-" << nsig.getError() << endl;
+    out << "Background Events: " << nbkg.getVal() << "+/-" << nbkg.getError() << endl;
+
+    out.close();
 
     // =====================================================
     // CLEANUP
