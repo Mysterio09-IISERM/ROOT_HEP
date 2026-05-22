@@ -1,0 +1,10 @@
+Mass Fit Results:
+Signal Yield: 29947.9 ± 238.828
+Mass Mean: 91.1991 ± 0.0115361 GeV
+Mass Width: 2.58116 ± 0.0304315 GeV
+
+
+Energy Fit Results:
+Signal Yield: 39857.8 ± 232.512
+Energy Mean: 50.005 ± 0.0182239 GeV
+Energy Sigma: 3.02441 ± 0.0163057 GeV
