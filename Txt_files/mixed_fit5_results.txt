@@ -1,0 +1,8 @@
+Fit Results:
+Signal Yield 1: 37668.3 ± 223.538
+Mean1: 35.0031 ± 0.0130111
+Width1: 2.03568 ± 0.0113941
+Signal Yield 2: 29554.2 ± 230.249
+Mean2: 74.9883 ± 0.0180535
+Width2: 4.02352 ± 0.0469214
+Background Yield: 59752.7 ± 316.316
