@@ -146,10 +146,10 @@ void Mixedfitdata5(){
     ftotal->SetParameters(scale1, mean1.getVal(), sigma1.getVal(), scale2, mean2.getVal(), width2.getVal());
     fsig1->SetLineColor(kRed);
     fsig2->SetLineColor(kMagenta);
-    ftotal->SetLineColor(kBlack);
+    ftotal->SetLineColor(kBlue);
     fsig1->SetLineStyle(2);
     fsig2->SetLineStyle(2);
-    ftotal->SetLineStyle(0);
+    ftotal->SetLineStyle(1);
     gStyle->SetOptStat(0);
     hsig->Draw("E1");
     ftotal->Draw("same");

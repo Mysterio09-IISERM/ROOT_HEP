@@ -181,7 +181,6 @@ void Mixedfitdata4(){
     out << "Width: " << sigma.getVal() << " ± " << sigma.getError() << endl;
     out << "Alpha: " << alpha.getVal() << " ± " << alpha.getError() << endl;
     out << "N: " << n.getVal() << " ± " << n.getError() << endl;
-    out << "Signal Yield: " << nsig.getVal() << " ± " << nsig.getError() << endl;
     out << "Background Yield: " << nbkg.getVal() << " ± " << nbkg.getError() << endl;
 
     out.close();
