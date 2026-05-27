@@ -130,7 +130,7 @@ void Mixedfitdata3(){
         double bkg_counts = bkg_density * nbkg.getVal() * bw;
         double y = hsig->GetBinContent(i);
         hsig->SetBinContent(i, y - bkg_counts);
-    }
+    }/*
 
     hsig->SetLineColor(kBlue);
     hsig->SetMarkerStyle(20);
@@ -154,14 +154,22 @@ void Mixedfitdata3(){
     hsig->Draw("E1");
     ftotal->Draw("same");
     fsig1->Draw("same");
-    fsig2->Draw("same");
-   
+    fsig2->Draw("same");*/
+
+    RooDataHist signalData("signalData", "Signal Data", var, Import(*hsig));
+    RooPlot *frame3 = var.frame();
+    signalData.plotOn(frame3, Name("sigdata"));
+    signal.plotOn(frame3, Name("sigpdf"), LineColor(kBlue), LineStyle(kDashed), Normalization(nsig.getVal(),RooAbsReal::NumEvent));
+    signal1.plotOn(frame3, Name("sigpdf1"), LineColor(kRed), LineStyle(kDotted), Normalization(nsig.getVal() * frac.getVal(),RooAbsReal::NumEvent));
+    signal2.plotOn(frame3, Name("sigpdf2"), LineColor(kMagenta), LineStyle(kDotted), Normalization(nsig.getVal() * (1 - frac.getVal()),RooAbsReal::NumEvent));
+    frame3->SetTitle("Extracted Signal Component");
+    frame3->Draw();
 
     TLegend *leg3 = new TLegend(0.6, 0.75, 0.9, 0.9);
-    leg3->AddEntry(hsig, "Signal Data", "ep");
-    leg3->AddEntry(ftotal, "Fitted Total Signal", "l");
-    leg3->AddEntry(fsig1, "Fitted Signal 1", "l");
-    leg3->AddEntry(fsig2, "Fitted Signal 2", "l");
+    leg3->AddEntry(frame3->findObject("sigdata"), "Signal Data", "ep");
+    leg3->AddEntry(frame3->findObject("sigpdf"), "Fitted Total Signal", "l");
+    leg3->AddEntry(frame3->findObject("sigpdf1"), "Fitted Signal 1", "l");
+    leg3->AddEntry(frame3->findObject("sigpdf2"), "Fitted Signal 2", "l");
     leg3->Draw();
 
     cmain->Modified();
