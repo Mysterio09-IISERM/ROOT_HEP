@@ -1,0 +1,6 @@
+Fit Results:
+Signal Yield: 52287.1 ± 502.658
+BW Mean: 91.0055 ± 0.0164599
+BW Width: 2.34513 ± 0.131379
+Smearing Sigma: 1.90441 ± 0.0496902
+Background Yield: 82461.7 ± 531.752
