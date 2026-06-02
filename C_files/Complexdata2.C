@@ -7,6 +7,7 @@
     #include "TStyle.h"
     #include "TF1.h"
     #include "TMath.h"
+    #include "TSystem.h"
 
     #include "RooRealVar.h"
     #include "RooDataHist.h"
@@ -24,6 +25,8 @@
 void Complexdata2(){
 
     //OPEN ROOT FILE
+
+    gSystem->RedirectOutput("../logs/Complexdata2.log", "w");
 
     TFile *f = new TFile("../Root_files/ComplexData.root", "READ");
     TTree *t = (TTree*)f->Get("data");
@@ -168,4 +171,6 @@ void Complexdata2(){
     out << "Background Yield: " << nbkg.getVal() << " ± " << nbkg.getError() << endl;
 
     out.close();
+
+    gSystem->RedirectOutput(0);
 }
