@@ -90,7 +90,7 @@ void Complexdata2(){
 
     TCanvas *cmain = new TCanvas("cmain", "Fit Result", 1600, 900);
 
-    cmain->Divide(3,1);
+    cmain->Divide(2,2);
 
     // RAW DISTRIBUTION
 
@@ -159,6 +159,33 @@ void Complexdata2(){
     leg3->AddEntry(frame3->findObject("sig2"), "Signal 2", "l");
     leg3->Draw();
 
+    cmain->cd(4);
+
+    RooPlot *frame4 = var.frame();
+    frame4->SetMinimum(-5);
+    frame4->SetMaximum(5);
+    RooHist *pullHist = frame2->pullHist("data2", "fullfit");
+    for (int i=0; i<pullHist->GetN(); i++) 
+    {
+        pullHist->SetPointEYhigh(i,0);
+        pullHist->SetPointEYlow(i,0);
+    }
+    frame4->addPlotable(pullHist, "P");
+    frame4->SetTitle("Pull Distribution; Var; Pull");
+    frame4->Draw();
+
+    TLine *zero = new TLine(var.getMin(), 0, var.getMax(), 0);
+    TLine *plus = new TLine(var.getMin(), 3, var.getMax(), 3);
+    TLine *minus = new TLine(var.getMin(),-3, var.getMax(),-3);
+    zero->SetLineColor(kRed);
+    plus->SetLineColor(kBlue);
+    minus->SetLineColor(kBlue);
+    plus->SetLineStyle(2);
+    minus->SetLineStyle(2);
+    zero->Draw("same");
+    plus->Draw("same");
+    minus->Draw("same");
+
     cmain->Modified();
     cmain->Update();
     gPad->Update();
@@ -186,6 +213,7 @@ void Complexdata2(){
     out << "Background Yield: " << nbkg.getVal() << " ± " << nbkg.getError() << endl;
 
     out.close();
+    
 
     gSystem->RedirectOutput(0);
 }
