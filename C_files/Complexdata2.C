@@ -90,7 +90,7 @@ void Complexdata2(){
 
     TCanvas *cmain = new TCanvas("cmain", "Fit Result", 1600, 900);
 
-    cmain->Divide(2,2);
+    cmain->Divide(3,1);
 
     // RAW DISTRIBUTION
 
@@ -159,7 +159,10 @@ void Complexdata2(){
     leg3->AddEntry(frame3->findObject("sig2"), "Signal 2", "l");
     leg3->Draw();
 
-    cmain->cd(4);
+
+    TCanvas *cmain2 = new TCanvas("cmain2", "Pull Distribution and Pull Gauss", 800, 600);
+    cmain2->Divide(1,2);
+    cmain2->cd(1);
 
     RooPlot *frame4 = var.frame();
     frame4->SetMinimum(-5);
@@ -185,6 +188,16 @@ void Complexdata2(){
     zero->Draw("same");
     plus->Draw("same");
     minus->Draw("same");
+
+    
+    cmain2->cd(2);
+    TH1F *hpull = new TH1F("hpull", "Pull Values; Pull; Bins",20, -5, 5);
+    for (int i = 0; i < pullHist->GetN(); i++) {
+        double x, y;
+        pullHist->GetPoint(i, x, y);
+        hpull->Fill(y);
+    }
+    hpull->Fit("gaus");
 
     cmain->Modified();
     cmain->Update();
