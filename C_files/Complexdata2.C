@@ -61,12 +61,17 @@ void Complexdata2(){
     RooRealVar c1("c1", "c1", -0.5, -1.0, 1.0);
     RooRealVar c2("c2", "c2", 0.1, -1.0, 1.0);
 
+    RooRealVar a1("a1", "a1", 0.5, 0.0, 10.0);
+    RooRealVar a2("a2", "a2", 0.0, 0.0, 10.0);
+    RooRealVar a3("a3", "a3", 0.0, 0.0, 10.0);
+
     // SIGNAL AND BACKGROUND PDFS
 
     RooBreitWigner signal1("signal1", "Signal 1", var, mean1, width1);
     RooBreitWigner signal2("signal2", "Signal 2", var, mean2, width2);
     RooAddPdf signal("signal", "Combined Signal", RooArgList(signal1, signal2), frac);
-    RooChebychev background("background", "Background", var, RooArgList(c0, c1, c2));
+    //RooChebychev background("background", "Background", var, RooArgList(c0, c1, c2));
+    RooBernstein background("background", "Background", var, RooArgList(a1, a2, a3));
 
     // YEILD VARIABLES
 
@@ -79,7 +84,7 @@ void Complexdata2(){
 
     //FIT MODEL TO DATA
 
-    model.fitTo(data, SumW2Error(kTRUE));
+    RooFitResult* fitres = model.fitTo(data, Save(), SumW2Error(kTRUE));
 
     //CANVAS CREATION
 
@@ -108,6 +113,7 @@ void Complexdata2(){
     model.plotOn(frame2, Name("fullfit"));
     model.plotOn(frame2, Components(background), LineColor(kGreen), Name("bkg"));
     model.plotOn(frame2, Components(signal), LineColor(kRed), Name("sig"));
+    double chi2ndf = frame2->chiSquare("fullfit", "data2", 10);
     frame2->SetTitle("Fitted Distribution");
     frame2->Draw();
 
@@ -161,12 +167,21 @@ void Complexdata2(){
 
     ofstream out("../Txt_files/ComplexData2_results.txt");
 
-    out << "Fit Results:" << endl;
-    out << "Signal Yield: " << nsig.getVal() << " ± " << nsig.getError() << endl;
-    out << "Mean1: " << mean1.getVal() << " ± " << mean1.getError() << endl;
-    out << "Mean2: " << mean2.getVal() << " ± " << mean2.getError() << endl;
-    out << "Width1: " << width1.getVal() << " ± " << width1.getError() << endl;
-    out << "Width2: " << width2.getVal() << " ± " << width2.getError() << endl;
+    out << "Fit Results:\n" << endl;
+
+    out << "Status: " << fitres->status() << endl;
+    out << "CovQual: " << fitres->covQual() << endl;
+    out << "EDM: " << fitres->edm() << endl;
+    out << "MinNLL: " << fitres->minNll() << endl;
+    out << "Chi2/NDF: " << chi2ndf << endl;
+
+    fitres->Print("v");
+
+    out << "\nSignal Yield: "<< nsig.getVal()<< " ± "<< nsig.getError()<< endl;
+    out << "Mean1: "<< mean1.getVal()<< " ± "<< mean1.getError()<< endl;
+    out << "Mean2: "<< mean2.getVal()<< " ± "<< mean2.getError()<< endl;
+    out << "Width1: "<< width1.getVal()<< " ± "<< width1.getError()<< endl;
+    out << "Width2: "<< width2.getVal()<< " ± "<< width2.getError()<< endl;
     out << "Fraction: " << frac.getVal() << " ± " << frac.getError() << endl;
     out << "Background Yield: " << nbkg.getVal() << " ± " << nbkg.getError() << endl;
 

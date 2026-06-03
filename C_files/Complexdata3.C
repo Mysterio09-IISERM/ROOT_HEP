@@ -50,13 +50,13 @@ void Complexdata3(){
     //SIGNAL PARAMETERS
 
     RooRealVar mean1("mean1", "Mean1", 3100.0, 3060.0, 3140.0);
-    RooRealVar width1("width1", "Width1", 40.0, 0.1, 60.0);
+    //RooRealVar width1("width1", "Width1", 40.0, 0.1, 60.0);
     RooRealVar sigma1("sigma1", "Sigma1", 0.5, 0.1, 100.0);
     RooRealVar mean2("mean2", "Mean2", 3690.0, 3650.0, 3730.0);
-    RooRealVar width2("width2", "Width2", 20.0, 0.1, 50.0);
+    //RooRealVar width2("width2", "Width2", 20.0, 0.1, 50.0);
     RooRealVar sigma2("sigma2", "Sigma2", 0.5, 0.1, 100.0);
     RooRealVar mean3("mean3", "Mean3", 3870.0, 3830.0, 3910.0);
-    RooRealVar width3("width3", "Width3", 15.0, 0.1, 40.0);
+    //RooRealVar width3("width3", "Width3", 15.0, 0.1, 40.0);
     RooRealVar sigma3("sigma3", "Sigma3", 0.5, 0.1, 100.0);
 
     // BACKGROUND PARAMETERS
@@ -68,9 +68,9 @@ void Complexdata3(){
 
     // SIGNAL AND BACKGROUND PDFS
 
-    RooVoigtian signal1("signal1", "Signal 1", var, mean1, width1, sigma1);
-    RooVoigtian signal2("signal2", "Signal 2", var, mean2, width2, sigma2);
-    RooVoigtian signal3("signal3", "Signal 3", var, mean3, width3, sigma3);
+    RooGaussian signal1("signal1", "Signal 1", var, mean1, sigma1);
+    RooGaussian signal2("signal2", "Signal 2", var, mean2, sigma2);
+    RooGaussian signal3("signal3", "Signal 3", var, mean3, sigma3);
     //RooChebychev background("background", "Background", var, RooArgList(c0, c1));
     RooBernstein background("background", "Background", var, RooArgList(a1, a2));
 
@@ -87,7 +87,7 @@ void Complexdata3(){
 
     //FIT MODEL TO DATA
 
-    model.fitTo(data, SumW2Error(kTRUE));
+    RooFitResult* fitres = model.fitTo(data, Save(), SumW2Error(kTRUE));
 
     //CANVAS CREATION
 
@@ -116,10 +116,11 @@ void Complexdata3(){
     model.plotOn(frame2, Name("fullfit"));
     model.plotOn(frame2, Components(background), LineColor(kGreen), Name("bkg"));
     model.plotOn(frame2, Components(RooArgList(signal1, signal2, signal3)), LineColor(kRed), Name("sig"));
+    double chi2ndf = frame2->chiSquare("fullfit", "data2", 12);
     frame2->SetTitle("Fitted Distribution");
     frame2->Draw();
 
-    TLegend *leg2 = new TLegend(0.1, 0.65, 0.4, 0.9);
+    TLegend *leg2 = new TLegend(0.3, 0.65, 0.6, 0.9);
     leg2->AddEntry(frame2->findObject("data2"), "Data", "ep");
     leg2->AddEntry(frame2->findObject("fullfit"), "Full Fit","l");
     leg2->AddEntry(frame2->findObject("sig"), "Signal PDF", "l");
@@ -155,7 +156,7 @@ void Complexdata3(){
     frame3->SetTitle("Extracted Signal Component");
     frame3->Draw();
 
-    TLegend *leg3 = new TLegend(0.1, 0.75, 0.4, 0.9);
+    TLegend *leg3 = new TLegend(0.3, 0.75, 0.6, 0.9);
     leg3->AddEntry(frame3->findObject("sigdata"), "Signal Data", "ep");
     //leg3->AddEntry(frame3->findObject("sigpdf"), "Fitted Signal", "l");
     leg3->AddEntry(frame3->findObject("sig1"), "Signal 1", "l");
@@ -171,16 +172,22 @@ void Complexdata3(){
 
     ofstream out("../Txt_files/ComplexData3_results.txt");
 
-    out << "Fit Results:" << endl;
-    out << "Signal 1 Yield: " << nsig1.getVal() << " ± " << nsig1.getError() << endl;
+    out << "Fit Results:\n" << endl;
+
+    out << "Status: " << fitres->status() << endl;
+    out << "CovQual: " << fitres->covQual() << endl;
+    out << "EDM: " << fitres->edm() << endl;
+    out << "MinNLL: " << fitres->minNll() << endl;
+    out << "Chi2/NDF: " << chi2ndf << endl;
+
+    fitres->Print("v");
+
+    out << "\nSignal 1 Yield: " << nsig1.getVal() << " ± " << nsig1.getError() << endl;
     out << "Signal 2 Yield: " << nsig2.getVal() << " ± " << nsig2.getError() << endl;
     out << "Signal 3 Yield: " << nsig3.getVal() << " ± " << nsig3.getError() << endl;
     out << "Mean1: " << mean1.getVal() << " ± " << mean1.getError() << endl;
     out << "Mean2: " << mean2.getVal() << " ± " << mean2.getError() << endl;
     out << "Mean3: " << mean3.getVal() << " ± " << mean3.getError() << endl;
-    out << "Width1: " << width1.getVal() << " ± " << width1.getError() << endl;
-    out << "Width2: " << width2.getVal() << " ± " << width2.getError() << endl;
-    out << "Width3: " << width3.getVal() << " ± " << width3.getError() << endl;
     out << "Sigma1: " << sigma1.getVal() << " ± " << sigma1.getError() << endl;
     out << "Sigma2: " << sigma2.getVal() << " ± " << sigma2.getError() << endl;
     out << "Sigma3: " << sigma3.getVal() << " ± " << sigma3.getError() << endl;

@@ -18,30 +18,35 @@
     #include "RooArgSet.h"
     #include "RooGlobalFunc.h"
     #include "RooChebychev.h"
+    #include "RooGaussian.h"
+    #include "RooGenericPdf.h"
+    #include "RooFitResult.h"
+    #include "TPad.h"
+    #include "TLatex.h"
     #include <fstream>
 
     using namespace RooFit;
 
-void Complexdata1(){
+void Complexdata4(){
 
     //OPEN ROOT FILE
 
-    gSystem->RedirectOutput("../logs/Complexdata1.log", "w");
+    gSystem->RedirectOutput("../logs/Complexdata4.log", "w");
 
     TFile *f = new TFile("../Root_files/ComplexData.root", "READ");
     TTree *t = (TTree*)f->Get("data");
 
     //CREATE HISTOGRAMS
 
-    TH1F *h1 = new TH1F("h1", "Generated Distribution; Var; Counts", 800, 5240.0, 5290.0);
-    t->Draw("var1 >>h1", "weight1", "goff");
+    TH1F *h1 = new TH1F("h1", "Generated Distribution; Var; Counts", 700, -10.0, 10.0);
+    t->Draw("var4 >>h1", "weight4", "goff");
     h1->SetDirectory(0);
     f->Close();
     delete f;
 
     // ROOFIT VARIABLE
 
-    RooRealVar var("var1", "Variable", 5240.0, 5290.0);
+    RooRealVar var("var4", "Variable", -10.0, 10.0);
 
     // IMPORT DATA
 
@@ -49,18 +54,32 @@ void Complexdata1(){
 
     //SIGNAL PARAMETERS
 
-    RooRealVar mean("mean", "Mean", 5277.0, 5273.0, 5280.0);
-    RooRealVar sigma("sigma", "Sigma", 0.7, 0.1, 7.0);
+    RooRealVar mean1("mean1", "Mean1", 0.0, -2.0, 2.0);
+    RooRealVar sigma1("sigma1", "Sigma1", 1.0, 0.1, 5.0);
+    RooRealVar sigma2("sigma2", "Sigma2", 2.75, 0.1, 10.0);
+    RooRealVar frac("frac", "Fraction of Signal 1", 0.5, 0.0, 1.0);
+    sigma2.setVal(2.5);
+    sigma2.setConstant(true);
+    
 
     // BACKGROUND PARAMETERS
 
-    RooRealVar var0("var0", "var0", 5289.0, 5285.0, 5295.0);    
-    RooRealVar c("c", "c", -50.0, -200.0, 0.0);
+    RooRealVar tau("tau", "Tau", 1.0, 0.1, 10.0);
+    RooRealVar meanbkg("meanbkg", "Meanbkg", 1.0, -2.0, 2.0);
+    RooRealVar sigmabkg("sigmabkg", "SigmaBkg", 1.0, 0.1, 5.0);
+    RooRealVar fracbkg("fracbkg", "Fraction of Background 1", 0.5, 0.0, 1.0);
+
 
     // SIGNAL AND BACKGROUND PDFS
 
-    RooGaussian signal("signal", "Signal", var, mean, sigma);
-    RooArgusBG background("background", "Background", var, var0, c);
+    RooGaussian signal1("signal1", "Signal PDF", var, mean1, sigma1);
+    RooGaussian signal2("signal2", "Signal PDF 2", var, mean1, sigma2);
+    RooAddPdf signal("signal", "Combined Signal PDF", RooArgList(signal1, signal2),frac);
+    RooGenericPdf background1("background1", "exp(-TMath::Abs(var4)/tau)", RooArgList(var, tau));
+    RooGaussian background2("background2", "Gaussian Background", var, meanbkg, sigmabkg);
+    RooAddPdf background("background", "Combined Background PDF", RooArgList(background1, background2), fracbkg);
+
+
 
     // YEILD VARIABLES
 
@@ -73,7 +92,7 @@ void Complexdata1(){
 
     //FIT MODEL TO DATA
 
-    RooFitResult* fitres = model.fitTo(data, Save(), SumW2Error(kTRUE));
+    RooFitResult* fitres = model.fitTo(data,Save(),SumW2Error(kTRUE));
 
     //CANVAS CREATION
 
@@ -102,6 +121,9 @@ void Complexdata1(){
     model.plotOn(frame2, Name("fullfit"));
     model.plotOn(frame2, Components(background), LineColor(kGreen), Name("bkg"));
     model.plotOn(frame2, Components(signal), LineColor(kRed), Name("sig"));
+    model.plotOn(frame2, Components(background1), LineColor(kBlack), LineStyle(kDashed), Name("bkg1"));
+    model.plotOn(frame2, Components(background2), LineColor(kMagenta), LineStyle(kDotted), Name("bkg2"));
+
     double chi2ndf = frame2->chiSquare("fullfit", "data2", 10);
     frame2->SetTitle("Fitted Distribution");
     frame2->Draw();
@@ -111,6 +133,8 @@ void Complexdata1(){
     leg2->AddEntry(frame2->findObject("fullfit"), "Full Fit","l");
     leg2->AddEntry(frame2->findObject("sig"), "Signal PDF", "l");
     leg2->AddEntry(frame2->findObject("bkg"), "Background PDF", "l");
+    leg2->AddEntry(frame2->findObject("bkg1"), "Exp Background", "l");
+    leg2->AddEntry(frame2->findObject("bkg2"), "Gaussian Background", "l");
     leg2->Draw();
 
     // EXTRACTED SIGNAL COMPONENT
@@ -136,23 +160,25 @@ void Complexdata1(){
     RooPlot *frame3 = var.frame();
     signalData.plotOn(frame3, Name("sigdata"));
     signal.plotOn(frame3, Name("sigpdf"), LineColor(kRed), LineStyle(kDashed), Normalization(hsig->Integral(),RooAbsReal::NumEvent));
+    //signal.plotOn(frame3, Name("sig"), LineColor(kBlue), LineStyle(kDotted), Normalization(nsig.getVal(),RooAbsReal::NumEvent));
     frame3->SetTitle("Extracted Signal Component");
     frame3->Draw();
 
     TLegend *leg3 = new TLegend(0.1, 0.75, 0.4, 0.9);
     leg3->AddEntry(frame3->findObject("sigdata"), "Signal Data", "ep");
     leg3->AddEntry(frame3->findObject("sigpdf"), "Fitted Signal", "l");
+    //leg3->AddEntry(frame3->findObject("sig"), "Signal", "l");
     leg3->Draw();
 
     cmain->Modified();
     cmain->Update();
     gPad->Update();
 
-    cmain->SaveAs("../Png_files/ComplexData1.png");
+    cmain->SaveAs("../Png_files/ComplexData4.png");
 
-    ofstream out("../Txt_files/ComplexData1_results.txt");
+    ofstream out("../Txt_files/ComplexData4_results.txt");
 
-    out << "Fit Results:\n" << endl;
+    out << "Fit Results:\n";
 
     out << "Status: " << fitres->status() << endl;
     out << "CovQual: " << fitres->covQual() << endl;
@@ -163,9 +189,11 @@ void Complexdata1(){
     fitres->Print("v");
 
     out << "\nSignal Yield: "<< nsig.getVal()<< " ± "<< nsig.getError()<< endl;
-    out << "Mean: "<< mean.getVal()<< " ± "<< mean.getError()<< endl;
-    out << "Sigma: "<< sigma.getVal()<< " ± "<< sigma.getError()<< endl;
     out << "Background Yield: "<< nbkg.getVal()<< " ± "<< nbkg.getError()<< endl;
+    out << "\nSignal Mean: "<< mean1.getVal()<< " ± "<< mean1.getError()<< endl;
+    out << "Sigma1: "<< sigma1.getVal()<< " ± "<< sigma1.getError()<< endl;
+    out << "Sigma2: "<< sigma2.getVal()<< " ± "<< sigma2.getError()<< endl;
+    out << "Signal Fraction: "<< frac.getVal()<< " ± "<< frac.getError()<< endl;
 
     out.close();
 
