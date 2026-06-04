@@ -61,7 +61,7 @@ void Gendata3_3(){
     // SIGNAL AND BACKGROUND PDFS
 
     RooGaussian signal("signal", "Signal PDF", var, mean, sigma);
-    RooBernstein background("background", "Background PDF", var, RooArgList(a1, a2, a3));
+    RooBernstein background("background", "Background PDF", var, RooArgList(a1, a2));
 
     // YEILD VARIABLES
 
@@ -205,6 +205,7 @@ void Gendata3_3(){
     out << "Chi2/NDF: " << chi2ndf << endl;
 
     fitres->Print("v");
+    fitres->correlationMatrix().Print();
 
     out << "\nSignal Yield: "<< nsig.getVal()<< " ± "<< nsig.getError()<< endl;
     out << "Mean: "<< mean.getVal()<< " ± "<< mean.getError()<< endl;
