@@ -51,6 +51,8 @@ void Gendata3_3(){
 
     RooRealVar mean("mean", "Mean", 80.0, 75.0, 85.0);
     RooRealVar sigma("sigma", "Sigma", 2.0, 0.1, 7.0);
+    RooRealVar alpha("alpha", "Alpha", 2.0, 0.1, 5.0);
+    RooRealVar n("n", "N", 5.0, 0.1, 20.0);
 
     // BACKGROUND PARAMETERS
 
@@ -60,7 +62,7 @@ void Gendata3_3(){
 
     // SIGNAL AND BACKGROUND PDFS
 
-    RooGaussian signal("signal", "Signal PDF", var, mean, sigma);
+    RooCBShape signal("signal", "Signal PDF", var, mean, sigma, alpha, n);
     RooBernstein background("background", "Background PDF", var, RooArgList(a1, a2));
 
     // YEILD VARIABLES
