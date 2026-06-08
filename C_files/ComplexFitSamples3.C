@@ -22,26 +22,26 @@
 
     using namespace RooFit;
 
-void ComplexFitSamples2(){
+void ComplexFitSamples3(){
 
     //OPEN ROOT FILE
 
-    gSystem->RedirectOutput("../logs/ComplexFitSamples2.log", "w");
+    gSystem->RedirectOutput("../logs/ComplexFitSamples3.log", "w");
 
     TFile *f = new TFile("../Root_files/ComplexFitSamples.root", "READ");
     TTree *t = (TTree*)f->Get("data");
 
     //CREATE HISTOGRAMS
 
-    TH1F *h1 = new TH1F("h1", "Generated Distribution; Var; Counts", 700, 170.0, 235.0);
-    t->Draw("var2 >>h1", "", "goff");
+    TH1F *h1 = new TH1F("h1", "Generated Distribution; Var; Counts", 700, 60.0, 100.0);
+    t->Draw("var3 >>h1", "", "goff");
     h1->SetDirectory(0);
     f->Close();
     delete f;
 
     // ROOFIT VARIABLE
 
-    RooRealVar var("var2", "Variable", 170.0, 235.0);
+    RooRealVar var("var3", "Variable", 60.0, 100.0);
 
     // IMPORT DATA
 
@@ -49,35 +49,26 @@ void ComplexFitSamples2(){
 
     //SIGNAL PARAMETERS
 
-    RooRealVar mean1("mean1", "Mean of Signal Component 1", 190.0, 180.0, 200.0);
-    RooRealVar sigma1("sigma1", "Sigma of Signal Component 1", 2.0, 0.1, 10.0);
+    RooRealVar mean1("mean1", "Mean of Signal Component 1", 80.0, 75.0, 85.0);
+    RooRealVar width1("width1", "Width of Signal Component 1", 4.0, 0.5, 25.0);
 
-    RooRealVar mean2("mean2", "Mean of Signal Component 2", 200.0, 195.0, 205.0);
-    RooRealVar sigma2("sigma2", "Sigma of Signal Component 2", 3.0, 0.1, 10.0);
+    RooRealVar mean2("mean2", "Mean of Signal Component 2", 91.0, 85.0, 95.0);
+    RooRealVar width2("width2", "Width of Signal Component 2", 0.5, 0.001, 10.0);
 
-    RooRealVar mean3("mean3", "Mean of Signal Component 3", 212.0, 205.0, 220.0);
-    RooRealVar sigma3("sigma3", "Sigma of Signal Component 3", 3.5, 0.1, 10.0);
-
-    RooRealVar frac1("frac1", "Fraction of Signal Component 1", 0.3, 0.0, 1.0);
-    RooRealVar frac2("frac2", "Fraction of Signal Component 2", 0.3, 0.0, 1.0);
-
+    RooRealVar frac("frac", "Fraction of Signal Component 1", 0.5, 0.0, 1.0);
 
     // BACKGROUND PARAMETERS
 
-    RooRealVar tau("tau", "Tau of Exponential Background", -0.25, -1.0, 0.0);
-    RooRealVar mean4("mean4", "Mean of Background Component 1", 205.0, 190.0, 220.0);
-    RooRealVar sigma4("sigma4", "Sigma of Background Component 1", 18.0, 3.0, 40.0);
-    RooRealVar frac3("frac3", "Fraction of Background Component 1", 0.5, 0.0, 1.0);
+    RooRealVar a0("a0", "Constant Term of Background", 1.0, 0.0, 100.0);
+    RooRealVar a1("a1", "Linear Term of Background", 0.01, 0.0, 100.0);
+    RooRealVar a2("a2", "Quadratic Term of Background", 0.0001, 0.0, 100.0);
 
     // SIGNAL AND BACKGROUND PDFS
 
-    RooGaussian signal1("signal1", "Signal Component 1", var, mean1, sigma1);
-    RooGaussian signal2("signal2", "Signal Component 2", var, mean2, sigma2);
-    RooGaussian signal3("signal3", "Signal Component 3", var, mean3, sigma3);
-    RooAddPdf signal("signal", "Total Signal", RooArgList(signal1, signal2, signal3), RooArgList(frac1, frac2));
-    RooExponential background1("background1", "Background Component 1", var, tau);
-    RooGaussian background2("background2", "Background Component 2", var, mean4, sigma4);
-    RooAddPdf background("background", "Total Background", RooArgList(background1, background2), frac3);
+    RooBreitWigner signal1("signal1", "Signal Component 1", var, mean1, width1);
+    RooBreitWigner signal2("signal2", "Signal Component 2", var, mean2, width2);
+    RooAddPdf signal("signal", "Total Signal", RooArgList(signal1, signal2), frac);
+    RooBernstein background("background", "Background", var, RooArgList(a0, a1));
    
     // YEILD VARIABLES
 
@@ -106,7 +97,7 @@ void ComplexFitSamples2(){
     frame1->SetTitle("Raw Distribution");
     frame1->Draw();
 
-    TLegend *leg1 = new TLegend(0.6, 0.85, 0.9, 0.9);
+    TLegend *leg1 = new TLegend(0.1, 0.85, 0.4, 0.9);
     leg1->AddEntry(frame1->findObject("data"), "Data", "ep");
     leg1->Draw();
 
@@ -119,19 +110,15 @@ void ComplexFitSamples2(){
     model.plotOn(frame2, Name("fullfit"));
     model.plotOn(frame2, Components(background), LineColor(kGreen), Name("bkg"));
     model.plotOn(frame2, Components(signal), LineColor(kRed), Name("sig"));
-    model.plotOn(frame2, Components(background1), LineColor(kMagenta), LineStyle(kDashed), Name("bkg1"));
-    model.plotOn(frame2, Components(background2), LineColor(kYellow), LineStyle(kDotted), Name("bkg2"));
-    double chi2ndf = frame2->chiSquare("fullfit", "data2", 14);
+    double chi2ndf = frame2->chiSquare("fullfit", "data2", 10);
     frame2->SetTitle("Fitted Distribution");
     frame2->Draw();
 
-    TLegend *leg2 = new TLegend(0.6, 0.65, 0.9, 0.9);
+    TLegend *leg2 = new TLegend(0.1, 0.65, 0.4, 0.9);
     leg2->AddEntry(frame2->findObject("data2"), "Data", "ep");
     leg2->AddEntry(frame2->findObject("fullfit"), "Full Fit","l");
     leg2->AddEntry(frame2->findObject("sig"), "Signal PDF", "l");
     leg2->AddEntry(frame2->findObject("bkg"), "Background PDF", "l");
-    leg2->AddEntry(frame2->findObject("bkg1"), "Background Component 1", "l");
-    leg2->AddEntry(frame2->findObject("bkg2"), "Background Component 2", "l");
     leg2->Draw();
 
     // EXTRACTED SIGNAL COMPONENT
@@ -157,18 +144,16 @@ void ComplexFitSamples2(){
     RooPlot *frame3 = var.frame();
     signalData.plotOn(frame3, Name("sigdata"));
     signal.plotOn(frame3, Name("sigpdf"), LineColor(kRed), LineStyle(kDashed), Normalization(hsig->Integral(),RooAbsReal::NumEvent));
-    signal1.plotOn(frame3, Name("sig1"), LineColor(kBlue), LineStyle(kDotted), Normalization(hsig->Integral()*frac1.getVal(),RooAbsReal::NumEvent));
-    signal2.plotOn(frame3, Name("sig2"), LineColor(kGreen), LineStyle(kDashed), Normalization(hsig->Integral()*frac2.getVal(),RooAbsReal::NumEvent));
-    signal3.plotOn(frame3, Name("sig3"), LineColor(kMagenta), LineStyle(kDashed), Normalization(hsig->Integral()*(1 - frac1.getVal() - frac2.getVal()),RooAbsReal::NumEvent));
+    signal1.plotOn(frame3, Name("sig1"), LineColor(kBlue), LineStyle(kDotted), Normalization(hsig->Integral()*frac.getVal(),RooAbsReal::NumEvent));
+    signal2.plotOn(frame3, Name("sig2"), LineColor(kGreen), LineStyle(kDashed), Normalization(hsig->Integral()*(1 - frac.getVal()),RooAbsReal::NumEvent));
     frame3->SetTitle("Extracted Signal Component");
     frame3->Draw();
 
-    TLegend *leg3 = new TLegend(0.6, 0.75, 0.9, 0.9);
+    TLegend *leg3 = new TLegend(0.1, 0.75, 0.4, 0.9);
     leg3->AddEntry(frame3->findObject("sigdata"), "Signal Data", "ep");
     leg3->AddEntry(frame3->findObject("sigpdf"), "Fitted Signal", "l");
     leg3->AddEntry(frame3->findObject("sig1"), "Signal Component 1", "l");
     leg3->AddEntry(frame3->findObject("sig2"), "Signal Component 2", "l");
-    leg3->AddEntry(frame3->findObject("sig3"), "Signal Component 3", "l");
     leg3->Draw();
 
 
@@ -217,10 +202,10 @@ void ComplexFitSamples2(){
     cmain2->Update();
     gPad->Update();
 
-    cmain1->SaveAs("../Png_files/ComplexFitSamples2_results.png");
-    cmain2->SaveAs("../Png_files/ComplexFitSamples2_pull.png");
+    cmain1->SaveAs("../Png_files/ComplexFitSamples3_results.png");
+    cmain2->SaveAs("../Png_files/ComplexFitSamples3_pull.png");
 
-    ofstream out("../Txt_files/ComplexFitSamples2_results.txt");
+    ofstream out("../Txt_files/ComplexFitSamples3_results.txt");
 
     out << "Fit Results:\n" << endl;
 
@@ -234,15 +219,11 @@ void ComplexFitSamples2(){
     fitres->correlationMatrix().Print();
 
     out << "\nSignal Yield: "<< nsig.getVal()<< " ± "<< nsig.getError()<< endl;
-    out << "Signal Yeild: "<< nbkg.getVal()<< " ± "<< nbkg.getError()<< endl;
     out << "Mean1: "<< mean1.getVal()<< " ± "<< mean1.getError()<< endl;
-    out << "Sigma1: "<< sigma1.getVal()<< " ± "<< sigma1.getError()<< endl;
+    out << "Width1: "<< width1.getVal()<< " ± "<< width1.getError()<< endl;
     out << "Mean2: "<< mean2.getVal()<< " ± "<< mean2.getError()<< endl;
-    out << "Sigma2: "<< sigma2.getVal()<< " ± "<< sigma2.getError()<< endl;
-    out << "Mean3: "<< mean3.getVal()<< " ± "<< mean3.getError()<< endl;
-    out << "Sigma3: "<< sigma3.getVal()<< " ± "<< sigma3.getError()<< endl;
-    out << "Frac1: "<< frac1.getVal()<< " ± "<< frac1.getError()<< endl;
-    out << "Frac2: "<< frac2.getVal()<< " ± "<< frac2.getError()<< endl;
+    out << "Width2: "<< width2.getVal()<< " ± "<< width2.getError()<< endl;
+    out << "Fraction: "<< frac.getVal()<< " ± "<< frac.getError()<< endl;
     out << "Background Yeild: "<< nbkg.getVal()<< " ± "<< nbkg.getError()<< endl;
 
     out.close();
