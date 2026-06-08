@@ -114,7 +114,8 @@ void ComplexFitSamples4(){
     model.plotOn(frame2, Name("fullfit"));
     model.plotOn(frame2, Components(background), LineColor(kGreen), Name("bkg"));
     model.plotOn(frame2, Components(signal), LineColor(kRed), Name("sig"));
-    double chi2ndf = frame2->chiSquare("fullfit", "data2", 10);
+    int npar = fitres->floatParsFinal().getSize();
+    double chi2ndf = frame2->chiSquare("fullfit", "data2", npar);
     frame2->SetTitle("Fitted Distribution");
     frame2->Draw();
 
@@ -147,9 +148,9 @@ void ComplexFitSamples4(){
     RooDataHist signalData("signalData", "Signal Data", var, Import(*hsig));
     RooPlot *frame3 = var.frame();
     signalData.plotOn(frame3, Name("sigdata"));
-    signal.plotOn(frame3, Name("sigpdf"), LineColor(kRed), LineStyle(kDashed), Normalization(hsig->Integral(),RooAbsReal::NumEvent));
-    signal1.plotOn(frame3, Name("sig1"), LineColor(kBlue), LineStyle(kDotted), Normalization(hsig->Integral()*frac.getVal(),RooAbsReal::NumEvent));
-    signal2.plotOn(frame3, Name("sig2"), LineColor(kGreen), LineStyle(kDashed), Normalization(hsig->Integral()*(1 - frac.getVal()),RooAbsReal::NumEvent));
+    signal.plotOn(frame3, Name("sigpdf"), LineColor(kRed), LineStyle(kDashed), Normalization(nsig.getVal(),RooAbsReal::NumEvent));
+    signal1.plotOn(frame3, Name("sig1"), LineColor(kBlue), LineStyle(kDotted), Normalization(nsig.getVal()*frac.getVal(),RooAbsReal::NumEvent));
+    signal2.plotOn(frame3, Name("sig2"), LineColor(kGreen), LineStyle(kDashed), Normalization(nsig.getVal()*(1 - frac.getVal()),RooAbsReal::NumEvent));
     frame3->SetTitle("Extracted Signal Component");
     frame3->Draw();
 
