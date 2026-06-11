@@ -1,0 +1,10 @@
+Fit Results:
+
+Status: 0
+CovQual: 3
+EDM: 4.66372e-06
+MinNLL: -630971
+Chi2/NDF: 1.18344
+
+Background Yield: 99333.1 ± 315.171
+Tau: -0.0372816 ± 0.000150874
