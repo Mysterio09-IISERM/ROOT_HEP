@@ -87,39 +87,6 @@ void sig_bkg_3(){
     int nbins = (int)sqrt(data.numEntries());
     cout << "Using " << nbins << " bins for display" << endl;
 
-    //Finding Upper Limit of signal data
-/*
-    cout << "Before PLC: "
-     << nsig.getVal() << endl;
-
-    RooArgSet poi(nsig);
-    RooStats::ProfileLikelihoodCalculator plc(data, model, poi);
-    plc.SetConfidenceLevel(0.90);
-    RooStats::LikelihoodInterval *interval = plc.GetInterval();
-    double upper_limit = interval->UpperLimit(nsig);
-    cout << "Upper limit on nsig at 90% CL: " 
-         << upper_limit << " events" << endl;
-    
-    TCanvas *c = new TCanvas("c", "Upper Limit", 800, 600);
-    RooStats::LikelihoodIntervalPlot plot(interval);
-    plot.SetRange(0, upper_limit * 2);
-    plot.Draw();
-
-    // draw the 90% CL line
-    TLine *cl_line = new TLine(upper_limit, 0, 
-                                upper_limit, 1);
-    cl_line->SetLineColor(kRed);
-    cl_line->SetLineStyle(2);
-    cl_line->Draw("same");
-
-    cout << "\n=== Upper Limit Result ===" << endl;
-    cout << "nsig upper limit (90% CL) = " 
-         << upper_limit << endl;
-    cout << "After PLC: "
-     << nsig.getVal() << endl;
-
-    delete interval;
-*/
 
     //CANVAS CREATION
 
@@ -212,6 +179,40 @@ void sig_bkg_3(){
     gPad->Update();
 
     cmain1->SaveAs("../Png_files/sig_bkg_3_results.png");
+
+    //Finding Upper Limit of signal data
+
+    cout << "Before PLC: "
+     << nsig.getVal() << endl;
+
+    RooArgSet poi(nsig);
+    RooStats::ProfileLikelihoodCalculator plc(data, model, poi);
+    plc.SetConfidenceLevel(0.90);
+    RooStats::LikelihoodInterval *interval = plc.GetInterval();
+    double upper_limit = interval->UpperLimit(nsig);
+    cout << "Upper limit on nsig at 90% CL: " 
+         << upper_limit << " events" << endl;
+    
+    TCanvas *c = new TCanvas("c", "Upper Limit", 800, 600);
+    RooStats::LikelihoodIntervalPlot plot(interval);
+    plot.SetRange(0, upper_limit * 2);
+    plot.Draw();
+
+    // draw the 90% CL line
+    TLine *cl_line = new TLine(upper_limit, 0, 
+                                upper_limit, 1);
+    cl_line->SetLineColor(kRed);
+    cl_line->SetLineStyle(2);
+    cl_line->Draw("same");
+
+    cout << "\n=== Upper Limit Result ===" << endl;
+    cout << "nsig upper limit (90% CL) = " 
+         << upper_limit << endl;
+    cout << "After PLC: "
+     << nsig.getVal() << endl;
+
+    delete interval;
+
 
     ofstream out("../Txt_files/sig_bkg_3_results.txt");
 
