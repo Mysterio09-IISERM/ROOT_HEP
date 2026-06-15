@@ -2,13 +2,13 @@ Fit Results:
 
 Status: 0
 CovQual: 3
-EDM: 0.000304094
-MinNLL: -1723.13
-Chi2/NDF: 0.90648
+EDM: 2.51641e-07
+MinNLL: -1721.75
+Chi2/NDF: 0.897146
 
-Signal Yield: 80.2546 ± 0
-Mean: 4.8501e-07 ± 1.4538
-Sigma: 40.0479 ± 1.46185
+Signal Yield: 2.94209e-09 ± 0
+Mean: 44.984 ± 0
+Sigma: 3.0528 ± 0
 
-Background Yield: 278.28 ± 29.7132
-Tau: -0.0948404 ± 0.0111191
+Background Yield: 986.808 ± 31.5864
+Tau: -0.037282 ± 0

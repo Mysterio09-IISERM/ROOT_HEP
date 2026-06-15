@@ -54,12 +54,19 @@ void sig_bkg_4(){
 
     //SIGNAL PARAMETERS
 
-    RooRealVar mean("mean", "Mean", 10.0, 0.0, 30.0);
-    RooRealVar sigma("sigma", "Sigma", 0.7, 0.1, 20.0);
+    RooRealVar mean("mean", "Mean", 30.0, 0.0, 50.0);
+    RooRealVar sigma("sigma", "Sigma", 0.7, 0.1, 100.0);
+    mean.setVal(44.984);
+    sigma.setVal(3.0528);
+    mean.setConstant(kTRUE);
+    sigma.setConstant(kTRUE);
+
 
     // BACKGROUND PARAMETERS
 
     RooRealVar tau("tau", "Expo Coeff", -0.05, -5.0, 0.0);
+    tau.setVal(-0.037282);
+    tau.setConstant(kTRUE);
 
     // SIGNAL AND BACKGROUND PDFS
 

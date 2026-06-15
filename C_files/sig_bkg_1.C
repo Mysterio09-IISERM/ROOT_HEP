@@ -49,22 +49,24 @@ void sig_bkg_1(){
 
     //SIGNAL PARAMETERS
 
-    RooRealVar mean("mean", "Mean", 45.0, 35.0, 55.0);
-    RooRealVar sigma("sigma", "Sigma", 0.7, 0.1, 7.0);
+    RooRealVar mean("mean", "Mean", 30.0, 0.0, 50.0);
+    RooRealVar sigma("sigma", "Sigma", 0.7, 0.1, 100.0);
+    mean.setVal(44.984);
+    sigma.setVal(3.0528);
+    mean.setConstant(kTRUE);
+    sigma.setConstant(kTRUE);
+
 
     // BACKGROUND PARAMETERS
 
-    RooRealVar tau1("tau1", "Expo Coeff", -0.05, -1.0, 0.0);
-    RooRealVar a0("a0","a0", 0.0, -1.0, 1.0);
-    RooRealVar a1("a1","a1", 0.0, -1.0, 1.0);
-    RooRealVar fracbkg("fracbkg", "Fraction", 0.5 , 0.0, 1.0);
+    RooRealVar tau1("tau", "Expo Coeff", -0.05, -5.0, 0.0);
+    tau1.setVal(-0.037282);
+    tau1.setConstant(kTRUE);
 
     // SIGNAL AND BACKGROUND PDFS
 
     RooGaussian signal("signal", "Signal PDF", var, mean, sigma);
-    RooExponential background("background", "Background PDF 1", var, tau1);
-    //RooChebychev background2("background2","Background PDF 2", var , RooArgList(a0, a1));
-    //RooAddPdf background("background", "Total Background", RooArgList(background1, background2), fracbkg);
+    RooExponential background("background", "Background PDF", var, tau1);
 
     
     // YEILD VARIABLES
@@ -218,10 +220,7 @@ void sig_bkg_1(){
     out << "Mean: " << mean.getVal() << " ± " << mean.getError() << endl;
     out << "Sigma: " << sigma.getVal() << " ± " << sigma.getError() << endl;
     out << "\nBackground Yield: "<< nbkg.getVal()<< " ± "<< nbkg.getError()<< endl;
-    out << "Tau 1: " << tau1.getVal() << " ± " << tau1.getError() << endl;
-    out << "a0: " << a0.getVal() << " ± " << a0.getError() << endl;
-    out << "a1: " << a1.getVal() << " ± " << a1.getError() << endl;
-    out << "Fraction: " << fracbkg.getVal() << " ± " << fracbkg.getError() << endl;
+    out << "Tau: " << tau1.getVal() << " ± " << tau1.getError() << endl;
 
     out.close();
     
