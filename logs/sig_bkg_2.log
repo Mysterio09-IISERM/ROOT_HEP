@@ -1,5 +1,5 @@
 Info in <Minuit2>: MnSeedGenerator Computing seed using NumericalGradient calculator
-Info in <Minuit2>: MnSeedGenerator Evaluated function and gradient in 906.2 μs
+Info in <Minuit2>: MnSeedGenerator Evaluated function and gradient in 616.1 μs
 Info in <Minuit2>: MnSeedGenerator Initial state: FCN =       14702.57979 Edm =        17690.2778 NCalls =      9
 Info in <Minuit2>: MnSeedGenerator Initial state  
   Minimum value : 14702.57979
@@ -32,7 +32,7 @@ Before PLC: 27.9965
 [#1] INFO:InputArguments -- The deprecated RooFit::CloneData(1) option passed to createNLL() is ignored.
 [#1] INFO:Minimization -- p.d.f. provides expected number of events, including extended term in likelihood.
 [#1] INFO:Fitting -- RooAbsPdf::fitTo(model) fixing normalization set for coefficient determination to observables in data
-[#1] INFO:Fitting -- Creation of NLL object took 203.3 μs
+[#1] INFO:Fitting -- Creation of NLL object took 413.5 μs
 [#0] PROGRESS:Minimization -- ProfileLikelihoodCalcultor::DoGLobalFit - find MLE 
 [#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_model_data) Summation contains a RooNLLVar, using its error level
 [#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
