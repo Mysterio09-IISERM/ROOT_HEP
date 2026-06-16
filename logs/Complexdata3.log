@@ -1,0 +1,102 @@
+Info in <Minuit2>: MnSeedGenerator Computing seed using NumericalGradient calculator
+Info in <Minuit2>: MnSeedGenerator Evaluated function and gradient in 1.7224 ms
+Info in <Minuit2>: MnSeedGenerator Initial state: FCN =      -1953564.537 Edm =   1.930307711e+10 NCalls =     61
+Info in <Minuit2>: NegativeG2LineSearch Doing a NegativeG2LineSearch since one of the G2 component is negative
+Info in <Minuit2>: NegativeG2LineSearch Done after 860.8 μs
+Info in <Minuit2>: MnSeedGenerator Negative G2 found - new state: 
+  Minimum value : -2001822.977
+  Edm           : 544685.2357
+  Internal parameters:	[     -1.375832791     -1.370461484                0                0 Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -2697701.36261563608
+Edm   = 0.000665594708244055889
+Nfcn  = 920
+a1	  = 0.0884727	 +/-  0.00647357	(limited)
+a2	  = 0.136262	 +/-  0.0099688	(limited)
+mean1	  = 3096.97	 +/-  0.0521837	(limited)
+mean2	  = 3686.05	 +/-  0.054959	(limited)
+mean3	  = 3871.69	 +/-  0.121148	(limited)
+nbkg	  = 385283	 +/-  673.108	(limited)
+nsig1	  = 60055	 +/-  287.642	(limited)
+nsig2	  = 39963.5	 +/-  245.521	(limited)
+nsig3	  = 14664.6	 +/-  193.722	(limited)
+sigma1	  = 10.0555	 +/-  0.0461697	(limited)
+sigma2	  = 8.02905	 +/-  0.0490336	(limited)
+sigma3	  = 8.23425	 +/-  0.116084	(limited)
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(model) Calculating sum-of-weights-squared correction matrix for covariance matrix
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) directly selected PDF components: (background)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) indirectly selected PDF components: ()
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) directly selected PDF components: (signal1,signal2,signal3)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) indirectly selected PDF components: ()
+[#1] INFO:InputArguments -- RooAbsData::plotOn(signalData) INFO: dataset has non-integer weights, auto-selecting SumW2 errors instead of Poisson errors
+
+  RooFitResult: minimized FCN value: -2.6977e+06, estimated distance to minimum: 0.000669852
+                covariance matrix quality: Full, accurate covariance matrix
+                Status : MINIMIZE=0 HESSE=0 HESSE=0 
+
+    Floating Parameter  InitialValue    FinalValue +/-  Error     GblCorr.
+  --------------------  ------------  --------------------------  --------
+                    a1    5.0000e-01    8.8473e-02 +/-  1.59e-02  <none>
+                    a2    0.0000e+00    1.3626e-01 +/-  2.44e-02  <none>
+                 mean1    3.1000e+03    3.0970e+03 +/-  5.22e-02  <none>
+                 mean2    3.6900e+03    3.6861e+03 +/-  5.50e-02  <none>
+                 mean3    3.8700e+03    3.8717e+03 +/-  1.21e-01  <none>
+                  nbkg    1.0000e+05    3.8528e+05 +/-  6.73e+02  <none>
+                 nsig1    1.0000e+05    6.0055e+04 +/-  2.88e+02  <none>
+                 nsig2    1.0000e+05    3.9963e+04 +/-  2.46e+02  <none>
+                 nsig3    1.0000e+05    1.4665e+04 +/-  1.95e+02  <none>
+                sigma1    5.0000e-01    1.0056e+01 +/-  4.62e-02  <none>
+                sigma2    5.0000e-01    8.0291e+00 +/-  4.91e-02  <none>
+                sigma3    5.0000e-01    8.2343e+00 +/-  1.17e-01  <none>
+
+  -0.6435011088    -0.6435011088     -1.444157321....      -1.444157321]	
+  Internal gradient  :	[      8465.303307     -8243.294367      22529.40001      67881.22324      1515.108138     -755442.7146      180333.4434      183951.0202      191222.8785     -476242.1534....      -205443.7658]	
+  Internal covariance matrix:
+[[  4.5097463e-07              0              0              0              0              0              0              0              0              0....               0]
+ [              0  4.6712399e-07              0              0              0              0              0              0              0              0....               0]
+ [              0              0  5.9396178e-08              0              0              0              0              0              0              0....               0]
+ [              0              0              0  7.4797693e-08              0              0              0              0              0              0....               0]
+ [              0              0              0              0  1.3298181e-07              0              0              0              0              0....               0]
+ [              0              0              0              0              0  1.4927441e-06              0              0              0              0....               0]
+ [              0              0              0              0              0              0  1.1585962e-05              0              0              0....               0]
+ [              0              0              0              0              0              0              0   1.187583e-05              0              0....               0]
+ [              0              0              0              0              0              0              0              0  1.2492719e-05              0....               0]
+ [              0              0              0              0              0              0              0              0              0  1.7717551e-07....               0]
+....
+ [              0              0              0              0              0              0              0              0              0              0....   4.1235785e-07]]]
+Info in <Minuit2>: VariableMetricBuilder Start iterating until Edm is < 0.001 with call limit = 6000
+Info in <Minuit2>: VariableMetricBuilder    0 - FCN =      -2001822.977 Edm =       544685.2357 NCalls =     96
+Info in <Minuit2>: VariableMetricBuilder    1 - FCN =      -2525549.563 Edm =       54658.21737 NCalls =    140
+Info in <Minuit2>: VariableMetricBuilder    2 - FCN =      -2596020.376 Edm =       20809.95021 NCalls =    170
+Info in <Minuit2>: VariableMetricBuilder    3 - FCN =      -2616137.098 Edm =         12010.729 NCalls =    197
+Info in <Minuit2>: VariableMetricBuilder    4 - FCN =      -2647671.463 Edm =       7715.909539 NCalls =    238
+Info in <Minuit2>: VariableMetricBuilder    5 - FCN =      -2655661.592 Edm =       7372.831795 NCalls =    265
+Info in <Minuit2>: VariableMetricBuilder    6 - FCN =      -2677565.389 Edm =       11994.80272 NCalls =    296
+Info in <Minuit2>: VariableMetricBuilder    7 - FCN =      -2685082.331 Edm =       8526.392398 NCalls =    328
+Info in <Minuit2>: VariableMetricBuilder    8 - FCN =      -2696148.872 Edm =       738.3189574 NCalls =    361
+Info in <Minuit2>: VariableMetricBuilder    9 - FCN =      -2696736.205 Edm =       71.23043144 NCalls =    387
+Info in <Minuit2>: VariableMetricBuilder   10 - FCN =      -2696837.973 Edm =       41.65822285 NCalls =    413
+Info in <Minuit2>: VariableMetricBuilder   11 - FCN =      -2696964.919 Edm =       148.7923827 NCalls =    439
+Info in <Minuit2>: VariableMetricBuilder   12 - FCN =      -2697297.005 Edm =       100.6272676 NCalls =    466
+Info in <Minuit2>: VariableMetricBuilder   13 - FCN =      -2697417.046 Edm =       9.381814839 NCalls =    492
+Info in <Minuit2>: VariableMetricBuilder   14 - FCN =      -2697494.872 Edm =       45.19075607 NCalls =    519
+Info in <Minuit2>: VariableMetricBuilder   15 - FCN =      -2697681.949 Edm =       3.004426346 NCalls =    545
+Info in <Minuit2>: VariableMetricBuilder   16 - FCN =      -2697685.509 Edm =      0.1631662576 NCalls =    571
+Info in <Minuit2>: VariableMetricBuilder   17 - FCN =      -2697686.376 Edm =      0.6548187332 NCalls =    598
+Info in <Minuit2>: VariableMetricBuilder   18 - FCN =      -2697698.379 Edm =       1.005307757 NCalls =    626
+Info in <Minuit2>: VariableMetricBuilder   19 - FCN =      -2697699.553 Edm =     0.03251557933 NCalls =    652
+Info in <Minuit2>: VariableMetricBuilder   20 - FCN =      -2697700.323 Edm =      0.3927943852 NCalls =    680
+Info in <Minuit2>: VariableMetricBuilder   21 - FCN =      -2697701.212 Edm =    0.005951354189 NCalls =    706
+Info in <Minuit2>: VariableMetricBuilder   22 - FCN =       -2697701.23 Edm =      0.0107274037 NCalls =    732
+Info in <Minuit2>: VariableMetricBuilder   23 - FCN =      -2697701.362 Edm =   0.0007085780628 NCalls =    759
+Info in <Minuit2>: VariableMetricBuilder   24 - FCN =      -2697701.363 Edm =   1.314211231e-05 NCalls =    785
+Info in <Minuit2>: MnHesse Done after 4.7038 ms
+Info in <Minuit2>: VariableMetricBuilder After Hessian
+Info in <Minuit2>: VariableMetricBuilder   25 - FCN =      -2697701.363 Edm =   0.0006655947082 NCalls =    920
+Info in <Minuit2>: VariableMetricBuilder Stop iterating after 28.6707 ms
+Info in <Minuit2>: Minuit2Minimizer::Hesse Using max-calls 6000
+Info in <Minuit2>: MnHesse Done after 4.2539 ms
+Info in <Minuit2>: Minuit2Minimizer::Hesse Hesse is valid - matrix is accurate
+Info in <Minuit2>: Minuit2Minimizer::Hesse Using max-calls 6000
+Info in <Minuit2>: MnHesse Done after 4.3339 ms
+Info in <Minuit2>: Minuit2Minimizer::Hesse Hesse is valid - matrix is accurate
+Info in <TCanvas::Print>: file ../Png_files/ComplexData3.png has been created

@@ -1,0 +1,49 @@
+Info in <Minuit2>: MnSeedGenerator Computing seed using NumericalGradient calculator
+Info in <Minuit2>: MnSeedGenerator Evaluated function and gradient in 371.2 μs
+Info in <Minuit2>: MnSeedGenerator Initial state: FCN =      -3087812.441 Edm =        124040.534 NCalls =     25
+Info in <Minuit2>: MnSeedGenerator Initial state  
+  Minimum value : -3087812.441
+  Edm           : 124040.534
+  Internal parameters:	[    -0.1433475689    -0.6435011088    -0.6435011088    -0.8317784478      0.927295218]	
+  Internal gradient  :	[     -25962.30959     -263627.5796     -56483.20474     -222799.85Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -3205955.4279060089
+Edm   = 0.000376171028533653644
+Nfcn  = 165
+mean	  = 90.999	 +/-  0.00965928	(limited)
+nbkg	  = 221124	 +/-  764.169	(limited)
+nsig	  = 138882	 +/-  708.917	(limited)
+sigma	  = 2.15293	 +/-  0.0106197	(limited)
+tau	  = -0.0220007	 +/-  0.000425064	(limited)
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(model) Calculating sum-of-weights-squared correction matrix for covariance matrix
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) directly selected PDF components: (background)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) indirectly selected PDF components: ()
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) directly selected PDF components: (signal)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) indirectly selected PDF components: ()
+[#1] INFO:InputArguments -- RooAbsData::plotOn(signalData) INFO: dataset has non-integer weights, auto-selecting SumW2 errors instead of Poisson errors
+****************************************
+Minimizer is Minuit2 / Migrad
+Chi2                      =      4.99982
+NDf                       =           12
+Edm                       =   1.3292e-08
+NCalls                    =           52
+Constant                  =      137.978   +/-   6.24798     
+Mean                      =   -0.0285388   +/-   0.0413274   
+Sigma                     =      1.15092   +/-   0.0329043    	 (limited)
+
+  RooFitResult: minimized FCN value: -3.20596e+06, estimated distance to minimum: 0.000376179
+                covariance matrix quality: Full, accurate covariance matrix
+                Status : MINIMIZE=0 HESSE=0 HESSE=0 
+
+    Floating Parameter  InitialValue    FinalValue +/-  Error     GblCorr.
+  --------------------  ------------  --------------------------  --------
+                  mean    9.1000e+01    9.0999e+01 +/-  9.67e-03  <none>
+                  nbkg    1.0000e+05    2.2112e+05 +/-  7.69e+02  <none>
+                  nsig    1.0000e+05    1.3888e+05 +/-  7.13e+02  <none>
+                 sigma    1.0000e+00    2.1529e+00 +/-  1.07e-02  <none>
+                   tau   -1.0000e-01   -2.2001e-02 +/-  4.26e-04  <none>
+
+
+Info in <Minuit2>: Minuit2Minimizer::Hesse Hesse is valid - matrix is accurate
+Warning in <TROOT::Append>: Replacing existing TH1: hpull (Potential memory leak).
+Info in <TCanvas::Print>: file ../Png_files/Gendata3_4_results.png has been created
+Info in <TCanvas::Print>: file ../Png_files/Gendata3_4_pull.png has been created

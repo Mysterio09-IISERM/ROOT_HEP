@@ -1,0 +1,96 @@
+Info in <Minuit2>: MnSeedGenerator Computing seed using NumericalGradient calculator
+Info in <Minuit2>: MnSeedGenerator Evaluated function and gradient in 1.7623 ms
+Info in <Minuit2>: MnSeedGenerator Initial state: FCN =      -2345827.248 Edm =   4.031797221e+11 NCalls =     43
+Info in <Minuit2>: NegativeG2LineSearch Doing a NegativeG2LineSearch since one of the G2 component is negative
+Info in <Minuit2>: NegativeG2LineSearch Done after 2.6744 ms
+Info in <Minuit2>: MnSeedGenerator Negative G2 found - new state: 
+  Minimum value : -2364813.822
+  Edm           : 29617.09383
+  Internal pMinuit2Minimizer : Invalid minimum - status = 3
+FVAL  = -2.38877e+06
+Edm   = 0.130648
+Nfcn  = 372
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(model) Calculating sum-of-weights-squared correction matrix for covariance matrix
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) directly selected PDF components: (background)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) indirectly selected PDF components: ()
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) directly selected PDF components: (signal)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) indirectly selected PDF components: ()
+[#1] INFO:InputArguments -- RooAbsData::plotOn(signalData) INFO: dataset has non-integer weights, auto-selecting SumW2 errors instead of Poisson errors
+****************************************
+Minimizer is Minuit2 / Migrad
+Chi2                      =       12.048
+NDf                       =           11
+Edm                       =  1.81371e-06
+NCalls                    =           53
+Constant                  =       162.18   +/-   7.10457     
+Mean                      =   -0.0362786   +/-   0.0346165   
+Sigma                     =      0.96936   +/-   0.0248046    	 (limited)
+
+  RooFitResult: minimized FCN value: -2.38877e+06, estimated distance to minimum: 9.7062
+                covariance matrix quality: Full matrix, but forced positive-definite
+                Status : MINIMIZE=-1 HESSE=3 HESSE=3 
+
+    Floating Parameter  InitialValue    FinalValue +/-  Error     GblCorr.
+  --------------------  ------------  --------------------------  --------
+                    a1    1.0000e-02    1.6323e-03 +/-  1.01e-02  <none>
+                    a2    1.0000e-03    1.1449e-03 +/-  7.11e-03  <none>
+                 alpha    2.0000e+00    1.2757e+00 +/-  2.50e-02  <none>
+                  mean    8.0000e+01    7.9767e+01 +/-  1.40e-02  <none>
+                     n    5.0000e+00    1.3393e+01 +/-  1.93e+00  <none>
+                  nbkg    1.0000e+05    1.4427e+05 +/-  6.83e+02  <none>
+                  nsig    1.0000e+05    1.4884e+05 +/-  6.86e+02  <none>
+                 sigma    2.0000e+00    3.1058e+00 +/-  1.43e-02  <none>
+
+
+8x8 matrix is as follows
+
+     |      0    |      1    |      2    |      3    |      4    |
+----------------------------------------------------------------------
+   0 |          1           1     0.06947    -0.01117     -0.3641 
+   1 |          1           1     0.06848    -0.01104     -0.3642 
+   2 |    0.06947     0.06848           1     -0.5016     -0.1075 
+   3 |   -0.01117    -0.01104     -0.5016           1       0.118 
+   4 |    -0.3641     -0.3642     -0.1075       0.118           1 
+   5 |    -0.1175     -0.1181      0.4851     -0.1328      0.2224 
+   6 |     0.1171      0.1177     -0.4823      0.1321     -0.2221 
+   7 |    0.04512     0.04491      0.5099     -0.3748     -0.2401 
+
+
+     |      5    |      6    |      7    |
+----------------------------------------------------------------------
+   0 |    -0.1175      0.1171     0.04512 
+   1 |    -0.1181      0.1177     0.04491 
+   2 |     0.4851     -0.4823      0.5099 
+   3 |    -0.1328      0.1321     -0.3748 
+   4 |     0.2224     -0.2221     -0.2401 
+   5 |          1     -0.6793     -0.1785 
+   6 |    -0.6793           1      0.1777 
+   7 |    -0.1785      0.1777           1 
+
+   270.6165291 NCalls =    168
+Info in <Minuit2>: VariableMetricBuilder    4 - FCN =      -2388584.517 Edm =       26.92869243 NCalls =    188
+Info in <Minuit2>: VariableMetricBuilder    5 - FCN =      -2388647.327 Edm =       21.20340031 NCalls =    206
+Info in <Minuit2>: VariableMetricBuilder    6 - FCN =      -2388755.977 Edm =       7.354272796 NCalls =    225
+Info in <Minuit2>: VariableMetricBuilder    7 - FCN =      -2388767.574 Edm =         2.2605245 NCalls =    243
+Info in <Minuit2>: VariableMetricBuilder    8 - FCN =      -2388771.507 Edm =      0.3635483923 NCalls =    261
+Info in <Minuit2>: VariableMetricBuilder    9 - FCN =      -2388771.884 Edm =     0.01436214461 NCalls =    278
+Info in <Minuit2>: VariableMetricBuilder   10 - FCN =      -2388771.898 Edm =   0.0004724550118 NCalls =    295
+Info in <Minuit2>: MnHesse Done after 5.2848 ms
+Info in <Minuit2>: VariableMetricBuilder After Hessian
+Info in <Minuit2>: VariableMetricBuilder   11 - FCN =      -2388771.898 Edm =      0.1306483516 NCalls =    372
+Warning in <Minuit2>: VariableMetricBuilder Reached machine accuracy limit; Edm 0.130648 is smaller than machine limit 0.142382 while 0.001 was requested
+Warning in <Minuit2>: VariableMetricBuilder No convergence; Edm 0.130648 is above tolerance 0.01
+Info in <Minuit2>: VariableMetricBuilder Stop iterating after 16.6731 ms
+Warning in <Minuit2>: Minuit2Minimizer::Minimize Minimization did NOT converge, Edm is above max
+Info in <Minuit2>: Minuit2Minimizer::Hesse Using max-calls 4000
+Info in <Minuit2>: MnHesse Done after 3.1582 ms
+Info in <Minuit2>: Minuit2Minimizer::Hesse Hesse is valid - matrix is accurate
+Info in <Minuit2>: Minuit2Minimizer::Hesse Using max-calls 4000
+Warning in <Minuit2>: MnPosDef Matrix forced pos-def by adding to diagonal 0.0350538
+Info in <Minuit2>: MnHesse Done after 3.6882 ms
+Info in <Minuit2>: Minuit2Minimizer::Hesse Hesse is valid - matrix is full but made positive defined
+Warning in <TCanvas::Constructor>: Deleting canvas with same name: cmain1
+Warning in <TCanvas::Constructor>: Deleting canvas with same name: cmain2
+Warning in <TROOT::Append>: Replacing existing TH1: hpull (Potential memory leak).
+Info in <TCanvas::Print>: file ../Png_files/Gendata3_3_results.png has been created
+Info in <TCanvas::Print>: file ../Png_files/Gendata3_3_pull.png has been created

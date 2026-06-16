@@ -1,0 +1,59 @@
+Info in <Minuit2>: MnSeedGenerator Computing seed using NumericalGradient calculator
+Info in <Minuit2>: MnSeedGenerator Evaluated function and gradient in 346.6 μs
+Info in <Minuit2>: MnSeedGenerator Initial state: FCN =      -1740318.469 Edm =        1502483630 NCalls =     21
+Info in <Minuit2>: NegativeG2LineSearch Doing a NegativeG2LineSearch since one of the G2 component is negative
+Info in <Minuit2>: NegativeG2LineSearch Done after 331.3 μs
+Info in <Minuit2>: MnSeedGenerator Negative G2 found - new state: 
+  Minimum value : -1759715.207
+  Edm           : 23263.2188
+  Internal parameters:	[                0    -0.6435011088    -0.6435011088     -0.651333894  Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -1783660.64112436585
+Edm   = 6.62226953015991235e-05
+Nfcn  = 168
+mean	  = 49.9941	 +/-  0.00711537	(limited)
+nbkg	  = 91684.9	 +/-  384.072	(limited)
+nsig	  = 123615	 +/-  423.623	(limited)
+sigma	  = 1.98275	 +/-  0.00637775	(limited)
+tau	  = -0.0167056	 +/-  0.000393798	(limited)
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(model) Calculating sum-of-weights-squared correction matrix for covariance matrix
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) directly selected PDF components: (background)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) indirectly selected PDF components: ()
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) directly selected PDF components: (signal)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) indirectly selected PDF components: ()
+[#1] INFO:InputArguments -- RooAbsData::plotOn(signalData) INFO: dataset has non-integer weights, auto-selecting SumW2 errors instead of Poisson errors
+****************************************
+Minimizer is Minuit2 / Migrad
+Chi2                      =      15.2346
+NDf                       =           25
+Edm                       =  3.25912e-07
+NCalls                    =           53
+Constant                  =      68.3315   +/-   3.3061      
+Mean                      =   -0.0366853   +/-   0.0388658   
+Sigma                     =      1.00052   +/-   0.0300099    	 (limited)
+
+  RooFitResult: minimized FCN value: -1.78366e+06, estimated distance to minimum: 6.63214e-05
+                covariance matrix quality: Full, accurate covariance matrix
+                Status : MINIMIZE=0 HESSE=0 HESSE=0 
+
+    Floating Parameter  InitialValue    FinalValue +/-  Error     GblCorr.
+  --------------------  ------------  --------------------------  --------
+                  mean    5.0000e+01    4.9994e+01 +/-  7.12e-03  <none>
+                  nbkg    1.0000e+05    9.1685e+04 +/-  3.84e+02  <none>
+                  nsig    1.0000e+05    1.2361e+05 +/-  4.24e+02  <none>
+                 sigma    4.0000e+00    1.9827e+00 +/-  6.38e-03  <none>
+                   tau   -1.0000e-01   -1.6706e-02 +/-  3.94e-04  <none>
+
+  -1783660.638 Edm =    0.001901137315 NCalls =    117
+Info in <Minuit2>: VariableMetricBuilder    7 - FCN =      -1783660.641 Edm =   3.080176506e-05 NCalls =    129
+Info in <Minuit2>: MnHesse Done after 536.4 μs
+Info in <Minuit2>: VariableMetricBuilder After Hessian
+Info in <Minuit2>: VariableMetricBuilder    8 - FCN =      -1783660.641 Edm =    6.62226953e-05 NCalls =    168
+Info in <Minuit2>: VariableMetricBuilder Stop iterating after 1.9293 ms
+Info in <Minuit2>: Minuit2Minimizer::Hesse Using max-calls 2500
+Info in <Minuit2>: MnHesse Done after 469.3 μs
+Info in <Minuit2>: Minuit2Minimizer::Hesse Hesse is valid - matrix is accurate
+Info in <Minuit2>: Minuit2Minimizer::Hesse Using max-calls 2500
+Info in <Minuit2>: MnHesse Done after 470.1 μs
+Info in <Minuit2>: Minuit2Minimizer::Hesse Hesse is valid - matrix is accurate
+Info in <TCanvas::Print>: file ../Png_files/Gendata3_1_results.png has been created
+Info in <TCanvas::Print>: file ../Png_files/Gendata3_1_pull.png has been created

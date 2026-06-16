@@ -1,0 +1,53 @@
+Info in <Minuit2>: MnSeedGenerator Computing seed using NumericalGradient calculator
+Info in <Minuit2>: MnSeedGenerator Evaluated function and gradient in 66 μs
+Info in <Minuit2>: MnSeedGenerator Initial state: FCN =      -35578.73505 Edm =        5105.35152 NCalls =      9
+Info in <Minuit2>: MnSeedGenerator Initial state  
+  Minimum value : -35578.73505
+  Edm           : 5105.35152
+  Internal parameters:	[     -1.287002218     -1.287002218]	
+  Internal gradient  :	[      17851.04326      52148.71612]	
+  Internal covariance matrix:
+[[  4.8693765e-06              0]
+ [              Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -40184.9490791238932
+Edm   = 0.000260495335530642514
+Nfcn  = 36
+nbkg	  = 8061.41	 +/-  94.371	(limited)
+nsig	  = 1938.03	 +/-  52.7465	(limited)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) directly selected PDF components: (background)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) indirectly selected PDF components: ()
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) directly selected PDF components: (signal)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) indirectly selected PDF components: ()
+[#1] INFO:InputArguments -- RooAbsData::plotOn(signalData) INFO: dataset has non-integer weights, auto-selecting SumW2 errors instead of Poisson errors
+****************************************
+Minimizer is Minuit2 / Migrad
+Chi2                      =      32.0558
+NDf                       =           10
+Edm                       =   3.4567e-06
+NCalls                    =           73
+Constant                  =       25.683   +/-   2.75961     
+Mean                      =     0.185408   +/-   0.0866661   
+Sigma                     =     0.921199   +/-   0.0531Info in <TCanvas::Pr
+  RooFitResult: minimized FCN value: -40184.9, estimated distance to minimum: 0.000260535
+                covariance matrix quality: Full, accurate covariance matrix
+                Status : MINIMIZE=0 HESSE=0 
+
+    Constant Parameter    Value     
+  --------------------  ------------
+                  mean    4.4984e+01
+                 sigma    3.0528e+00
+                   tau   -3.7282e-02
+
+    Floating Parameter  InitialValue    FinalValue +/-  Error     GblCorr.
+  --------------------  ------------  --------------------------  --------
+                  nbkg    1.0000e+04    8.0614e+03 +/-  9.44e+01  <none>
+                  nsig    1.0000e+04    1.9380e+03 +/-  5.27e+01  <none>
+
+
+2x2 matrix is as follows
+
+     |      0    |      1    |
+-------------------------------
+   0 |          1     -0.1697 
+   1 |    -0.1697           1 
+

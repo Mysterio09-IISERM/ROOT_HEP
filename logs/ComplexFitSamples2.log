@@ -1,0 +1,143 @@
+Info in <Minuit2>: MnSeedGenerator Computing seed using NumericalGradient calculator
+Info in <Minuit2>: MnSeedGenerator Evaluated function and gradient in 1.0613 ms
+Info in <Minuit2>: MnSeedGenerator Initial state: FCN =      -2813144.555 Edm =        3360229972 NCalls =     63
+Info in <Minuit2>: NegativeG2LineSearch Doing a NegativeG2LineSearch since one of the G2 component is negative
+Info in <Minuit2>: NegativeG2LineSearch Done after 616.4 μs
+Info in <Minuit2>: MnSeedGenerator Negative G2 found - new state: 
+  Minimum value : -2855396.333
+  Edm           : 109883.4792
+  Internal parameters:	[    -0.4115168461    -0.4115168461                0                0 Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -2936983.36848499253
+Edm   = 0.00856630471583409367
+Nfcn  = 956
+frac1	  = 0.417471	 +/-  0.0173764	(limited)
+frac2	  = 0.317104	 +/-  0.0279841	(limited)
+frac3	  = 0.565688	 +/-  0.054246	(limited)
+mean1	  = 189.902	 +/-  0.104111	(limited)
+mean2	  = 199.693	 +/-  0.278948	(limited)
+mean3	  = 211.986	 +/-  0.383399	(limited)
+mean4	  = 201.985	 +/-  1.16411	(limited)
+nbkg	  = 204210	 +/-  6822.65	(limited)
+nsig	  = 172401	 +/-  6822.02	(limited)
+sigma1	  = 3.93919	 +/-  0.0780511	(limited)
+sigma2	  = 5.30279	 +/-  0.295081	(limited)
+sigma3	  = 6.29076	 +/-  0.24673	(limited)
+sigma4	  = 22.7093	 +/-  1.07455	(limited)
+tau	  = -0.0257025	 +/-  0.00213228	(limited)
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(model) Calculating sum-of-weights-squared correction matrix for covariance matrix
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) directly selected PDF components: (background)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) indirectly selected PDF components: (background1,background2)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) directly selected PDF components: (signal)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) indirectly selected PDF components: (signal1,signal2,signal3)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) directly selected PDF components: (background1)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) indirectly selected PDF components: (background)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) directly selected PDF components: (background2)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) indirectly selected PDF components: (background)
+[#1] INFO:InputArguments -- RooAbsData::plotOn(signalData) INFO: dataset has non-integer weights, auto-selecting SumW2 errors instead of Poisson errors
+****************************************
+Minimizer is Minuit2 / Migrad
+Chi2                      =      6.35907
+NDf                       =            9
+Edm                       =   7.0336e-10
+NCalls                    =           61
+Constant                  =      143.184   +/-   6.84367     
+Mean                      =  -0.00900131   +/-   0.0376586   
+Sigma                     =     0.970809   +/-   0.0292306    	 (limited)
+
+  RooFitResult: minimized FCN value: -2.93698e+06, estimated distance to minimum: 0.0596523
+                covariance matrix quality: Full, accurate covariance matrix
+                Status : MINIMIZE=0 HESSE=0 HESSE=0 
+
+    Floating Parameter  InitialValue    FinalValue +/-  Error     GblCorr.
+  --------------------  ------------  --------------------------  --------
+                 frac1    3.0000e-01    4.1747e-01 +/-  2.56e-02  <none>
+                 frac2    3.0000e-01    3.1710e-01 +/-  5.45e-02  <none>
+                 frac3    5.0000e-01    5.6569e-01 +/-  7.61e-02  <none>
+                 mean1    1.9000e+02    1.8990e+02 +/-  1.53e-01  <none>
+                 mean2    2.0000e+02    1.9969e+02 +/-  3.43e-01  <none>
+                 mean3    2.1200e+02    2.1199e+02 +/-  7.54e-01  <none>
+                 mean4    2.0500e+02    2.0199e+02 +/-  1.65e+00  <none>
+                  nbkg    1.0000e+05    2.0421e+05 +/-  6.58e+03  <none>
+                  nsig    1.0000e+05    1.7240e+05 +/-  6.57e+03  <none>
+                sigma1    2.0000e+00    3.9392e+00 +/-  9.34e-02  <none>
+                sigma2    3.0000e+00    5.3028e+00 +/-  5.43e-01  <none>
+                sigma3    3.5000e+00    6.2908e+00 +/-  4.62e-01  <none>
+                sigma4    1.8000e+01    2.2709e+01 +/-  1.61e+00  <none>
+                   tau   -2.5000e-01   -2.5703e-02 +/-  3.71e-03  <none>
+
+
+14x14 matrix is as follows
+
+     |       0    |       1    |       2    |       3    |       4    |
+----------------------------------------------------------------------
+   0 |          1     -0.7632    -0.05103      0.9203       0.578 
+   1 |    -0.7632           1     -0.3608     -0.8494    -0.04145 
+   2 |   -0.05103     -0.3608           1      0.1662     -0.2378 
+   3 |     0.9203     -0.8494      0.1662           1      0.5197 
+   4 |      0.578    -0.04145     -0.2378      0.5197           1 
+   5 |    -0.5542      0.9394     -0.3789     -0.6403      0.2835 
+   6 |     0.3291      0.1441     -0.3584     0.04464      0.4147 
+   7 |   -0.00558      0.4943     -0.6576     -0.2723      0.2017 
+   8 |   0.005579     -0.4945      0.6579      0.2724     -0.2018 
+   9 |     0.7871     -0.7461      0.2452      0.8495       0.497 
+  10 |    -0.8338      0.9826     -0.2707     -0.8789     -0.1387 
+  11 |     0.2892     -0.8295      0.5858      0.4835     -0.4066 
+  12 |    -0.1199     -0.1763     -0.1326     0.07567     -0.1277 
+  13 |    -0.1832     -0.2582      0.9152     0.06453     -0.3255 
+
+
+     |       5    |       6    |       7    |       8    |       9    |
+----------------------------------------------------------------------
+   0 |    -0.5542      0.3291    -0.00558    0.005579      0.7871 
+   1 |     0.9394      0.1441      0.4943     -0.4945     -0.7461 
+   2 |    -0.3789     -0.3584     -0.6576      0.6579      0.2452 
+   3 |    -0.6403     0.04464     -0.2723      0.2724      0.8495 
+   4 |     0.2835      0.4147      0.2017     -0.2018       0.497 
+   5 |          1      0.2319      0.5098       -0.51     -0.5487 
+   6 |     0.2319           1      0.4041     -0.4042      0.1945 
+   7 |     0.5098      0.4041           1     -0.9956      -0.491 
+   8 |      -0.51     -0.4042     -0.9956           1      0.4912 
+   9 |    -0.5487      0.1945      -0.491      0.4912           1 
+  10 |     0.8928     0.06546      0.3887     -0.3888      -0.738 
+  11 |    -0.9129     -0.4556     -0.7344      0.7347      0.4686 
+  12 |    -0.2097     -0.4782     -0.5909      0.5911      0.1794 
+  13 |    -0.3029     -0.6436     -0.5133      0.5135     0.02305 
+
+
+     |      10    |      11    |      12    |      13    |
+----------------------------------------------------------------------
+   0 |    -0.8338      0.2892     -0.1199     -0.1832 
+   1 |     0.9826     -0.8295     -0.1763     -0.2582 
+   2 |    -0.2707      0.5858     -0.1326      0.9152 
+   3 |    -0.8789      0.4835     0.07567     0.06453 
+   4 |    -0.1387     -0.4066     -0.1277     -0.3255 
+   5 |     0.8928     -0.9129     -0.2097     -0.3029 
+   6 |    0.06546     -0.4556     -0.4782     -0.6436 
+   7 |     0.3887     -0.7344     -0.5909     -0.5133 
+   8 |    -0.3888      0.7347      0.5911      0.5135 
+   9 |     -0.738      0.4686      0.1794     0.02305 
+  10 |          1     -0.7314     -0.1261     -0.1711 
+  11 |    -0.7314           1      0.3369      0.5269 
+  12 |    -0.1261      0.3369           1    -0.09035 
+  13 |    -0.1711      0.5269    -0.09035           1 
+
+  0.02090657279 NCalls =    600
+Info in <Minuit2>: VariableMetricBuilder   17 - FCN =      -2936983.238 Edm =     0.00281461805 NCalls =    631
+Info in <Minuit2>: VariableMetricBuilder   18 - FCN =      -2936983.242 Edm =    0.000859413636 NCalls =    660
+Info in <Minuit2>: VariableMetricBuilder   19 - FCN =      -2936983.244 Edm =    0.001652606832 NCalls =    691
+Info in <Minuit2>: VariableMetricBuilder   20 - FCN =      -2936983.265 Edm =     0.01531417804 NCalls =    722
+Info in <Minuit2>: VariableMetricBuilder   21 - FCN =       -2936983.36 Edm =    0.006065253874 NCalls =    753
+Info in <Minuit2>: VariableMetricBuilder   22 - FCN =      -2936983.368 Edm =   0.0004036773903 NCalls =    784
+Info in <Minuit2>: MnHesse Done after 3.0401 ms
+Info in <Minuit2>: VariableMetricBuilder After Hessian
+Info in <Minuit2>: VariableMetricBuilder   23 - FCN =      -2936983.368 Edm =    0.008566304716 NCalls =    956
+Warning in <Minuit2>: VariableMetricBuilder Reached machine accuracy limit; Edm 0.0085663 is smaller than machine limit 0.175058 while 0.001 was requested
+Info in <Minuit2>: VariableMetricBuilder Stop iterating after 15.7941 ms
+Info in <Minuit2>: Minuit2Minimizer::Hesse Using max-calls 7000
+Info in <Minuit2>: MnHesse Done after 2.7461 ms
+Info in <Minuit2>: Minuit2Minimizer::Hesse Hesse is valid - matrix is accurate
+Info in <Minuit2>: Minuit2Minimizer::Hesse Using max-calls 7000
+Info in <Minuit2>: MnHesse Done after 2.7969 ms
+Info in <Minuit2>: Minuit2Minimizer::Hesse Hesse is valid - matrix is accurate
+Info in <TCanvas::Print>: file ../Png_files/ComplexFitSamples2_results.png has been created
+Info in <TCanvas::Print>: file ../Png_files/ComplexFitSamples2_pull.png has been created

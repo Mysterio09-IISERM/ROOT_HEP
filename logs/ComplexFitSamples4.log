@@ -1,0 +1,82 @@
+Info in <Minuit2>: MnSeedGenerator Computing seed using NumericalGradient calculator
+Info in <Minuit2>: MnSeedGenerator Evaluated function and gradient in 598.9 μs
+Info in <Minuit2>: MnSeedGenerator Initial state: FCN =      -2983995.187 Edm =       129153.6724 NCalls =     33
+Info in <Minuit2>: MnSeedGenerator Initial state  
+  Minimum value : -2983995.187
+  Edm           : 129153.6724
+  Internal parameters:	[                0    -0.2013579208    -0.6435011088    -0.6435011088    -0.7874309459    -0.3115481897      1.119769515]	
+  Internal gradient  :	[      25064.36172     -25691.03933     -213341.9232     -175864.8928     -40637.12977     -65470.46321     -2637Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -3088951.95851062145
+Edm   = 0.000503531264811552773
+Nfcn  = 399
+frac	  = 0.523068	 +/-  0.00872784	(limited)
+mean	  = 299.931	 +/-  0.0205653	(limited)
+nbkg	  = 200615	 +/-  2680.36	(limited)
+nsig	  = 193931	 +/-  2680.25	(limited)
+sigma1	  = 4.1484	 +/-  0.0273435	(limited)
+sigma2	  = 17.1349	 +/-  0.299085	(limited)
+tau	  = -0.0239709	 +/-  0.000484988	(limited)
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(model) Calculating sum-of-weights-squared correction matrix for covariance matrix
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) directly selected PDF components: (background)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) indirectly selected PDF components: ()
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) directly selected PDF components: (signal)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) indirectly selected PDF components: (sig1,sig2)
+[#1] INFO:InputArguments -- RooAbsData::plotOn(signalData) INFO: dataset has non-integer weights, auto-selecting SumW2 errors instead of Poisson errors
+****************************************
+Minimizer is Minuit2 / Migrad
+Chi2                      =      13.1632
+NDf                       =           16
+Edm                       =  5.52585e-08
+NCalls                    =           61
+Constant                  =      97.9027   +/-   4.76638     
+Mean                      =   -0.0480998   +/-   0.055011    
+Sigma                     =      1.40043   +/-   0.0427057    	 (limited)
+
+  RooFitResult: minimized FCN value: -3.08895e+06, estimated distance to minimum: 0.000530098
+                covariance matrix quality: Full, accurate covariance matrix
+                Status : MINIMIZE=0 HESSE=0 HESSE=0 
+
+    Floating Parameter  InitialValue    FinalValue +/-  Error     GblCorr.
+  --------------------  ------------  --------------------------  --------
+                  frac    5.0000e-01    5.2307e-01 +/-  9.18e-03  <none>
+                  mean    3.0000e+02    2.9993e+02 +/-  2.06e-02  <none>
+                  nbkg    1.0000e+05    2.0062e+05 +/-  3.04e+03  <none>
+                  nsig    1.0000e+05    1.9393e+05 +/-  3.04e+03  <none>
+                sigma1    3.0000e+00    4.1484e+00 +/-  2.78e-02  <none>
+                sigma2    7.0000e+00    1.7135e+01 +/-  3.44e-01  <none>
+                   tau   -5.0000e-02   -2.3971e-02 +/-  5.34e-04  <none>
+
+
+7x7 matrix is as follows
+
+     |      0    |      1    |      2    |      3    |      4    |
+----------------------------------------------------------------------
+   0 |          1     0.04555      0.8583     -0.8586      0.3808 
+   1 |    0.04555           1     0.06333    -0.06337    -0.05978 
+   2 |     0.8583     0.06333           1     -0.9787   0.0008538 
+   3 |    -0.8586    -0.06337     -0.9787           1  -0.0008325 
+   4 |     0.3808    -0.05978   0.0008538  -0.0008325           1 
+   5 |    -0.3522    -0.04851     -0.7057       0.706      0.3956 
+   6 |     0.8748    0.004536       0.935     -0.9353     0.08024 
+
+
+     |      5    |      6    |
+----------------------------------------------------------------------
+   0 |    -0.3522      0.8748 
+   1 |   -0.04851    0.004536 
+   2 |    -0.7057       0.935 
+   3 |      0.706     -0.9353 
+   4 |     0.3956     0.08024 
+   5 |          1     -0.5507 
+   6 |    -0.5507           1 
+
+959 Edm =   0.0005035312648 NCalls =    399
+Info in <Minuit2>: VariableMetricBuilder Stop iterating after 6.8763 ms
+Info in <Minuit2>: Minuit2Minimizer::Hesse Using max-calls 3500
+Info in <Minuit2>: MnHesse Done after 875.6 μs
+Info in <Minuit2>: Minuit2Minimizer::Hesse Hesse is valid - matrix is accurate
+Info in <Minuit2>: Minuit2Minimizer::Hesse Using max-calls 3500
+Info in <Minuit2>: MnHesse Done after 886.7 μs
+Info in <Minuit2>: Minuit2Minimizer::Hesse Hesse is valid - matrix is accurate
+Info in <TCanvas::Print>: file ../Png_files/ComplexFitSamples4_results.png has been created
+Info in <TCanvas::Print>: file ../Png_files/ComplexFitSamples4_pull.png has been created

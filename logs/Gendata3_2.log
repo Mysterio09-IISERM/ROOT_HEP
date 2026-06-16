@@ -1,0 +1,82 @@
+Info in <Minuit2>: MnSeedGenerator Computing seed using NumericalGradient calculator
+Info in <Minuit2>: MnSeedGenerator Evaluated function and gradient in 1.4674 ms
+Info in <Minuit2>: MnSeedGenerator Initial state: FCN =      -2579169.437 Edm =   8.639470957e+10 NCalls =     39
+Info in <Minuit2>: NegativeG2LineSearch Doing a NegativeG2LineSearch since one of the G2 component is negative
+Info in <Minuit2>: NegativeG2LineSearch Done after 2.2752 ms
+Info in <Minuit2>: MnSeedGenerator Negative G2 found - new state: 
+  Minimum value : -2622734.577
+  Edm           : 75890.16632
+  Internal pMinuit2Minimizer : Valid minimum - status = 0
+FVAL  = -2664385.31503947638
+Edm   = 0.000128740973531170193
+Nfcn  = 384
+frac	  = 0.569322	 +/-  0.00247179	(limited)
+mean1	  = 39.9947	 +/-  0.0173405	(limited)
+mean2	  = 51.9927	 +/-  0.0300076	(limited)
+nbkg	  = 158955	 +/-  656.689	(limited)
+nsig	  = 175132	 +/-  668.958	(limited)
+sigma1	  = 3.00919	 +/-  0.0162966	(limited)
+sigma2	  = 4.00449	 +/-  0.0313761	(limited)
+tau	  = -0.020006	 +/-  0.000230279	(limited)
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(model) Calculating sum-of-weights-squared correction matrix for covariance matrix
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) directly selected PDF components: (background)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) indirectly selected PDF components: ()
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) directly selected PDF components: (signal)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) indirectly selected PDF components: (signal1,signal2)
+[#1] INFO:InputArguments -- RooAbsData::plotOn(signalData) INFO: dataset has non-integer weights, auto-selecting SumW2 errors instead of Poisson errors
+****************************************
+Minimizer is Minuit2 / Migrad
+Chi2                      =      15.4612
+NDf                       =           10
+Edm                       =  1.12292e-07
+NCalls                    =           59
+Constant                  =       155.48   +/-   7.05412     
+Mean                      =   -0.0213966   +/-   0.0383979   
+Sigma                     =      1.01167   +/-   0.0292468    	 (limited)
+
+  RooFitResult: minimized FCN value: -2.66439e+06, estimated distance to minimum: 0.0001283
+                covariance matrix quality: Full, accurate covariance matrix
+                Status : MINIMIZE=0 HESSE=0 HESSE=0 
+
+    Floating Parameter  InitialValue    FinalValue +/-  Error     GblCorr.
+  --------------------  ------------  --------------------------  --------
+                  frac    5.0000e-01    5.6932e-01 +/-  2.47e-03  <none>
+                 mean1    4.0000e+01    3.9995e+01 +/-  1.73e-02  <none>
+                 mean2    5.2000e+01    5.1993e+01 +/-  3.01e-02  <none>
+                  nbkg    1.0000e+05    1.5896e+05 +/-  6.57e+02  <none>
+                  nsig    1.0000e+05    1.7513e+05 +/-  6.70e+02  <none>
+                sigma1    5.0000e+00    3.0092e+00 +/-  1.63e-02  <none>
+                sigma2    7.0000e+00    4.0045e+00 +/-  3.13e-02  <none>
+                   tau   -1.0000e-01   -2.0006e-02 +/-  2.30e-04  <none>
+
+         0              0]
+ [              0              0              0              0              0              0   0.0004537806              0]
+ [              0              0              0              0              0              0              0  9.4382329e-07]]]
+Info in <Minuit2>: VariableMetricBuilder Start iterating until Edm is < 0.001 with call limit = 4000
+Info in <Minuit2>: VariableMetricBuilder    0 - FCN =      -2622734.577 Edm =       75890.16632 NCalls =     99
+Info in <Minuit2>: VariableMetricBuilder    1 - FCN =      -2657773.924 Edm =       21301.48694 NCalls =    125
+Info in <Minuit2>: VariableMetricBuilder    2 - FCN =       -2660103.52 Edm =       3998.363104 NCalls =    145
+Info in <Minuit2>: VariableMetricBuilder    3 - FCN =      -2663308.143 Edm =       1559.417713 NCalls =    168
+Info in <Minuit2>: VariableMetricBuilder    4 - FCN =      -2663995.293 Edm =       158.9513405 NCalls =    186
+Info in <Minuit2>: VariableMetricBuilder    5 - FCN =       -2664157.72 Edm =       149.4728199 NCalls =    204
+Info in <Minuit2>: VariableMetricBuilder    6 - FCN =      -2664308.462 Edm =       81.28407354 NCalls =    223
+Info in <Minuit2>: VariableMetricBuilder    7 - FCN =       -2664380.82 Edm =       1.648497548 NCalls =    241
+Info in <Minuit2>: VariableMetricBuilder    8 - FCN =      -2664383.112 Edm =      0.8901746298 NCalls =    259
+Info in <Minuit2>: VariableMetricBuilder    9 - FCN =      -2664384.669 Edm =      0.5204176289 NCalls =    277
+Info in <Minuit2>: VariableMetricBuilder   10 - FCN =      -2664385.298 Edm =     0.01884558718 NCalls =    295
+Info in <Minuit2>: VariableMetricBuilder   11 - FCN =      -2664385.315 Edm =   0.0001597236537 NCalls =    313
+Info in <Minuit2>: MnHesse Done after 4.5475 ms
+Info in <Minuit2>: VariableMetricBuilder After Hessian
+Info in <Minuit2>: VariableMetricBuilder   12 - FCN =      -2664385.315 Edm =   0.0001287409735 NCalls =    384
+Info in <Minuit2>: VariableMetricBuilder Stop iterating after 14.854 ms
+Info in <Minuit2>: Minuit2Minimizer::Hesse Using max-calls 4000
+Info in <Minuit2>: MnHesse Done after 4.0846 ms
+Info in <Minuit2>: Minuit2Minimizer::Hesse Hesse is valid - matrix is accurate
+Info in <Minuit2>: Minuit2Minimizer::Hesse Using max-calls 4000
+Info in <Minuit2>: MnHesse Done after 3.376 ms
+Info in <Minuit2>: Minuit2Minimizer::Hesse Hesse is valid - matrix is accurate
+Warning in <TCanvas::Constructor>: Deleting canvas with same name: cmain1
+Warning in <TCanvas::Constructor>: Deleting canvas with same name: cmain2
+Warning in <TROOT::Append>: Replacing existing TH1: hpull (Potential memory leak).
+Info in <TCanvas::Print>: file ../Png_files/Gendata3_2_results.png has been created
+Info in <TCanvas::Print>: file ../Png_files/Gendata3_2_pull.png has been created

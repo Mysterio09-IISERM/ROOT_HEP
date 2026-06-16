@@ -1,0 +1,60 @@
+Info in <Minuit2>: MnSeedGenerator Computing seed using NumericalGradient calculator
+Info in <Minuit2>: MnSeedGenerator Evaluated function and gradient in 2.5539 ms
+Info in <Minuit2>: MnSeedGenerator Initial state: FCN =      -1657446.226 Edm =       236783.4665 NCalls =     27
+Info in <Minuit2>: MnSeedGenerator Initial state  
+  Minimum value : -1657446.226
+  Edm           : 236783.4665
+  Internal parameters:	[     0.5235987756     0.1433475689    -0.6435011088    -0.6435011088     -0.972128274    -0.2013579208]	
+  Internal gradient  :	[     -20238.86787     -1932.537309     -242826.6RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-1.57605e+06) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	c=-73.0589	mean=5277.56	nbkg=498473	nsig=251211	sigma=0.141776	var0=5288.42
+RooAddPdf::model[ nsig * signal_over_signal_Int[var1] + nbkg * background_over_background_Int[var1] ]
+     getLogVal() top-level p.d.f not greater than zero @ !refCoefNorm=(var1 = 5265), !pdfs=(signal_over_signal_Int[var1] = 0,background_over_background_Int[var1] = 0.0236273), !coefficients=(nsig = 251211,nbkg = 498473)
+     getLogVal() top-level p.d.f not greater than zero @ !refCoefNorm=(var1 = 5265), !pdfs=(signal_over_signal_Int[var1] = 0,background_over_background_Int[var1] = 0.0236273), !coefficients=(nsig = 251211,nbkg = 498473)
+     getLogVal() top-level p.d.f not greater than zero @ !refCoefNormInfo in <Minuit2>: VariableMetricBuilder    1 - FCN =      -1785320.003 Edm =       505.0391873 NCalls =     56
+Info in <Minuit2>: VariableMetricBuilder    2 - FCN =       -1786184.55 Edm =       112.4889865 NCalls =     70
+Info in <Minuit2>: VariableMetricBuilder    3 - FCN =      -1786393.215 Edm =       2.984700174 NCalls =     85
+Info in <Minuit2>: VariableMetricBuilder    4 - FCN =      -1786446.075 Edm =       8.507102155 NCalls =    107
+Info in <Minuit2>: VariableMetricBuilder    5 - FCN =       -1786447.28 Edm =       10.88559561 NCalls =    124
+Info in <Minuit2>: VariableMetricBuilder    6 - FCN =      -1786458.893 Edm =       3.575611923 NCalls =    138
+Info in <Minuit2>: VariableMetricBuilder    7 - FCN =      -1786482.229 Edm =       1.982557943 NCalls =    153
+Info in <Minuit2>: VariableMetricBuilder    8 - FCN =      -1786488.316 Edm =       2.078229473 NCalls =    168
+Info in <Minuit2>: VariableMetricBuilder    9 - FCN =      -1786497.017 Edm =       2.626158801 NCalls =    183
+Info in <Minuit2>: VariableMetricBuilder   10 - FCN =      -1786503.048 Edm =      0.2985533752 NCalls =    200
+Info in <Minuit2>: VariableMetricBuilder   11 - FCN =      -1786503.487 Edm =      0.1669436955 NCalls =    215
+Info in <Minuit2>: VariableMetricBuilder   12 - FCN =       -1786503.87 Edm =     0.08955149935 NCalls =    229
+Info in <Minuit2>: VariableMetricBuilder   13 - FCN =      -1786503.974 Edm =    0.001881549343 NCalls =    244
+Info in <Minuit2>: VariableMetricBuilder   14 - FCN =      -1786503.976 Edm =   0.0001510257031 NCalls =    257
+Info in <Minuit2>: MnHesse Done after 3.0182 ms
+Info in <Minuit2>: VariableMetricBuilder After Hessian
+Info in <Minuit2>: VariableMetricBuilder   15 - FCN =      -1786503.976 Edm =    0.001237706115 NCalls =    309
+Warning in <Minuit2>: VariableMetricBuilder Reached machine accuracy limit; Edm 0.00123771 is smaller than machine limit 0.106484 while 0.001 was requested
+Info in <Minuit2>: VariableMetricBuilder Stop iterating after 14.3013 ms
+Info in <Minuit2>: Minuit2Minimizer::Hesse Using max-calls 3000
+Info in <Minuit2>: MnHesse Done after 1.8896 ms
+Info in <Minuit2>: Minuit2Minimizer::Hesse Hesse is valid - matrix is accurate
+Info in <Minuit2>: Minuit2Minimizer::Hesse Using max-calls 3000
+Info in <Minuit2>: MnHesse Done after 2.2255 ms
+Info in <Minuit2>: Minuit2Minimizer::Hesse Hesse is valid - matrix is accurate
+Warning in <TCanvas::Constructor>: Deleting canvas with same name: cmain
+Info in <TCanvas::Print>: file ../Png_files/ComplexData1.png has been created
+ng -- RooAbsPdf::fitTo(model) Calculating sum-of-weights-squared correction matrix for covariance matrix
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) directly selected PDF components: (background)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) indirectly selected PDF components: ()
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) directly selected PDF components: (signal)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) indirectly selected PDF components: ()
+[#1] INFO:InputArguments -- RooAbsData::plotOn(signalData) INFO: dataset has non-integer weights, auto-selecting SumW2 errors instead of Poisson errors
+
+  RooFitResult: minimized FCN value: -1.7865e+06, estimated distance to minimum: 0.00127433
+                covariance matrix quality: Full, accurate covariance matrix
+                Status : MINIMIZE=0 HESSE=0 HESSE=0 
+
+    Floating Parameter  InitialValue    FinalValue +/-  Error     GblCorr.
+  --------------------  ------------  --------------------------  --------
+                     c   -5.0000e+01   -1.4818e+01 +/-  6.25e-01  <none>
+                  mean    5.2770e+03    5.2790e+03 +/-  1.17e-01  <none>
+                  nbkg    1.0000e+05    2.2954e+05 +/-  6.02e+02  <none>
+                  nsig    1.0000e+05    7.7794e+03 +/-  3.74e+02  <none>
+                 sigma    7.0000e-01    3.0802e+00 +/-  1.07e-01  <none>
+                  var0    5.2890e+03    5.2890e+03 +/-  8.42e-03  <none>
+

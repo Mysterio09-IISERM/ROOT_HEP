@@ -1,0 +1,50 @@
+Info in <Minuit2>: MnSeedGenerator Computing seed using NumericalGradient calculator
+Info in <Minuit2>: MnSeedGenerator Evaluated function and gradient in 707.1 μs
+Info in <Minuit2>: MnSeedGenerator Initial state: FCN =       83875.08901 Edm =       409309.9525 NCalls =     13
+Info in <Minuit2>: MnSeedGenerator Initial state  
+  Minimum value : 83875.08901
+  Edm           : 409309.9525
+  Internal parameters:	[                0     -1.287002218    -0.8558097488]	
+  Internal gradient  :	[      9370.750184     -623790.3423     -4045588.718]	
+  Internal covariance matrix:
+[[  1.0986508e-06              0              0]
+ [              0  7.3588029e-07            Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -790536.37604932976
+Edm   = 2.85127023725008357e-05
+Nfcn  = 118
+mean	  = 44.9843	 +/-  0.00975689	(limited)
+nsig	  = 99112.4	 +/-  314.821	(limited)
+sigma	  = 3.05282	 +/-  0.00711746	(limited)
+[#0] WARNING:Plotting -- RooHist::makeResisHist(data2) WARNING: point 496 has zero error, setting residual to zero
+****************************************
+Minimizer is Minuit2 / Migrad
+Chi2                      =      16.2594
+NDf                       =           12
+Edm                       =  4.81913e-06
+NCalls                    =           61
+Constant                  =      96.0551   +/-   5.26662     
+Mean                      =   -0.0240266   +/-   0.0458652   
+Sigma                     =      1.00488   +/-   0.0309494    	 (limited)
+
+  RooFitResult: minimized FCN value: -790536, estimated distance to minimum: 2.85439e-05
+                covariance matrix quality: Full, accurate covariance matrix
+                Status : MINIMIZE=0 HESSE=0 
+
+    Floating Parameter  InitialValue    FinalValue +/-  Error     GblCorr.
+  --------------------  ------------  --------------------------  --------
+                  mean    4.5000e+01    4.4984e+01 +/-  9.76e-03  <none>
+                  nsig    1.0000e+04    9.9112e+04 +/-  3.15e+02  <none>
+                 sigma    7.0000e-01    3.0528e+00 +/-  7.12e-03  <none>
+
+
+3x3 matrix is as follows
+
+     |      0    |      1    |      2    |
+--------------------------------------------
+   0 |          1   3.855e-08  -0.0001589 
+   1 |  3.855e-08           1   1.926e-07 
+   2 | -0.0001589   1.926e-07           1 
+
+
+Info in <TCanvas::Print>: file ../Png_files/pure_signal_results.png has been created
+Info in <TCanvas::Print>: file ../Png_files/pure_signal_pull.png has been created

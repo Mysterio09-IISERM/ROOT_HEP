@@ -1,0 +1,174 @@
+Info in <Minuit2>: MnSeedGenerator Computing seed using NumericalGradient calculator
+Info in <Minuit2>: MnSeedGenerator Evaluated function and gradient in 2.7026 ms
+Info in <Minuit2>: MnSeedGenerator Initial state: FCN =      -3520994.756 Edm =   2.491360672e+10 NCalls =     67
+Info in <Minuit2>: NegativeG2LineSearch Doing a NegativeG2LineSearch since one of the G2 component is negative
+Info in <Minuit2>: NegativeG2LineSearch Done after 3.2929 ms
+Info in <Minuit2>: MnSeedGenerator Negative G2 found - new state: 
+  Minimum value : -3555304.865
+  Edm           : 162848.7835
+  Internal[#0] WARNING:Eval -- RooAddPdf::updateCoefCache(signal WARNING: sum of PDF coefficients not in range [0-1], value=1.16313
+RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-2.52397e+06) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	a1=0.00224509	a2=0.00171368	alpha1=1.94954	frac1=0.868329	frac2=0.294802	mean1=124.724	mean2=139.025	mean3=125.792	n1=3.34268	nbkg=279312	nsig=279302	sigma1=2.48998	sigma3=9.2297	width2=9.61234
+RooAddPdf::model[ nsig * signal + nbkg * background_over_background_Int[var1] ]
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var1 = 135), !pdfs=(signal = nan/1,background_over_background_Int[var1] = 0.02), !coefficients=(nsig = 279302,nbkg = 279312)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var1 = 135), !pdfs=(signal = nan/1,background_over_background_Int[var1] = 0.02), !coefficients=(nsig = 279302,nbkg = 279312)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var1 = 135), !pdfs=(signal = nan/1,background_over_background_Int[var1] = 0.02), !coefficients=(nsig = 279302,nbkg = 279312)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var1 = 135), !pdfs=(signal = nan/1,background_over_background_Int[var1] = 0.02), !coefficients=(nsig = 279302,nbkg = 279312)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var1 = 135), !pdfs=(signal = nan/1,background_over_background_Int[var1] = 0.02), !coefficients=(nsig = 279302,nbkg = 279312)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var1 = 135), !pdfs=(signal = nan/1,background_over_background_Int[var1] = 0.02), !coefficients=(nsig = 279302,nbkg = 279312)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var1 = 135), !pdfs=(signal = nan/1,background_over_background_Int[var1] = 0.02), !coefficients=(nsig = 279302,nbkg = 279312)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var1 = 135), !pdfs=(signal = nan/1,background_over_background_Int[var1] = 0.02), !coefficients=(nsig = 279302,nbkg = 279312)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var1 = 135), !pdfs=(signal = nan/1,background_over_background_Int[var1] = 0.02), !coefficients=(nsig = 279302,nbkg = 279312)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var1 = 135), !pdfs=(signal = nan/1,background_over_background_Int[var1] = 0.02), !coefficients=(nsig = 279302,nbkg = 279312)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var1 = 135), !pdfs=(signal = nan/1,background_over_background_Int[var1] = 0.02), !coefficients=(nsig = 279302,nbkg = 279312)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var1 = 135), !pdfs=(signal = nan/1,background_over_background_Int[var1] = 0.02), !coefficients=(nsig = 279302,nbkg = 279312)
+    ... (remaining 690 messages suppressed)
+
+RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-2.52397e+06) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	a1=31.7971	a2=20.6115	alpha1=4.78788	frac1=0.875176	frac2=0.989343	mean1=120.106	mean2=132.994	mean3=129.289	n1=5.6826	nbkg=245270	nsig=293454	sigma1=0.923135	sigma3=5.88648	width2=16.2281
+RooAddPdf::model[ nsig * signal + nbkg * background_over_background_Int[var1] ]
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var1 = 135), !pdfs=(signal = nan/1,background_over_background_Int[var1] = 0.02), !coefficients=(nsig = 293454,nbkg = 245270)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var1 = 135), !pdfs=(signal = nan/1,background_over_background_Int[var1] = 0.02), !coefficients=(nsig = 293454,nbkg = 245270)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var1 = 135), !pdfs=(signal = nan/1,background_over_background_Int[var1] = 0.02), !coefficients=(nsig = 293454,nbkg = 245270)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var1 = 135), !pdfs=(signal = nan/1,background_over_background_Int[var1] = 0.02), !coefficients=(nsig = 293454,nbkg = 245270)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var1 = 135), !pdfs=(signal = nan/1,background_over_background_Int[var1] = 0.02), !coefficients=(nsig = 293454,nbkg = 245270)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var1 = 135), !pdfs=(signal = nan/1,background_over_background_Int[var1] = 0.02), !coefficients=(nsig = 293454,nbkg = 245270)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var1 = 135), !pdfs=(signal = nan/1,background_over_background_Int[var1] = 0.02), !coefficients=(nsig = 293454,nbkg = 245270)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var1 = 135), !pdfs=(signal = nan/1,background_over_background_Int[var1] = 0.02), !coefficients=(nsig = 293454,nbkg = 245270)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var1 = 135), !pdfs=(signal = nan/1,background_over_background_Int[var1] = 0.02), !coefficients=(nsig = 293454,nbkg = 245270)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var1 = 135), !pdfs=(signal = nan/1,background_over_background_Int[var1] = 0.02), !coefficients=(nsig = 293454,nbkg = 245270)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var1 = 135), !pdfs=(signal = nan/1,background_over_background_Int[var1] = 0.02), !coefficients=(nsig = 293454,nbkg = 245270)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var1 = 135), !pdfs=(signal = nan/1,background_over_background_Int[var1] = 0.02), !coefficients=(nsig = 293454,nbkg = 245270)
+    ... (remaining 690 messages suppressed)
+
+RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-2.52397e+06) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	a1=79.3498	a2=7.90507	alpha1=4.78098	frac1=0.705568	frac2=0.586906	mean1=120.001	mean2=130.082	mean3=128.218	n1=5.69537	nbkg=164629	nsig=327704	sigma1=1.79835	sigma3=7.31019	width2=15.9459
+RooAddPdf::model[ nsig * signal + nbkg * background_over_background_Int[var1] ]
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var1 = 135), !pdfs=(signal = nan/1,background_over_background_Int[var1] = 0.02), !coefficients=(nsig = 327704,nbkg = 164629)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var1 = 135), !pdfs=(signal = nan/1,background_over_background_Int[var1] = 0.02), !coefficients=(nsig = 327704,nbkg = 164629)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var1 = 135), !pdfs=(signal = nan/1,background_over_background_Int[var1] = 0.02), !coefficients=(nsig = 327704,nbkg = 164629)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var1 = 135), !pdfs=(signal = nan/1,background_over_background_Int[var1] = 0.02), !coefficients=(nsig = 327704,nbkg = 164629)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var1 = 135), !pdfs=(signal = nan/1,background_over_background_Int[var1] = 0.02), !coefficients=(nsig = 327704,nbkg = 164629)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var1 = 135), !pdfs=(signal = nan/1,background_over_background_Int[var1] = 0.02), !coefficients=(nsig = 327704,nbkg = 164629)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var1 = 135), !pdfs=(signal = nan/1,background_over_background_Int[var1] = 0.02), !coefficients=(nsig = 327704,nbkg = 164629)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var1 = 135), !pdfs=(signal = nan/1,background_over_background_Int[var1] = 0.02), !coefficients=(nsig = 327704,nbkg = 164629)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var1 = 135), !pdfs=(signal = nan/1,background_over_background_Int[var1] = 0.02), !coefficients=(nsig = 327704,nbkg = 164629)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var1 = 135), !pdfs=(signal = nan/1,background_over_background_Int[var1] = 0.02), !coefficients=(nsig = 327704,nbkg = 164629)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var1 = 135), !pdfs=(signal = nan/1,background_over_background_Int[var1] = 0.02), !coefficients=(nsig = 327704,nbkg = 164629)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var1 = 135), !pdfs=(signal = nan/1,background_over_background_Int[var1] = 0.02), !coefficients=(nsig = 327704,nbkg = 164629)
+    ... (remaining 690 messages suppressed)
+
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -3668764.86602535145
+Edm   = 0.00113991752552036209
+Nfcn  = 1567
+a1	  = 0.00212081	 +/-  0.000223853	(limited)
+a2	  = 0.00245315	 +/-  0.000262988	(limited)
+alpha1	  = 3.79473	 +/-  0.59291	(limited)
+frac1	  = 0.387751	 +/-  0.00583569	(limited)
+frac2	  = 0.370205	 +/-  0.00486156	(limited)
+mean1	  = 124.894	 +/-  0.0121107	(limited)
+mean2	  = 139.733	 +/-  0.0736809	(limited)
+mean3	  = 124.104	 +/-  0.0733257	(limited)
+n1	  = 5.75764	 +/-  7.66837	(limited)
+nbkg	  = 121670	 +/-  2005.96	(limited)
+nsig	  = 317943	 +/-  2052.53	(limited)
+sigma1	  = 2.07526	 +/-  0.0173589	(limited)
+sigma3	  = 5.01987	 +/-  0.117423	(limited)
+width2	  = 15.0518	 +/-  0.285951	(limited)
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(model) Calculating sum-of-weights-squared correction matrix for covariance matrix
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) directly selected PDF components: (background)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) indirectly selected PDF components: ()
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) directly selected PDF components: (signal)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) indirectly selected PDF components: (signal1,signal2,signal3)
+[#1] INFO:InputArguments -- RooAbsData::plotOn(signalData) INFO: dataset has non-integer weights, auto-selecting SumW2 errors instead of Poisson errors
+****************************************
+Minimizer is Minuit2 / Migrad
+Chi2                      =      8.49547
+NDf                       =            9
+Edm                       =  1.84718e-07
+NCalls                    =           53
+Constant                  =      130.104   +/-   6.11578     
+Mean                      =   -0.0574578   +/-   0.041838    
+Sigma                     =      1.06502   +/-   0.0307007    	 (limited)
+
+  RooFitResult: minimized FCN value: -3.66876e+06, estimated distance to minimum: 0.00135185
+                covariance matrix quality: Full, accurate covariance matrix
+                Status : MINIMIZE=0 HESSE=0 HESSE=0 
+
+    Floating Parameter  InitialValue    FinalValue +/-  Error     GblCorr.
+  --------------------  ------------  --------------------------  --------
+                    a1    1.2000e+00    2.1208e-03 +/-  5.01e-04  <none>
+                    a2    1.0000e-02    2.4531e-03 +/-  5.83e-04  <none>
+                alpha1    1.5000e+00    3.7947e+00 +/-  6.01e-01  <none>
+                 frac1    5.0000e-01    3.8775e-01 +/-  6.45e-03  <none>
+                 frac2    3.0000e-01    3.7020e-01 +/-  5.49e-03  <none>
+                 mean1    1.2500e+02    1.2489e+02 +/-  1.23e-02  <none>
+                 mean2    1.4000e+02    1.3973e+02 +/-  7.80e-02  <none>
+                 mean3    1.2500e+02    1.2410e+02 +/-  8.13e-02  <none>
+                    n1    2.0000e+00    5.7576e+00 +/-  6.93e+00  <none>
+                  nbkg    1.0000e+05    1.2167e+05 +/-  2.23e+03  <none>
+                  nsig    1.0000e+05    3.1794e+05 +/-  2.27e+03  <none>
+                sigma1    2.0000e+00    2.0753e+00 +/-  1.92e-02  <none>
+                sigma3    5.0000e+00    5.0199e+00 +/-  1.37e-01  <none>
+                width2    7.0000e+00    1.5052e+01 +/-  3.20e-01  <none>
+
+
+14x14 matrix is as follows
+
+     |       0    |       1    |       2    |       3    |       4    |
+----------------------------------------------------------------------
+   0 |          1      0.9914   1.549e-05   -0.005618      0.1061 
+   1 |     0.9914           1   0.0003756     0.06345     0.04161 
+   2 |  1.549e-05   0.0003756           1    0.002592   -0.001983 
+   3 |  -0.005618     0.06345    0.002592           1     -0.2976 
+   4 |     0.1061     0.04161   -0.001983     -0.2976           1 
+   5 |    0.01867    -0.01188  -0.0004388     -0.3058      0.3633 
+   6 |   -0.02261     0.01295    0.002443      0.1803     -0.6076 
+   7 |   -0.07642     -0.1058   -0.002584     -0.3193     -0.5596 
+   8 |  -0.000498  -0.0001778    0.009632    0.003884   -0.002444 
+   9 |     -0.112     -0.1491   -0.001415     -0.1828     -0.5139 
+  10 |     0.1096       0.146    0.001388      0.1793      0.5041 
+  11 |    0.03204     0.08967    0.001843      0.8605   -0.008933 
+  12 |    0.01202      0.1124    0.005255      0.7666     -0.4003 
+  13 |     0.1149     0.07092  -0.0009452     -0.1661      0.9113 
+
+
+     |       5    |       6    |       7    |       8    |       9    |
+----------------------------------------------------------------------
+   0 |    0.01867    -0.02261    -0.07642   -0.000498      -0.112 
+   1 |   -0.01188     0.01295     -0.1058  -0.0001778     -0.1491 
+   2 | -0.0004388    0.002443   -0.002584    0.009632   -0.001415 
+   3 |    -0.3058      0.1803     -0.3193    0.003884     -0.1828 
+   4 |     0.3633     -0.6076     -0.5596   -0.002444     -0.5139 
+   5 |          1     -0.3972     -0.3657    -0.00088    -0.01488 
+   6 |    -0.3972           1      0.4702    0.002976     0.01651 
+   7 |    -0.3657      0.4702           1   -0.002863      0.6344 
+   8 |   -0.00088    0.002976   -0.002863           1  -0.0009253 
+   9 |   -0.01488     0.01651      0.6344  -0.0009253           1 
+  10 |     0.0146     -0.0162     -0.6222   0.0009077     -0.9568 
+  11 |    -0.2028     0.07935     -0.4809    0.002797     -0.4292 
+  12 |     -0.423       0.489      -0.206    0.006389     -0.4591 
+  13 |     0.2514     -0.4843     -0.5683   -0.001237     -0.6382 
+
+
+     |      10    |      11    |      12    |      13    |
+----------------------------------------------------------------------
+   0 |     0.1096     0.03204     0.01202      0.1149 
+   1 |      0.146     0.08967      0.1124     0.07092 
+   2 |   0.001388    0.001843    0.005255  -0.0009452 
+   3 |     0.1793      0.8605      0.7666     -0.1661 
+   4 |     0.5041   -0.008933     -0.4003      0.9113 
+   5 |     0.0146     -0.2028      -0.423      0.2514 
+   6 |    -0.0162     0.07935       0.489     -0.4843 
+   7 |    -0.6222     -0.4809      -0.206     -0.5683 
+   8 |  0.0009077    0.002797    0.006389   -0.001237 
+   9 |    -0.9568     -0.4292     -0.4591     -0.6382 
+  10 |          1       0.421      0.4503       0.626 
+  11 |      0.421           1       0.682       0.103 
+  12 |     0.4503       0.682           1     -0.1913 
+  13 |      0.626       0.103     -0.1913           1 
+

@@ -1,0 +1,166 @@
+Info in <Minuit2>: MnSeedGenerator Computing seed using NumericalGradient calculator
+Info in <Minuit2>: MnSeedGenerator Evaluated function and gradient in 740.9 μs
+Info in <Minuit2>: MnSeedGenerator Initial state: FCN =      -4572948.337 Edm =    3.40470982e+12 NCalls =     43
+Info in <Minuit2>: NegativeG2LineSearch Doing a NegativeG2LineSearch since one of the G2 component is negative
+Info in <Minuit2>: NegativeG2LineSearch Done after 1.2972 ms
+Info in <Minuit2>: MnSeedGenerator Negative G2 found - new state: 
+  Minimum value : -4790300.325
+  Edm           : 336318.6612
+  Internal parameters:	[     -1.583090131     -1.541808728     -1.550795993     -0.927295218Minuit2Minimizer : Invalid minimum - status = 3
+FVAL  = -5.083e+06
+Edm   = 411.683
+Nfcn  = 992
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) directly selected PDF components: (background)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) indirectly selected PDF components: ()
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) directly selected PDF components: (signal)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) indirectly selected PDF components: ()
+[#1] INFO:InputArguments -- RooAbsData::plotOn(signalData) INFO: dataset has non-integer weights, auto-selecting SumW2 errors instead of Poisson errors
+****************************************
+Minimizer is Minuit2 / Migrad
+Chi2                      =      14.4624
+NDf                       =           13
+Edm                       =  1.23661e-07
+NCalls                    =           51
+Constant                  =      131.258   +/-   6.40642     
+Mean                      =   -0.0472645   +/-   0.0401097   
+Sigma                     =      1.04191   +/-   0.0317102    	 (limited)
+
+  RooFitResult: minimized FCN value: -5.083e+06, estimated distance to minimum: 0.862283
+                covariance matrix quality: Full matrix, but forced positive-definite
+                Status : MINIMIZE=-1 HESSE=3 
+
+    Floating Parameter  InitialValue    FinalValue +/-  Error     GblCorr.
+  --------------------  ------------  --------------------------  --------
+                    a0    1.0000e+00    1.6708e-02 +/-  1.42e-03  <none>
+                    a1    1.0000e-01    1.7648e-02 +/-  1.54e-03  <none>
+                    a2    1.0000e-02    1.5534e-02 +/-  1.33e-03  <none>
+                 alpha    1.0000e+00    3.2545e+00 +/-  2.13e-01  <none>
+                  mean    1.5000e+02    1.5021e+02 +/-  9.31e-03  <none>
+                     n    1.0000e+00    7.5876e-01 +/-  8.28e-01  <none>
+                  nbkg    1.0000e+05    3.4094e+05 +/-  1.06e+03  <none>
+                  nsig    1.0000e+05    2.3874e+05 +/-  1.01e+03  <none>
+                 sigma    1.0000e+00    3.0873e+00 +/-  1.06e-02  <none>
+
+
+9x9 matrix is as follows
+
+     |      0    |      1    |      2    |      3    |      4    |
+----------------------------------------------------------------------
+   0 |          1      0.9778      0.9967     0.01724    0.004003 
+   1 |     0.9778           1      0.9778   -0.006608   -0.008151 
+   2 |     0.9967      0.9778           1    -0.01292    -0.01108 
+   3 |    0.01724   -0.006608    -0.01292           1     0.06334 
+   4 |   0.004003   -0.008151    -0.01108     0.06334           1 
+   5 |    0.01685    -0.01359    -0.01252      0.3722     0.06345 
+   6 |    0.01086      0.1235   -0.001318      0.2838    0.003056 
+   7 |    -0.0114     -0.1295    0.001394     -0.2983   -0.003253 
+   8 |  -0.005279       -0.11   -0.001278     -0.1066     0.02808 
+
+
+     |      5    |      6    |      7    |      8    |
+----------------------------------------------------------------------
+   0 |    0.01685     0.01086     -0.0114   -0.005279 
+   1 |   -0.01359      0.1235     -0.1295       -0.11 
+   2 |   -0.01252   -0.001318    0.001394   -0.001278 
+   3 |     0.3722      0.2838     -0.2983     -0.1066 
+   4 |    0.06345    0.003056   -0.003253     0.02808 
+   5 |          1      0.2501     -0.2629    -0.08463 
+   6 |     0.2501           1     -0.7319     -0.5956 
+   7 |    -0.2629     -0.7319           1      0.6249 
+   8 |   -0.08463     -0.5956      0.6249           1 
+
+6318.6612 NCalls =    133
+Info in <Minuit2>: VariableMetricBuilder    1 - FCN =      -5054304.198 Edm =       21200.65289 NCalls =    163
+Info in <Minuit2>: VariableMetricBuilder    2 - FCN =      -5071067.514 Edm =       3219.199992 NCalls =    187
+Info in <Minuit2>: VariableMetricBuilder    3 - FCN =      -5075450.779 Edm =          2025.388 NCalls =    212
+Info in <Minuit2>: VariableMetricBuilder    4 - FCN =      -5077855.238 Edm =        1173.58688 NCalls =    237
+Info in <Minuit2>: VariableMetricBuilder    5 - FCN =      -5080331.013 Edm =       1243.817057 NCalls =    258
+Info in <Minuit2>: VariableMetricBuilder    6 - FCN =      -5081637.871 Edm =        672.256037 NCalls =    280
+Info in <Minuit2>: VariableMetricBuilder    7 - FCN =      -5082170.448 Edm =        55.3827647 NCalls =    300
+Info in <Minuit2>: VariableMetricBuilder    8 - FCN =       -5082252.05 Edm =        18.5185841 NCalls =    320
+Info in <Minuit2>: VariableMetricBuilder    9 - FCN =      -5082304.651 Edm =       24.15946365 NCalls =    340
+Info in <Minuit2>: VariableMetricBuilder   10 - FCN =       -5082534.89 Edm =       129.2587594 NCalls =    361
+Info in <Minuit2>: VariableMetricBuilder   11 - FCN =      -5082825.737 Edm =       36.95922562 NCalls =    382
+Info in <Minuit2>: VariableMetricBuilder   12 - FCN =      -5082873.145 Edm =       24.13983762 NCalls =    402
+Info in <Minuit2>: VariableMetricBuilder   13 - FCN =      -5082938.797 Edm =       18.10361687 NCalls =    426
+Info in <Minuit2>: VariableMetricBuilder   14 - FCN =      -5082966.421 Edm =        8.14298797 NCalls =    448
+Info in <Minuit2>: VariableMetricBuilder   15 - FCN =      -5082982.952 Edm =        3.39614294 NCalls =    472
+Info in <Minuit2>: VariableMetricBuilder   16 - FCN =      -5082990.606 Edm =       2.577734284 NCalls =    498
+Info in <Minuit2>: VariableMetricBuilder   17 - FCN =      -5082993.113 Edm =      0.7132668767 NCalls =    518
+Info in <Minuit2>: VariableMetricBuilder   18 - FCN =      -5082994.271 Edm =       0.258099305 NCalls =    543
+Info in <Minuit2>: VariableMetricBuilder   19 - FCN =      -5082994.947 Edm =      0.0878940102 NCalls =    570
+Info in <Minuit2>: VariableMetricBuilder   20 - FCN =      -5082994.965 Edm =      0.1064623369 NCalls =    591
+Info in <Minuit2>: VariableMetricBuilder   21 - FCN =      -5082994.973 Edm =      0.1233801698 NCalls =    612
+Warning in <Minuit2>: DavidonErrorUpdator delgam < 0 : first derivatives increasing along search line (details in info log)
+Info in <Minuit2>: DavidonErrorUpdator Explanation:
+   The distance from the minimum cannot be estimated, since the minimized
+   function seems not to be strictly convex in the space probed by the fit.
+   That is expected if the starting parameters are e.g. close to a local maximum
+   of the minimized function. If this function is expected to be fully convex
+   in the probed range or Minuit is already close to the function minimum, this
+   may hint to numerical or analytical issues with the minimized function.
+   This was found by projecting the difference of gradients at two points, s0 and p1,
+   onto the direction given by the difference of s0 and p1, where:
+ * s0:  	[     -1.596112507       -1.5448017     -1.546398138    -0.3547007634    0.02108858961      -0.96599629     0.3727376677    -0.0453222969     -0.764490735]	 
+ * p1:  	[     -1.596113136     -1.544801029     -1.546397552     -0.354641502      0.021088664     -0.965995082     0.3727376717   -0.04532274833    -0.7644906222]	 
+ * gradient at s0:  	[     -898.4440024     -574.6476671     -385.5216012     -13.30781012     -23.54659328     0.8422790317      27.98195316     -4.179584749     -38.02199993]	 
+ * gradient at p1:  	[     -892.8594918     -570.9114235     -384.0488822     -15.84827429     -23.52041327     -1.196638746       27.8329403     -4.067718879      -37.9673082]	 
+   To understand whether this hints to an issue in the minimized function,
+   the minimized function can be plotted along points between s0 and p1 to
+   look for unexpected behavior.
+Info in <Minuit2>: VariableMetricBuilder   22 - FCN =      -5082994.973 Edm =       1.272813227 NCalls =    641
+Warning in <Minuit2>: VariableMetricBuilder Matrix not pos.def, gdel = 0.00130014 > 0
+Warning in <Minuit2>: MnPosDef non-positive diagonal element in covariance matrix[ 3 ] = -1.79834e-05
+Warning in <Minuit2>: MnPosDef Added to diagonal of Error matrix a value 0.500018
+Warning in <Minuit2>: VariableMetricBuilder gdel = -636858
+Info in <Minuit2>: VariableMetricBuilder   23 - FCN =      -5082994.976 Edm =       100304.9605 NCalls =    668
+Info in <Minuit2>: VariableMetricBuilder   24 - FCN =      -5082994.979 Edm =       749.5954024 NCalls =    693
+Info in <Minuit2>: VariableMetricBuilder   25 - FCN =       -5082994.98 Edm =       509.1275229 NCalls =    717
+Info in <Minuit2>: VariableMetricBuilder   26 - FCN =      -5082994.981 Edm =       512.8212472 NCalls =    742
+Info in <Minuit2>: VariableMetricBuilder   27 - FCN =      -5082994.981 Edm =       425.2626518 NCalls =    767
+Info in <Minuit2>: VariableMetricBuilder   28 - FCN =      -5082994.982 Edm =       360.5508734 NCalls =    793
+Warning in <Minuit2>: VariableMetricBuilder No improvement in line search
+Info in <Minuit2>: VariableMetricBuilder   29 - FCN =      -5082994.982 Edm =       360.5508734 NCalls =    804
+Warning in <Minuit2>: VariableMetricBuilder Iterations finish without convergence; Edm 1622.26 Requested 0.001
+Warning in <Minuit2>: MnPosDef Matrix forced pos-def by adding to diagonal 0.00404314
+Info in <Minuit2>: MnHesse Done after 1.3013 ms
+Info in <Minuit2>: VariableMetricBuilder After Hessian
+Info in <Minuit2>: VariableMetricBuilder   30 - FCN =      -5082994.982 Edm =      0.8002622452 NCalls =    893
+Info in <Minuit2>: VariableMetricBuilder Tolerance not sufficient, continue minimization; Edm 0.800262 Required 0.001
+Warning in <Minuit2>: DavidonErrorUpdator delgam < 0 : first derivatives increasing along search line (details in info log)
+Info in <Minuit2>: DavidonErrorUpdator Explanation:
+   The distance from the minimum cannot be estimated, since the minimized
+   function seems not to be strictly convex in the space probed by the fit.
+   That is expected if the starting parameters are e.g. close to a local maximum
+   of the minimized function. If this function is expected to be fully convex
+   in the probed range or Minuit is already close to the function minimum, this
+   may hint to numerical or analytical issues with the minimized function.
+   This was found by projecting the difference of gradients at two points, s0 and p1,
+   onto the direction given by the difference of s0 and p1, where:
+ * s0:  	[     -1.596640217     -1.544252627     -1.545887001    -0.3542810725    0.02110655484    -0.9659739172     0.3724698859    -0.0452117486    -0.7644158596]	 
+ * p1:  	[     -1.596638016     -1.544251276     -1.545885456    -0.3566224739    0.02109948612     -1.012669611     0.3723276763   -0.04508016517    -0.7643989214]	 
+ * gradient at s0:  	[     -76.27635965     -8.586783337     -70.08914588       1.87714693      2.093117839      2.943215542       3.48612874    -0.9704393122     -2.860543323]	 
+ * gradient at p1:  	[     -1043.075578     -404.9366245     -660.6351872     -1.732177265      1.967181097      3.102858975      15.69837261     -20.25880776       9.52266479]	 
+   To understand whether this hints to an issue in the minimized function,
+   the minimized function can be plotted along points between s0 and p1 to
+   look for unexpected behavior.
+Info in <Minuit2>: VariableMetricBuilder   31 - FCN =      -5082995.142 Edm =      0.8898743753 NCalls =    913
+Warning in <Minuit2>: VariableMetricBuilder Matrix not pos.def, gdel = 1.9441 > 0
+Warning in <Minuit2>: MnPosDef non-positive diagonal element in covariance matrix[ 5 ] = -0.181823
+Warning in <Minuit2>: MnPosDef Added to diagonal of Error matrix a value 0.681823
+Warning in <Minuit2>: VariableMetricBuilder gdel = -1.15172e+06
+Info in <Minuit2>: VariableMetricBuilder   32 - FCN =      -5082995.145 Edm =       55392.97343 NCalls =    941
+Info in <Minuit2>: VariableMetricBuilder   33 - FCN =      -5082995.147 Edm =       765.2663759 NCalls =    967
+Info in <Minuit2>: VariableMetricBuilder   34 - FCN =      -5082995.147 Edm =       411.6833699 NCalls =    992
+Warning in <Minuit2>: VariableMetricBuilder No improvement in line search
+Info in <Minuit2>: VariableMetricBuilder   35 - FCN =      -5082995.147 Edm =       411.6833699 NCalls =   1003
+Warning in <Minuit2>: VariableMetricBuilder Iterations finish without convergence; Edm 958.075 Requested 0.001
+Warning in <Minuit2>: VariableMetricBuilder FunctionMinimum is invalid after second try
+Info in <Minuit2>: VariableMetricBuilder Stop iterating after 17.2647 ms
+Warning in <Minuit2>: Minuit2Minimizer::Minimize Minimization did NOT converge, Edm is above max
+Info in <Minuit2>: Minuit2Minimizer::Hesse Using max-calls 4500
+Warning in <Minuit2>: MnPosDef Matrix forced pos-def by adding to diagonal 0.00407026
+Info in <Minuit2>: MnHesse Done after 1.3573 ms
+Info in <Minuit2>: Minuit2Minimizer::Hesse Hesse is valid - matrix is full but made positive defined
+Info in <TCanvas::Print>: file ../Png_files/Compdata1_results.png has been created
+Info in <TCanvas::Print>: file ../Png_files/Compdata1_pull.png has been created

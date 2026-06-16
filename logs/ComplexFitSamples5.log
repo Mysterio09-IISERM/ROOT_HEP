@@ -1,0 +1,557 @@
+Info in <Minuit2>: MnSeedGenerator Computing seed using NumericalGradient calculator
+Info in <Minuit2>: MnSeedGenerator Evaluated function and gradient in 235.158 ms
+Info in <Minuit2>: MnSeedGenerator Initial state: FCN =       -3159999.25 Edm =   1.688852067e+11 NCalls =     93
+Info in <Minuit2>: NegativeG2LineSearch Doing a NegativeG2LineSearch since one of the G2 component is negative
+Info in <Minuit2>: NegativeG2LineSearch Done after 192.232 ms
+Info in <Minuit2>: MnSeedGenerator Negative G2 found - new state: 
+  Minimum value : -3194510.915
+  Edm           : 268006.5385
+  Internal parameters:	[     -1.553380926     -1.550795993     -1.568796326                0                0                0                0                0                0    -0.5235987756....     -0.5236420785]	
+  Internal gradient  :	[      922197.6355     -828403.8597      250641.6135      55980865.85       448291.989      58339.59779      169844.7602     -9910.734669     -10988.08621                0....                 0]	
+  Internal covariance matrix:
+[[  3.5892941e-08              0              0              0              0              0              0              0              0              0....               0]
+ [              0  1.6348015e-08              0              0              0              0              0              0              0              0....               0]
+ [              0              0  1.5634487e-08              0              0              0              0              0              0              0....               0]
+ [              0              0              0  2.8920594e-11              0              0              0              0              0              0....               0]
+ [              0              0              0              0  5.8625916e-07              0              0              0              0              0....               0]
+ [              0              0              0              0              0  1.0566717e-05              0              0              0              0....               0]
+ [              0              0              0              0              0              0  3.7193401e-06              0              0              0....               0]
+ [              0              0              0              0              0              0              0   1.060296e-05              0              0....               0]
+ [              0              0              0              0              0              0              0              0  3.0178478e-05              0....               0]
+ [              0              0              0              0              0              0              0              0              0              2....               0]
+....
+ [              0              0              0              0              0              0              0              0              0              0....               2]]]
+Info in <Minuit2>: MnSeedGenerator Initial state  
+  Minimum value : -3194510.915
+  Edm           : 268006.5385
+  Internal parameters:	[     -1.553380926     -1.550795993     -1.568796326                0                0                0                0                0                0    -0.5235987756....     -0.5236420785]	
+  Internal gradient  :	[      922197.6355     -828403.8597      250641.6135      55980865.85       448291.989      58339.59779      169844.7602     -9910.734669     -10988.08621                0....                 0]	
+  Internal covariance matrix:
+[[  3.5892941e-08              0              0              0              0              0              0              0              0              0....               0]
+ [              0  1.6348015e-08              0              0              0              0              0              0              0              0....               0]
+ [              0              0  1.5634487e-08              0              0              0              0              0              0              0....               0]
+ [              0              0              0  2.8920594e-11              0              0              0              0              0              0....               0]
+ [              0              0              0              0  5.8625916e-07              0              0              0              0              0....               0]
+ [              0              0              0              0              0  1.0566717e-05              0              0              0              0....               0]
+ [              0              0              0              0              0              0  3.7193401e-06              0              0              0....               0]
+ [              0              0              0              0              0              0              0   1.060296e-05              0              0....               0]
+ [              0              0              0              0              0              0              0              0  3.0178478e-05              0....               0]
+ [              0              0              0              0              0              0              0              0              0              2....               0]
+....
+ [              0              0              0              0              0              0              0              0              0              0....               2]]]
+Info in <Minuit2>: VariableMetricBuilder Start iterating until Edm is < 0.001 with call limit = 9500
+Info in <Minuit2>: VariableMetricBuilder    0 - FCN =      -3194510.915 Edm =       268006.5385 NCalls =    164
+Info in <Minuit2>: VariableMetricBuilder    1 - FCN =      -3405211.473 Edm =       966228117.1 NCalls =    251
+Info in <Minuit2>: VariableMetricBuilder    2 - FCN =      -3419789.557 Edm =       27368334.23 NCalls =    320
+Info in <Minuit2>: VariableMetricBuilder    3 - FCN =      -3420734.827 Edm =       3638587.794 NCalls =    364
+Info in <Minuit2>: VariableMetricBuilder    4 - FCN =      -3420830.931 Edm =       50630.45342 NCalls =    409
+Info in <Minuit2>: VariableMetricBuilder    5 - FCN =      -3420889.894 Edm =       1201.114463 NCalls =    457
+Info in <Minuit2>: VariableMetricBuilder    6 - FCN =      -3423867.254 Edm =       834.4616124 NCalls =    506
+Info in <Minuit2>: VariableMetricBuilder    7 - FCN =      -3425277.892 Edm =       760.7129741 NCalls =    555
+Info in <Minuit2>: VariableMetricBuilder    8 - FCN =      -3426800.247 Edm =        585.036229 NCalls =    606
+Info in <Minuit2>: VariableMetricBuilder    9 - FCN =      -3427342.595 Edm =       505.3934177 NCalls =    649
+Info in <Minuit2>: VariableMetricBuilder   10 - FCN =      -3427766.491 Edm =       333.4751748 NCalls =    693
+Info in <Minuit2>: VariableMetricBuilder   11 - FCN =      -3429500.173 Edm =       598.7381333 NCalls =    747
+Info in <Minuit2>: VariableMetricBuilder   12 - FCN =       -3430611.67 Edm =       993.5257129 NCalls =    798
+Info in <Minuit2>: VariableMetricBuilder   13 - FCN =      -3430997.053 Edm =       355.2507465 NCalls =    841
+Info in <Minuit2>: VariableMetricBuilder   14 - FCN =      -3431432.346 Edm =       248.4255445 NCalls =    885
+Info in <Minuit2>: VariableMetricBuilder   15 - FCN =      -3431764.601 Edm =       336.9852689 NCalls =    930
+Info in <Minuit2>: VariableMetricBuilder   16 - FCN =      -3432492.245 Edm =       731.0223079 NCalls =    975
+Info in <Minuit2>: VariableMetricBuilder   17 - FCN =      -3433411.487 Edm =       809.2931459 NCalls =   1023
+Info in <Minuit2>: VariableMetricBuilder   18 - FCN =      -3433532.342 Edm =       369.8888011 NCalls =   1064
+Info in <Minuit2>: VariableMetricBuilder   19 - FCN =      -3434405.294 Edm =        184.582884 NCalls =   1113
+Info in <Minuit2>: VariableMetricBuilder   20 - FCN =       -3434601.99 Edm =       189.6536527 NCalls =   1161
+Info in <Minuit2>: VariableMetricBuilder   21 - FCN =      -3434761.226 Edm =       35.85789943 NCalls =   1207
+Info in <Minuit2>: VariableMetricBuilder   22 - FCN =      -3434798.213 Edm =       15.61226104 NCalls =   1253
+Info in <Minuit2>: VariableMetricBuilder   23 - FCN =      -3434847.751 Edm =       19.17970324 NCalls =   1294
+Info in <Minuit2>: VariableMetricBuilder   24 - FCN =      -3434918.589 Edm =        19.6129904 NCalls =   1338
+Info in <Minuit2>: VariableMetricBuilder   25 - FCN =      -3434982.582 Edm =       32.14034968 NCalls =   1381
+Info in <Minuit2>: VariableMetricBuilder   26 - FCN =      -3435186.168 Edm =       159.4809399 NCalls =   1429
+Info in <Minuit2>: VariableMetricBuilder   27 - FCN =      -3435603.065 Edm =       126.5896137 NCalls =   1477
+Info in <Minuit2>: VariableMetricBuilder   28 - FCN =      -3435859.054 Edm =       117.4069973 NCalls =   1520
+Info in <Minuit2>: VariableMetricBuilder   29 - FCN =      -3435961.256 Edm =       120.6036519 NCalls =   1561
+Info in <Minuit2>: VariableMetricBuilder   30 - FCN =       -3436037.82 Edm =       60.08553526 NCalls =   1601
+Info in <Minuit2>: VariableMetricBuilder   31 - FCN =       -3436153.91 Edm =       78.49216086 NCalls =   1643
+Info in <Minuit2>: VariableMetricBuilder   32 - FCN =      -3436286.345 Edm =       50.28856157 NCalls =   1684
+Info in <Minuit2>: VariableMetricBuilder   33 - FCN =      -3436331.097 Edm =       15.64563486 NCalls =   1724
+Info in <Minuit2>: VariableMetricBuilder   34 - FCN =      -3436350.655 Edm =       13.68721055 NCalls =   1764
+Info in <Minuit2>: VariableMetricBuilder   35 - FCN =      -3436433.274 Edm =       67.89382227 NCalls =   1808
+Info in <Minuit2>: VariableMetricBuilder   36 - FCN =      -3436631.064 Edm =       40.52186699 NCalls =   1851
+Info in <Minuit2>: VariableMetricBuilder   37 - FCN =      -3436693.348 Edm =       16.74383105 NCalls =   1890
+Info in <Minuit2>: VariableMetricBuilder   38 - FCN =      -3436704.619 Edm =       1.028693909 NCalls =   1930
+Info in <Minuit2>: VariableMetricBuilder   39 - FCN =      -3436705.758 Edm =      0.1418280191 NCalls =   1970
+Info in <Minuit2>: VariableMetricBuilder   40 - FCN =      -3436705.904 Edm =     0.06363685701 NCalls =   2009
+Info in <Minuit2>: VariableMetricBuilder   41 - FCN =      -3436706.027 Edm =     0.06454131407 NCalls =   2049
+Info in <Minuit2>: VariableMetricBuilder   42 - FCN =      -3436707.096 Edm =       0.936045049 NCalls =   2090
+Info in <Minuit2>: VariableMetricBuilder   43 - FCN =      -3436710.366 Edm =      0.9020395238 NCalls =   2131
+Info in <Minuit2>: VariableMetricBuilder   44 - FCN =      -3436711.439 Edm =      0.2502779242 NCalls =   2171
+Info in <Minuit2>: VariableMetricBuilder   45 - FCN =      -3436711.733 Edm =      0.1480983467 NCalls =   2211
+Info in <Minuit2>: VariableMetricBuilder   46 - FCN =      -3436713.035 Edm =       1.298684256 NCalls =   2253
+Info in <Minuit2>: VariableMetricBuilder   47 - FCN =      -3436714.576 Edm =       1.862936367 NCalls =   2295
+Info in <Minuit2>: VariableMetricBuilder   48 - FCN =      -3436721.967 Edm =        9.04213033 NCalls =   2340
+Info in <Minuit2>: VariableMetricBuilder   49 - FCN =      -3436722.144 Edm =      0.2772471835 NCalls =   2381
+Info in <Minuit2>: VariableMetricBuilder   50 - FCN =      -3436723.904 Edm =       2.157414444 NCalls =   2423
+Info in <Minuit2>: VariableMetricBuilder   51 - FCN =      -3436727.086 Edm =       2.848672016 NCalls =   2465
+Info in <Minuit2>: VariableMetricBuilder   52 - FCN =      -3436739.124 Edm =       5.525084869 NCalls =   2506
+Info in <Minuit2>: VariableMetricBuilder   53 - FCN =      -3436744.523 Edm =        5.59521131 NCalls =   2547
+Info in <Minuit2>: VariableMetricBuilder   54 - FCN =      -3436748.668 Edm =      0.6619608989 NCalls =   2587
+Info in <Minuit2>: VariableMetricBuilder   55 - FCN =      -3436752.834 Edm =       2.024454719 NCalls =   2629
+Info in <Minuit2>: VariableMetricBuilder   56 - FCN =      -3436759.335 Edm =       3.938241438 NCalls =   2671
+Info in <Minuit2>: VariableMetricBuilder   57 - FCN =       -3436764.77 Edm =       3.210997505 NCalls =   2712
+Info in <Minuit2>: VariableMetricBuilder   58 - FCN =      -3436766.409 Edm =       2.259253724 NCalls =   2752
+Info in <Minuit2>: VariableMetricBuilder   59 - FCN =      -3436768.866 Edm =       1.089472834 NCalls =   2792
+Info in <Minuit2>: VariableMetricBuilder   60 - FCN =      -3436771.086 Edm =       1.156269681 NCalls =   2833
+Info in <Minuit2>: VariableMetricBuilder   61 - FCN =      -3436773.331 Edm =       1.702498852 NCalls =   2876
+Info in <Minuit2>: VariableMetricBuilder   62 - FCN =      -3436774.527 Edm =       1.552399053 NCalls =   2918
+Info in <Minuit2>: VariableMetricBuilder   63 - FCN =      -3436776.972 Edm =       1.181490445 NCalls =   2959
+Info in <Minuit2>: VariableMetricBuilder   64 - FCN =      -3436779.733 Edm =      0.9685753128 NCalls =   3004
+Info in <Minuit2>: VariableMetricBuilder   65 - FCN =      -3436781.617 Edm =       1.792154353 NCalls =   3047
+Info in <Minuit2>: VariableMetricBuilder   66 - FCN =      -3436783.046 Edm =       1.035403446 NCalls =   3087
+Info in <Minuit2>: VariableMetricBuilder   67 - FCN =      -3436784.808 Edm =      0.6313523662 NCalls =   3128
+Info in <Minuit2>: VariableMetricBuilder   68 - FCN =      -3436786.719 Edm =       1.031749598 NCalls =   3169
+Info in <Minuit2>: VariableMetricBuilder   69 - FCN =       -3436787.79 Edm =      0.7776690405 NCalls =   3209
+Info in <Minuit2>: VariableMetricBuilder   70 - FCN =      -3436788.796 Edm =      0.3680305739 NCalls =   3249
+Info in <Minuit2>: VariableMetricBuilder   71 - FCN =      -3436789.847 Edm =      0.7910178805 NCalls =   3290
+Info in <Minuit2>: VariableMetricBuilder   72 - FCN =      -3436790.619 Edm =      0.2900944189 NCalls =   3330
+Info in <Minuit2>: VariableMetricBuilder   73 - FCN =      -3436791.194 Edm =      0.2124170067 NCalls =   3371
+Info in <Minuit2>: VariableMetricBuilder   74 - FCN =       -3436791.76 Edm =      0.1440254584 NCalls =   3413
+Info in <Minuit2>: VariableMetricBuilder   75 - FCN =      -3436791.932 Edm =      0.1115996775 NCalls =   3452
+Info in <Minuit2>: VariableMetricBuilder   76 - FCN =      -3436792.046 Edm =     0.03572311649 NCalls =   3493
+Info in <Minuit2>: VariableMetricBuilder   77 - FCN =      -3436792.112 Edm =     0.02904780806 NCalls =   3534
+Info in <Minuit2>: VariableMetricBuilder   78 - FCN =      -3436792.149 Edm =      0.0127352546 NCalls =   3574
+Info in <Minuit2>: VariableMetricBuilder   79 - FCN =       -3436792.15 Edm =     0.00981122295 NCalls =   3615
+Info in <Minuit2>: VariableMetricBuilder   80 - FCN =       -3436792.15 Edm =     0.02324415982 NCalls =   3659
+Warning in <Minuit2>: VariableMetricBuilder No improvement in line search
+Info in <Minuit2>: VariableMetricBuilder   81 - FCN =       -3436792.15 Edm =     0.02324415982 NCalls =   3670
+Warning in <Minuit2>: VariableMetricBuilder Edm is limited by Machine accuracy - return current minimum
+Warning in <Minuit2>: MnPosDef Matrix forced pos-def by adding to diagonal 0.00978204
+Info in <Minuit2>: MnHesse Done after 15.8608 ms
+Info in <Minuit2>: VariableMetricBuilder After Hessian
+Info in <Minuit2>: VariableMetricBuilder   82 - FCN =       -3436792.15 Edm =       71.89270746 NCalls =   3950
+Info in <Minuit2>: VariableMetricBuilder Tolerance not sufficient, continue minimization; Edm 71.8927 Required 0.001
+Info in <Minuit2>: VariableMetricBuilder   83 - FCN =      -3436864.276 Edm =       105.9735564 NCalls =   4021
+Info in <Minuit2>: VariableMetricBuilder   84 - FCN =      -3436872.095 Edm =       9.598219358 NCalls =   4063
+Info in <Minuit2>: VariableMetricBuilder   85 - FCN =      -3436886.244 Edm =       6.846377664 NCalls =   4103
+Info in <Minuit2>: VariableMetricBuilder   86 - FCN =      -3436898.844 Edm =       3.809873841 NCalls =   4145
+Info in <Minuit2>: VariableMetricBuilder   87 - FCN =      -3436903.975 Edm =       7.153165831 NCalls =   4185
+Info in <Minuit2>: VariableMetricBuilder   88 - FCN =      -3436906.315 Edm =       2.229349529 NCalls =   4224
+Info in <Minuit2>: VariableMetricBuilder   89 - FCN =      -3436908.283 Edm =      0.7927976491 NCalls =   4265
+Info in <Minuit2>: VariableMetricBuilder   90 - FCN =      -3436909.116 Edm =      0.8375156252 NCalls =   4305
+Info in <Minuit2>: VariableMetricBuilder   91 - FCN =      -3436910.305 Edm =      0.4905199845 NCalls =   4347
+Info in <Minuit2>: VariableMetricBuilder   92 - FCN =      -3436910.908 Edm =      0.4989409449 NCalls =   4388
+Info in <Minuit2>: VariableMetricBuilder   93 - FCN =      -3436911.325 Edm =      0.3660818415 NCalls =   4429
+Info in <Minuit2>: VariableMetricBuilder   94 - FCN =      -3436911.624 Edm =      0.3118862887 NCalls =   4469
+Info in <Minuit2>: VariableMetricBuilder   95 - FCN =      -3436911.766 Edm =      0.1814602767 NCalls =   4510
+Info in <Minuit2>: VariableMetricBuilder   96 - FCN =       -3436911.94 Edm =      0.1553164273 NCalls =   4551
+Info in <Minuit2>: VariableMetricBuilder   97 - FCN =      -3436911.997 Edm =     0.04721464722 NCalls =   4590
+Info in <Minuit2>: VariableMetricBuilder   98 - FCN =      -3436912.051 Edm =     0.02900540225 NCalls =   4630
+Info in <Minuit2>: VariableMetricBuilder   99 - FCN =      -3436912.104 Edm =      0.0248984905 NCalls =   4671
+Info in <Minuit2>: VariableMetricBuilder  100 - FCN =      -3436912.114 Edm =     0.01729800858 NCalls =   4711
+Info in <Minuit2>: VariableMetricBuilder  101 - FCN =      -3436912.124 Edm =     0.01171096343 NCalls =   4752
+Info in <Minuit2>: VariableMetricBuilder  102 - FCN =      -3436912.126 Edm =     0.01882047008 NCalls =   4793
+Warning in <Minuit2>: DavidonErrorUpdator delgam < 0 : first derivatives increasing along search line (details in info log)
+Info in <Minuit2>: DavidonErrorUpdator Explanation:
+   The distance from the minimum cannot be estimated, since the minimized
+   function seems not to be strictly convex in the space probed by the fit.
+   That is expected if the starting parameters are e.g. close to a local maximum
+   of the minimized function. If this function is expected to be fully convex
+   in the probed range or Minuit is already close to the function minimum, this
+   may hint to numerical or analytical issues with the minimized function.
+   This was found by projecting the difference of gradients at two points, s0 and p1,
+   onto the direction given by the difference of s0 and p1, where:
+ * s0:  	[      -1.50694674     -1.720811295     -1.268276875    -0.2727922515     -0.320312342     -0.654640468    -0.8206982354  0.0009545711355   0.004662330457    -0.5571836068....       2.937617209]	 
+ * p1:  	[      -1.50708365     -1.720769172     -1.268369689     -0.272803632    -0.3203156901    -0.6546932075    -0.8207059981  0.0009548604888   0.004664497198    -0.5571837207....       2.937571718]	 
+ * gradient at s0:  	[      44.33293001     -26.93761614     -25.43031829     -5.239889729      5.614698676     -46.70912074     -50.47243305     -1.704001059     0.7367671953      1.346131217....       33.02504695]	 
+ * gradient at p1:  	[       44.7076793      -26.8424926      -25.4174955     -4.952229561      5.626837221     -46.61530426     -50.22676936     -1.748331164     0.7245053824      1.374360514....       32.96348601]	 
+   To understand whether this hints to an issue in the minimized function,
+   the minimized function can be plotted along points between s0 and p1 to
+   look for unexpected behavior.
+Info in <Minuit2>: VariableMetricBuilder  103 - FCN =      -3436912.126 Edm =      0.0712836895 NCalls =   4838
+Warning in <Minuit2>: VariableMetricBuilder Matrix not pos.def., try to make pos.def.
+Warning in <Minuit2>: MnPosDef non-positive diagonal element in covariance matrix[ 0 ] = -0.000365597
+Warning in <Minuit2>: MnPosDef non-positive diagonal element in covariance matrix[ 2 ] = -9.99506e-05
+Warning in <Minuit2>: MnPosDef non-positive diagonal element in covariance matrix[ 11 ] = -9.73899e-05
+Warning in <Minuit2>: MnPosDef Added to diagonal of Error matrix a value 0.500366
+Info in <Minuit2>: VariableMetricBuilder  104 - FCN =      -3436912.148 Edm =       165.6374617 NCalls =   4878
+Info in <Minuit2>: VariableMetricBuilder  105 - FCN =       -3436912.15 Edm =       131.4751658 NCalls =   4921
+Info in <Minuit2>: VariableMetricBuilder  106 - FCN =      -3436912.152 Edm =        46.3455477 NCalls =   4965
+Info in <Minuit2>: VariableMetricBuilder  107 - FCN =      -3436912.152 Edm =       180.3477653 NCalls =   5007
+Info in <Minuit2>: VariableMetricBuilder  108 - FCN =      -3436912.154 Edm =       46.86394362 NCalls =   5050
+Info in <Minuit2>: VariableMetricBuilder  109 - FCN =      -3436912.155 Edm =       43.47168294 NCalls =   5093
+Info in <Minuit2>: VariableMetricBuilder  110 - FCN =      -3436912.157 Edm =       35.11052566 NCalls =   5137
+Info in <Minuit2>: VariableMetricBuilder  111 - FCN =      -3436912.157 Edm =       32.44737269 NCalls =   5181
+Info in <Minuit2>: VariableMetricBuilder  112 - FCN =      -3436912.158 Edm =       29.19371175 NCalls =   5225
+Info in <Minuit2>: VariableMetricBuilder  113 - FCN =      -3436912.158 Edm =       22.73197561 NCalls =   5269
+Info in <Minuit2>: VariableMetricBuilder  114 - FCN =      -3436912.159 Edm =       21.88415259 NCalls =   5314
+Info in <Minuit2>: VariableMetricBuilder  115 - FCN =      -3436912.159 Edm =       21.48828802 NCalls =   5359
+Warning in <Minuit2>: VariableMetricBuilder No improvement in line search
+Info in <Minuit2>: VariableMetricBuilder  116 - FCN =      -3436912.159 Edm =       21.48828802 NCalls =   5370
+Warning in <Minuit2>: VariableMetricBuilder Iterations finish without convergence; Edm 43.6035 Requested 0.001
+Warning in <Minuit2>: VariableMetricBuilder FunctionMinimum is invalid after second try
+Info in <Minuit2>: VariableMetricBuilder Stop iterating after 333.453 ms
+Warning in <Minuit2>: Minuit2Minimizer::Minimize Minimization did NOT converge, Edm is above max
+Info in <Minuit2>: Minuit2Minimizer::Hesse Using max-calls 9500
+Warning in <Minuit2>: MnPosDef Matrix forced pos-def by adding to diagonal 0.0564284
+Info in <Minuit2>: MnHesse Done after 15.9074 ms
+Info in <Minuit2>: Minuit2Minimizer::Hesse Hesse is valid - matrix is full but made positive defined
+Info in <Minuit2>: Minuit2Minimizer::Hesse Using max-calls 9500
+Warning in <Minuit2>: MnPosDef Matrix forced pos-def by adding to diagonal 0.00692562
+Info in <Minuit2>: MnHesse Done after 13.5284 ms
+Info in <Minuit2>: Minuit2Minimizer::Hesse Hesse is valid - matrix is full but made positive defined
+Warning in <TCanvas::Constructor>: Deleting canvas with same name: cmain1
+Warning in <TCanvas::Constructor>: Deleting canvas with same name: cmain2
+Warning in <TROOT::Append>: Replacing existing TH1: hpull (Potential memory leak).
+Info in <TCanvas::Print>: file ../Png_files/ComplexFitSamples5_results.png has been created
+Info in <TCanvas::Print>: file ../Png_files/ComplexFitSamples5_pull.png has been created
+ = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+    ... (remaining 690 messages suppressed)
+
+RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-3.15959e+06) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	a0=1	a1=0.01	a2=0.0001	frac1=0.5	frac2=0.5	fracbkg1=0.5	fracbkg2=0.501007	mean1=150	mean2=165	mean3=180	mean4=220	mean5=170	nbkg=100000	nsig=100000	sigma1=2	sigma2=3	sigma3=4	sigma4=10	sigma5=10
+RooAddPdf::model[ nsig * signal + nbkg * background ]
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+    ... (remaining 690 messages suppressed)
+
+RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-3.01607e+06) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	a0=0.00758221	a1=0.01	a2=0.0001	frac1=0.57993	frac2=0.5	fracbkg1=0.5	fracbkg2=0.5	mean1=150	mean2=165	mean3=180	mean4=220	mean5=170	nbkg=100000	nsig=100000	sigma1=2	sigma2=3	sigma3=4	sigma4=10	sigma5=10
+RooAddPdf::model[ nsig * signal + nbkg * background ]
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+    ... (remaining 690 messages suppressed)
+
+RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-3.01607e+06) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	a0=0.00758221	a1=0.01	a2=0.0001	frac1=0.508027	frac2=0.5	fracbkg1=0.5	fracbkg2=0.5	mean1=150	mean2=165	mean3=180	mean4=220	mean5=170	nbkg=100000	nsig=100000	sigma1=2	sigma2=3	sigma3=4	sigma4=10	sigma5=10
+RooAddPdf::model[ nsig * signal + nbkg * background ]
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+    ... (remaining 690 messages suppressed)
+
+RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-3.01607e+06) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	a0=0.00758221	a1=0.01	a2=0.0001	frac1=0.500803	frac2=0.5	fracbkg1=0.5	fracbkg2=0.5	mean1=150	mean2=165	mean3=180	mean4=220	mean5=170	nbkg=100000	nsig=100000	sigma1=2	sigma2=3	sigma3=4	sigma4=10	sigma5=10
+RooAddPdf::model[ nsig * signal + nbkg * background ]
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+    ... (remaining 690 messages suppressed)
+
+RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-3.01607e+06) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	a0=0.00758221	a1=0.01	a2=0.0001	frac1=0.5	frac2=0.500134	fracbkg1=0.5	fracbkg2=0.5	mean1=150	mean2=165	mean3=180	mean4=220	mean5=170	nbkg=100000	nsig=100000	sigma1=2	sigma2=3	sigma3=4	sigma4=10	sigma5=10
+RooAddPdf::model[ nsig * signal + nbkg * background ]
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+    ... (remaining 690 messages suppressed)
+
+RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-3.01607e+06) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	a0=0.00758221	a1=0.01	a2=0.0001	frac1=0.5	frac2=0.500013	fracbkg1=0.5	fracbkg2=0.5	mean1=150	mean2=165	mean3=180	mean4=220	mean5=170	nbkg=100000	nsig=100000	sigma1=2	sigma2=3	sigma3=4	sigma4=10	sigma5=10
+RooAddPdf::model[ nsig * signal + nbkg * background ]
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.00569503/1), !coefficients=(nsig = 100000,nbkg = 100000)
+    ... (remaining 690 messages suppressed)
+
+RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-3.01607e+06) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	a0=0.00758221	a1=0.01	a2=0.0001	frac1=0.5	frac2=0.5	fracbkg1=0.500101	fracbkg2=0.5	mean1=150	mean2=165	mean3=180	mean4=220	mean5=170	nbkg=100000	nsig=100000	sigma1=2	sigma2=3	sigma3=4	sigma4=10	sigma5=10
+RooAddPdf::model[ nsig * signal + nbkg * background ]
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+    ... (remaining 690 messages suppressed)
+
+RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-3.01607e+06) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	a0=0.00758221	a1=0.01	a2=0.0001	frac1=0.5	frac2=0.5	fracbkg1=0.50001	fracbkg2=0.5	mean1=150	mean2=165	mean3=180	mean4=220	mean5=170	nbkg=100000	nsig=100000	sigma1=2	sigma2=3	sigma3=4	sigma4=10	sigma5=10
+RooAddPdf::model[ nsig * signal + nbkg * background ]
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+    ... (remaining 690 messages suppressed)
+
+RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-3.01607e+06) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	a0=0.00758221	a1=0.01	a2=0.0001	frac1=0.5	frac2=0.5	fracbkg1=0.5	fracbkg2=0.500101	mean1=150	mean2=165	mean3=180	mean4=220	mean5=170	nbkg=100000	nsig=100000	sigma1=2	sigma2=3	sigma3=4	sigma4=10	sigma5=10
+RooAddPdf::model[ nsig * signal + nbkg * background ]
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+    ... (remaining 690 messages suppressed)
+
+RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-3.01607e+06) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	a0=0.00758221	a1=0.01	a2=0.0001	frac1=0.5	frac2=0.5	fracbkg1=0.5	fracbkg2=0.50001	mean1=150	mean2=165	mean3=180	mean4=220	mean5=170	nbkg=100000	nsig=100000	sigma1=2	sigma2=3	sigma3=4	sigma4=10	sigma5=10
+RooAddPdf::model[ nsig * signal + nbkg * background ]
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = 4.0572e-14/1,background = nan/1), !coefficients=(nsig = 100000,nbkg = 100000)
+    ... (remaining 690 messages suppressed)
+
+RooAbsMinimizerFcn: Minimized function has error status.
+Returning maximum FCN so far (-3.01607e+06) to force MIGRAD to back out of this region. Error log follows.
+Parameter values: 	a0=96.645	a1=90.3303	a2=37.338	frac1=0.637057	frac2=0.944763	fracbkg1=0.0749668	fracbkg2=0.000324502	mean1=148.019	mean2=164.059	mean3=177.713	mean4=223.847	mean5=169.862	nbkg=105093	nsig=224895	sigma1=4.77093	sigma2=2.37897	sigma3=4.99003	sigma4=2.43349	sigma5=22.4935
+RooAddPdf::model[ nsig * signal + nbkg * background ]
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.013601/1), !coefficients=(nsig = 224895,nbkg = 105093)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.013601/1), !coefficients=(nsig = 224895,nbkg = 105093)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.013601/1), !coefficients=(nsig = 224895,nbkg = 105093)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.013601/1), !coefficients=(nsig = 224895,nbkg = 105093)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.013601/1), !coefficients=(nsig = 224895,nbkg = 105093)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.013601/1), !coefficients=(nsig = 224895,nbkg = 105093)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.013601/1), !coefficients=(nsig = 224895,nbkg = 105093)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.013601/1), !coefficients=(nsig = 224895,nbkg = 105093)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.013601/1), !coefficients=(nsig = 224895,nbkg = 105093)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.013601/1), !coefficients=(nsig = 224895,nbkg = 105093)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.013601/1), !coefficients=(nsig = 224895,nbkg = 105093)
+     getLogVal() top-level p.d.f evaluates to NaN @ !refCoefNorm=(var5 = 187.5), !pdfs=(signal = nan/1,background = 0.013601/1), !coefficients=(nsig = 224895,nbkg = 105093)
+    ... (remaining 690 messages suppressed)
+
+Minuit2Minimizer : Invalid minimum - status = 3
+FVAL  = -3.43691e+06
+Edm   = 21.4883
+Nfcn  = 5359
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(model) Calculating sum-of-weights-squared correction matrix for covariance matrix
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) directly selected PDF components: (background)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) indirectly selected PDF components: (background1,background2,background3)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) directly selected PDF components: (signal)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) indirectly selected PDF components: (signal1,signal2,signal3)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) directly selected PDF components: (background1)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) indirectly selected PDF components: (background)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) directly selected PDF components: (background2)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) indirectly selected PDF components: (background)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) directly selected PDF components: (background3)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) indirectly selected PDF components: (background)
+[#1] INFO:InputArguments -- RooAbsData::plotOn(signalData) INFO: dataset has non-integer weights, auto-selecting SumW2 errors instead of Poisson errors
+****************************************
+Minimizer is Minuit2 / Migrad
+Chi2                      =      13.9845
+NDf                       =           11
+Edm                       =  8.14875e-07
+NCalls                    =           53
+Constant                  =      140.943   +/-   6.59494     
+Mean                      =     -0.02887   +/-   0.0378641   
+Sigma                     =     0.971843   +/-   0.0265822    	 (limited)
+
+  RooFitResult: minimized FCN value: -3.43691e+06, estimated distance to minimum: 0.00666187
+                covariance matrix quality: Full matrix, but forced positive-definite
+                Status : MINIMIZE=-1 HESSE=3 HESSE=3 
+
+    Floating Parameter  InitialValue    FinalValue +/-  Error     GblCorr.
+  --------------------  ------------  --------------------------  --------
+                    a0    1.0000e+00    9.4497e-02 +/-  2.46e-01  <none>
+                    a1    1.0000e-02    5.7360e-01 +/-  9.92e-02  <none>
+                    a2    1.0000e-04    2.3261e+00 +/-  4.15e-01  <none>
+                 frac1    5.0000e-01    3.6487e-01 +/-  2.53e-03  <none>
+                 frac2    5.0000e-01    3.4295e-01 +/-  2.63e-03  <none>
+              fracbkg1    5.0000e-01    1.9468e-01 +/-  4.13e-03  <none>
+              fracbkg2    5.0000e-01    1.3401e-01 +/-  3.69e-03  <none>
+                 mean1    1.5000e+02    1.5001e+02 +/-  1.52e-02  <none>
+                 mean2    1.6500e+02    1.6502e+02 +/-  3.35e-02  <none>
+                 mean3    1.8000e+02    1.7971e+02 +/-  5.10e-02  <none>
+                 mean4    2.2000e+02    2.2004e+02 +/-  1.20e-01  <none>
+                 mean5    1.7000e+02    1.6937e+02 +/-  6.98e-01  <none>
+                  nbkg    1.0000e+05    3.4933e+05 +/-  8.39e+02  <none>
+                  nsig    1.0000e+05    1.0900e+05 +/-  7.37e+02  <none>
+                sigma1    2.0000e+00    1.9883e+00 +/-  1.59e-02  <none>
+                sigma2    3.0000e+00    3.0976e+00 +/-  3.29e-02  <none>
+                sigma3    4.0000e+00    3.9883e+00 +/-  4.99e-02  <none>
+                sigma4    1.0000e+01    9.4080e+00 +/-  1.18e-01  <none>
+                sigma5    1.0000e+01    2.4125e+01 +/-  3.51e-01  <none>
+
+
+19x19 matrix is as follows
+
+     |       0    |       1    |       2    |       3    |       4    |
+----------------------------------------------------------------------
+   0 |          1     -0.9003      0.9625      0.4693      0.3743 
+   1 |    -0.9003           1     -0.9527     -0.4374     -0.3165 
+   2 |     0.9625     -0.9527           1      0.4651      0.3477 
+   3 |     0.4693     -0.4374      0.4651           1    -0.05482 
+   4 |     0.3743     -0.3165      0.3477    -0.05482           1 
+   5 |     0.8338     -0.5885      0.7091      0.3776      0.3159 
+   6 |     0.9185     -0.7598       0.848      0.3839       0.315 
+   7 |     0.1509     -0.1304      0.1411     0.06224     0.05026 
+   8 |    -0.3314      0.3045     -0.3225     -0.1378    -0.03584 
+   9 |   -0.01148   -0.009998    0.001206   -0.001016     0.06785 
+  10 |    -0.2371      0.4449     -0.3576     -0.0899    0.009646 
+  11 |     0.9903     -0.8974      0.9562      0.4975      0.3937 
+  12 |    -0.2896      0.2598     -0.2743     0.08516     -0.1333 
+  13 |     0.3377     -0.3028      0.3198     -0.1179      0.1615 
+  14 |     0.4477     -0.4115      0.4362      0.3564      0.1199 
+  15 |     0.3603     -0.3163      0.3407     0.05379      0.4938 
+  16 |    -0.1524      0.1246     -0.1425      -0.272     -0.3846 
+  17 |     0.6089     -0.4233      0.5187      0.2095      0.2059 
+  18 |    -0.9434      0.8726     -0.9231     -0.5137     -0.3008 
+
+
+     |       5    |       6    |       7    |       8    |       9    |
+----------------------------------------------------------------------
+   0 |     0.8338      0.9185      0.1509     -0.3314    -0.01148 
+   1 |    -0.5885     -0.7598     -0.1304      0.3045   -0.009998 
+   2 |     0.7091       0.848      0.1411     -0.3225    0.001206 
+   3 |     0.3776      0.3839     0.06224     -0.1378   -0.001016 
+   4 |     0.3159       0.315     0.05026    -0.03584     0.06785 
+   5 |          1       0.779      0.1261      -0.273    -0.01766 
+   6 |      0.779           1      0.1358     -0.3013     0.01981 
+   7 |     0.1261      0.1358           1    -0.04579    -0.01651 
+   8 |     -0.273     -0.3013    -0.04579           1      0.1289 
+   9 |   -0.01766     0.01981    -0.01651      0.1289           1 
+  10 |    -0.1038     -0.1992    -0.01531     0.07456    -0.09155 
+  11 |     0.8096      0.8909      0.1475     -0.3387     -0.0307 
+  12 |    -0.2594     -0.3109    -0.08355      0.1409     0.04801 
+  13 |     0.3043      0.3621       0.101     -0.1666    -0.05953 
+  14 |     0.3793      0.4153      0.1113     -0.1678    -0.03714 
+  15 |     0.3098      0.3373      0.0555    -0.04587      0.1093 
+  16 |    -0.1259    -0.09033    -0.01039     -0.1243    -0.07869 
+  17 |     0.5713      0.7432     0.09498     -0.1904     0.01679 
+  18 |    -0.7977     -0.8984     -0.1124       0.312    -0.04788 
+
+
+     |      10    |      11    |      12    |      13    |      14    |
+----------------------------------------------------------------------
+   0 |    -0.2371      0.9903     -0.2896      0.3377      0.4477 
+   1 |     0.4449     -0.8974      0.2598     -0.3028     -0.4115 
+   2 |    -0.3576      0.9562     -0.2743      0.3198      0.4362 
+   3 |    -0.0899      0.4975     0.08516     -0.1179      0.3564 
+   4 |   0.009646      0.3937     -0.1333      0.1615      0.1199 
+   5 |    -0.1038      0.8096     -0.2594      0.3043      0.3793 
+   6 |    -0.1992      0.8909     -0.3109      0.3621      0.4153 
+   7 |   -0.01531      0.1475    -0.08355       0.101      0.1113 
+   8 |    0.07456     -0.3387      0.1409     -0.1666     -0.1678 
+   9 |   -0.09155     -0.0307     0.04801    -0.05953    -0.03714 
+  10 |          1     -0.2007     0.06397    -0.07148    -0.09161 
+  11 |    -0.2007           1      -0.296      0.3456      0.4703 
+  12 |    0.06397      -0.296           1     -0.6639     -0.3238 
+  13 |   -0.07148      0.3456     -0.6639           1      0.3871 
+  14 |   -0.09161      0.4703     -0.3238      0.3871           1 
+  15 |    -0.0436      0.3727     -0.2961      0.3602      0.2088 
+  16 |   -0.04108     -0.1734      -0.145       0.182    -0.04901 
+  17 |     -0.058       0.574      -0.228      0.2651      0.2631 
+  18 |     0.3443     -0.9261      0.1857     -0.2082     -0.4062 
+
+
+     |      15    |      16    |      17    |      18    |
+----------------------------------------------------------------------
+   0 |     0.3603     -0.1524      0.6089     -0.9434 
+   1 |    -0.3163      0.1246     -0.4233      0.8726 
+   2 |     0.3407     -0.1425      0.5187     -0.9231 
+   3 |    0.05379      -0.272      0.2095     -0.5137 
+   4 |     0.4938     -0.3846      0.2059     -0.3008 
+   5 |     0.3098     -0.1259      0.5713     -0.7977 
+   6 |     0.3373    -0.09033      0.7432     -0.8984 
+   7 |     0.0555    -0.01039     0.09498     -0.1124 
+   8 |   -0.04587     -0.1243     -0.1904       0.312 
+   9 |     0.1093    -0.07869     0.01679    -0.04788 
+  10 |    -0.0436    -0.04108      -0.058      0.3443 
+  11 |     0.3727     -0.1734       0.574     -0.9261 
+  12 |    -0.2961      -0.145      -0.228      0.1857 
+  13 |     0.3602       0.182      0.2651     -0.2082 
+  14 |     0.2088    -0.04901      0.2631     -0.4062 
+  15 |          1     -0.2354      0.2308     -0.2883 
+  16 |    -0.2354           1    -0.04278      0.1512 
+  17 |     0.2308    -0.04278           1     -0.5928 
+  18 |    -0.2883      0.1512     -0.5928           1 
+

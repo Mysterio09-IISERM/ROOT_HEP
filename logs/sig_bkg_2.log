@@ -1,0 +1,294 @@
+Info in <Minuit2>: MnSeedGenerator Computing seed using NumericalGradient calculator
+Info in <Minuit2>: MnSeedGenerator Evaluated function and gradient in 906.2 μs
+Info in <Minuit2>: MnSeedGenerator Initial state: FCN =       14702.57979 Edm =        17690.2778 NCalls =      9
+Info in <Minuit2>: MnSeedGenerator Initial state  
+  Minimum value : 14702.57979
+  Edm           : 17690.2778
+  Internal parameters:	[     -1.287002218     -1.287002218]	
+  Internal gradient  :	[      63843.72488      69156.25639]	
+  Internal covariance matrix:
+[[  7.6634647e-06              0]
+ Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -1700.74931077887618
+Edm   = 0.000439415389746360585
+Nfcn  = 47
+nbkg	  = 972.537	 +/-  32.5157	(limited)
+nsig	  = 27.9965	 +/-  10.6204	(limited)
+Using 31 bins for display
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) directly selected PDF components: (background)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) indirectly selected PDF components: ()
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) directly selected PDF components: (signal)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(model) indirectly selected PDF components: ()
+****************************************
+Minimizer is Minuit2 / Migrad
+Chi2                      =      1.54124
+NDf                       =            3
+Edm                       =  2.93862e-06
+NCalls                    =           60
+Constant                  =      6.74036   +/-   1.56155     
+Mean                      =   -0.0449402   +/-   0.293702    
+Sigma                     =      1.11872   +/-   0.300735     	 (limited)
+Before PLC: 27.9965
+[#1] INFO:InputArguments -- The deprecated RooFit::CloneData(1) option passed to createNLL() is ignored.
+[#1] INFO:Minimization -- p.d.f. provides expected number of events, including extended term in likelihood.
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(model) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- Creation of NLL object took 203.3 μs
+[#0] PROGRESS:Minimization -- ProfileLikelihoodCalcultor::DoGLobalFit - find MLE 
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_model_data) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+[#0] PROGRESS:Minimization -- ProfileLikelihoodCalcultor::DoMinimizeNLL - using Minuit2 / Migrad with strategy 1
+[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+[#1] INFO:Minimization -- 
+  RooFitResult: minimized FCN value: -1700.75, estimated distance to minimum: 2.36074e-09
+                covariance matrix quality: Full, accurate covariance matrix
+                Status : MINIMIZE=0 
+
+    Floating Parameter    FinalValue +/-  Error   
+  --------------------  --------------------------
+                  nbkg    9.7227e+02 +/-  3.25e+01
+                  nsig    2.7723e+01 +/-  1.06e+01
+
+Upper limit on nsig at 90% CL: 46.17 events
+[#1] INFO:Minimization -- RooProfileLL::evaluate(RooEvaluatorWrapper_Profile[nsig]) Creating instance of MINUIT
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_model_data) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooProfileLL::evaluate(RooEvaluatorWrapper_Profile[nsig]) determining minimum likelihood for current configurations w.r.t all observable
+[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+[#1] INFO:Minimization -- RooProfileLL::evaluate(RooEvaluatorWrapper_Profile[nsig]) minimum found at (nsig=27.7302)
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+
+[#1] INFO:Minimization -- RooProfileLL::evaluate(RooEvaluatorWrapper_Profile[nsig]) Creating instance of MINUIT
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_model_data) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooProfileLL::evaluate(RooEvaluatorWrapper_Profile[nsig]) determining minimum likelihood for current configurations w.r.t all observable
+[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+[#0] ERROR:InputArguments -- RooArgSet::checkForDup: ERROR argument with name nsig is already in this set
+[#1] INFO:Minimization -- RooProfileLL::evaluate(RooEvaluatorWrapper_Profile[nsig]) minimum found at (nsig=27.7239)
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+.[#1] INFO:Minimization -- [fitFCN] No discrete parameters, performing continuous minimization only
+
+=== Upper Limit Result ===
+nsig upper limit (90% CL) = 46.17
+After PLC: 27.723
+
+  RooFitResult: minimized FCN value: -1700.75, estimated distance to minimum: 0.00043935
+                covariance matrix quality: Full, accurate covariance matrix
+                Status : MINIMIZE=0 HESSE=0 
+
+    Constant Parameter    Value     
+  --------------------  ------------
+                  mean    4.4984e+01
+                 sigma    3.0528e+00
+                   tau   -3.7282e-02
+
+    Floating Parameter  InitialValue    FinalValue +/-  Error     GblCorr.
+  --------------------  ------------  --------------------------  --------
+                  nbkg    1.0000e+04    9.7254e+02 +/-  3.25e+01  <none>
+                  nsig    1.0000e+04    2.7997e+01 +/-  1.06e+01  <none>
+
+
+2x2 matrix is as follows
+
+     |      0    |      1    |
+-------------------------------
+   0 |          1     -0.2451 
+   1 |    -0.2451           1 
+
