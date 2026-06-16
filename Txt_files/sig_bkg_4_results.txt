@@ -6,9 +6,9 @@ EDM: 0.000493585
 MinNLL: -515.7
 Chi2/NDF: 0.884173
 
-Signal Yield: 0.00184224 ± 1.93314
+Signal Yield: 3.59324e-07 ± 0
 Mean: 44.984 ± 0
 Sigma: 3.0528 ± 0
 
-Background Yield: 500.133 ± 22.3654
+Background Yield: 494.305 ± 22.3405
 Tau: -0.037282 ± 0
