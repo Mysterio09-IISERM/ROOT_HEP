@@ -34,7 +34,7 @@ using namespace RooFit;
 
 void task3_4() {
 
-    gSystem->RedirectOutput("../logs/task1_2.log", "w");
+    gSystem->RedirectOutput("../logs/task3_4.log", "w");
 
     TFile *f = TFile::Open("../Root_files/Bplus_to_JpsiKplus_signal.root");
     TTree *t = (TTree*)f->Get("Events");
@@ -63,31 +63,31 @@ void task3_4() {
     t->SetBranchAddress("jpsi_InvM", &jpsi_InvM);
     t->SetBranchAddress("InvM", &InvM);
 
-    TH1F *h = new TH1F("h", "K+ mass;M_{K+} (GeV);Events", 300, 0.9, 1.5);
+    TH1F *h = new TH1F("h", "B+ mass;M_{K+} (GeV);Events", 500, 5.0, 5.5);
 
     Long64_t nentries = t->GetEntries();
 
-    RooRealVar var("var", "Variable", 4.0, 6.5);
+    RooRealVar var("var", "Variable", 5.0, 5.5);
     RooArgSet vars(var);
     RooDataSet data("data", "dataset", vars);
 
     // -----------------------------------------------------------------
-    // Output tree storing the reconstructed J/psi four-momentum for
+    // Output tree storing the reconstructed B+ four-momentum for
     // every event that passes the m2 > 0 cut, so it can be reused
     // downstream (e.g. combining with the kaon to reconstruct B+)
     // without having to redo the mu1+mu2 sum every time.
     // -----------------------------------------------------------------
-    TFile *fout = new TFile("../Root_files/K+_momenta.root", "RECREATE");
-    TTree *ktree = new TTree("KTree", "Reconstructed K+ four-momentum");
+    TFile *fout = new TFile("../Root_files/B+_momenta.root", "RECREATE");
+    TTree *btree = new TTree("BTree", "Reconstructed B+ four-momentum");
 
-    Double_t k_px, k_py, k_pz, k_E, k_mass, mass_diff;
+    Double_t b_px, b_py, b_pz, b_E, b_mass, mass_diff;
 
-    ktree->Branch("k_px",   &k_px,   "k_px/D");
-    ktree->Branch("k_py",   &k_py,   "k_py/D");
-    ktree->Branch("k_pz",   &k_pz,   "k_pz/D");
-    ktree->Branch("k_E",    &k_E,    "k_E/D");
-    ktree->Branch("k_mass", &k_mass, "k_mass/D");
-    ktree->Branch("mass_diff", &mass_diff, "mass_diff/D");
+    btree->Branch("b_px",   &b_px,   "b_px/D");
+    btree->Branch("b_py",   &b_py,   "b_py/D");
+    btree->Branch("b_pz",   &b_pz,   "b_pz/D");
+    btree->Branch("b_E",    &b_E,    "b_E/D");
+    btree->Branch("b_mass", &b_mass, "b_mass/D");
+    btree->Branch("mass_diff", &mass_diff, "mass_diff/D");
 
 
     for (Long64_t i = 0; i < nentries; i++) {
@@ -108,17 +108,17 @@ void task3_4() {
             var = m;
             data.add(vars);
 
-            k_px   = px;
-            k_py   = py;
-            k_pz   = pz;
-            k_E    = E;
-            k_mass = m;
+            b_px   = px;
+            b_py   = py;
+            b_pz   = pz;
+            b_E    = E;
+            b_mass = m;
             mass_diff = m - InvM;
-            ktree->Fill();
+            btree->Fill();
         }
     }
 
-    ktree->Write();
+    btree->Write();
     fout->Close();
     delete fout;
 
@@ -132,15 +132,17 @@ void task3_4() {
 
     //RooDataHist data("data", "dataset", var, Import(*h));
 
-    RooRealVar mean("mean", "Mean", 3.1, 3.05, 3.15);
-    RooRealVar sigma("sigma", "Sigma", 0.01, 0.001, 0.1);
-    RooRealVar alpha("alpha", "Alpha", 1.0, 0.0, 10.0);
-    RooRealVar nCB("nCB", "NCB", 1.0, 0.0, 10.0);
-    RooRealVar c0("c0", "Background Coefficient", 1.0, 0.0, 100.0);
-    RooRealVar c1("c1", "Background Coefficient", 0.0, -0.0, 100.0);
+    RooRealVar mean1("mean1", "Mean1", 5.27, 5.2, 5.4);
+    RooRealVar sigma1("sigma1", "Sigma1", 0.05, 0.005, 5.0);
+    //RooRealVar sigma2("sigma2", "Sigma2", 0.02, 0.005, 5.0);
+    RooRealVar frac("frac", "Fraction", 0.5, 0.0, 1.0);
+    RooRealVar tau("tau", "Tau", -0.1, -5.0, 0.0);
 
-    RooCBShape signal("signal", "Signal PDF", var, mean, sigma, alpha, nCB);
-    RooBernstein background("background", "Background PDF", var, RooArgList(c0, c1));
+    RooGaussian signal("signal", "Signal PDF 1", var, mean1, sigma1);
+    //RooGaussian signal2("signal2", "Signal PDF 2", var, mean1, sigma2);
+    //RooAddPdf signal("signal", "Signal PDF", RooArgList(signal1, signal2),frac);
+    //RooBernstein background("background", "Background PDF", var, RooArgList(c0, c1));
+    RooExponential background("background", "Background PDF", var, tau);
 
     RooRealVar nsig("nsig", "Number of Signal Events", 1000, 0, 10000);
     RooRealVar nbkg("nbkg", "Number of Background Events", 1000, 0, 10000);
@@ -301,10 +303,9 @@ void task3_4() {
     fitres->correlationMatrix().Print();
 
     out << "\nSignal Yield: " << nsig.getVal() << " ± " << nsig.getError() << endl;
-    out << "Mean: " << mean.getVal() << " ± " << mean.getError() << endl;
-    out << "Sigma: " << sigma.getVal() << " ± " << sigma.getError() << endl;
-    out << "Alpha: " << alpha.getVal() << " ± " << alpha.getError() << endl;
-    out << "N: " << nCB.getVal() << " ± " << nCB.getError() << endl;
+    out << "Mean 1: " << mean1.getVal() << " ± " << mean1.getError() << endl;
+    out << "Sigma 1: " << sigma1.getVal() << " ± " << sigma1.getError() << endl;
+    out << "Fraction: " << frac.getVal() << " ± " << frac.getError() << endl;
 
     out.close();
 

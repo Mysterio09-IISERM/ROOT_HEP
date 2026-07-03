@@ -123,14 +123,21 @@ void task1_2() {
 
     //RooDataHist data("data", "dataset", var, Import(*h));
 
-    RooRealVar mean("mean", "Mean", 3.1, 3.05, 3.15);
-    RooRealVar sigma("sigma", "Sigma", 0.01, 0.001, 0.1);
+    RooRealVar mean1("mean1", "Mean1", 3.1, 3.05, 3.15);
+    RooRealVar sigma1("sigma1", "Sigma1", 0.01, 0.001, 0.1);
+    RooRealVar mean2("mean2", "Mean2", 3.1, 3.05, 3.15);
+    RooRealVar sigma2("sigma2", "Sigma2", 0.02, 0.005, 0.1);
+    RooRealVar frac("frac", "Fraction", 0.5, 0.0, 1.0);
     RooRealVar alpha("alpha", "Alpha", 1.0, 0.0, 10.0);
     RooRealVar nCB("nCB", "NCB", 1.0, 0.0, 10.0);
     RooRealVar c0("c0", "Background Coefficient", 1.0, 0.0, 100.0);
     RooRealVar c1("c1", "Background Coefficient", 0.0, -0.0, 100.0);
 
-    RooCBShape signal("signal", "Signal PDF", var, mean, sigma, alpha, nCB);
+    //RooCBShape signal("signal", "Signal PDF", var, mean, sigma, alpha, nCB);
+    RooGaussian signal1("signal1", "Signal PDF 1", var, mean1, sigma1);
+    RooGaussian signal2("signal2", "Signal PDF 2", var, mean2, sigma2);
+    RooAddPdf signal("signal", "Signal PDF", RooArgList(signal1, signal2), frac);
+    
     RooBernstein background("background", "Background PDF", var, RooArgList(c0, c1));
 
     RooRealVar nsig("nsig", "Number of Signal Events", 1000, 0, 10000);
@@ -292,10 +299,11 @@ void task1_2() {
     fitres->correlationMatrix().Print();
 
     out << "\nSignal Yield: " << nsig.getVal() << " ± " << nsig.getError() << endl;
-    out << "Mean: " << mean.getVal() << " ± " << mean.getError() << endl;
-    out << "Sigma: " << sigma.getVal() << " ± " << sigma.getError() << endl;
-    out << "Alpha: " << alpha.getVal() << " ± " << alpha.getError() << endl;
-    out << "N: " << nCB.getVal() << " ± " << nCB.getError() << endl;
+    out << "Mean 1: " << mean1.getVal() << " ± " << mean1.getError() << endl;
+    out << "Mean 2: " << mean2.getVal() << " ± " << mean2.getError() << endl;
+    out << "Sigma 1: " << sigma1.getVal() << " ± " << sigma1.getError() << endl;
+    out << "Sigma 2: " << sigma2.getVal() << " ± " << sigma2.getError() << endl;
+    out << "Fraction: " << frac.getVal() << " ± " << frac.getError() << endl;
 
     out.close();
 
