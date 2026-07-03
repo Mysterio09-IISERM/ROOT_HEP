@@ -41,6 +41,7 @@ void task1_2() {
 
     Double_t  mu1_px, mu1_py, mu1_pz, mu1_E;
     Double_t mu2_px, mu2_py, mu2_pz, mu2_E;
+    Double_t jpsi_InvM;
 
     t->SetBranchAddress("mu1_px", &mu1_px);
     t->SetBranchAddress("mu1_py", &mu1_py);
@@ -51,6 +52,8 @@ void task1_2() {
     t->SetBranchAddress("mu2_py", &mu2_py);
     t->SetBranchAddress("mu2_pz", &mu2_pz);
     t->SetBranchAddress("mu2_E",  &mu2_E);
+
+    t->SetBranchAddress("jpsi_InvM", &jpsi_InvM);
 
     TH1F *h = new TH1F("h", "J/#psi mass;M_{#mu#mu} (GeV);Events", 300, 2.8, 3.4);
 
@@ -69,13 +72,14 @@ void task1_2() {
     TFile *fout = new TFile("../Root_files/Jpsi_momenta.root", "RECREATE");
     TTree *jpsiTree = new TTree("JpsiTree", "Reconstructed J/psi four-momentum");
 
-    Double_t jpsi_px, jpsi_py, jpsi_pz, jpsi_E, jpsi_mass;
+    Double_t jpsi_px, jpsi_py, jpsi_pz, jpsi_E, jpsi_mass, mass_diff;
 
     jpsiTree->Branch("jpsi_px",   &jpsi_px,   "jpsi_px/D");
     jpsiTree->Branch("jpsi_py",   &jpsi_py,   "jpsi_py/D");
     jpsiTree->Branch("jpsi_pz",   &jpsi_pz,   "jpsi_pz/D");
     jpsiTree->Branch("jpsi_E",    &jpsi_E,    "jpsi_E/D");
     jpsiTree->Branch("jpsi_mass", &jpsi_mass, "jpsi_mass/D");
+    jpsiTree->Branch("mass_diff", &mass_diff, "mass_diff/D");
 
     for (Long64_t i = 0; i < nentries; i++) {
 
@@ -100,6 +104,7 @@ void task1_2() {
             jpsi_pz   = pz;
             jpsi_E    = E;
             jpsi_mass = m;
+            mass_diff = m - jpsi_InvM;
             jpsiTree->Fill();
         }
     }
