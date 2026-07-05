@@ -63,11 +63,11 @@ void task3_4() {
     t->SetBranchAddress("jpsi_InvM", &jpsi_InvM);
     t->SetBranchAddress("InvM", &InvM);
 
-    TH1F *h = new TH1F("h", "B+ mass;M_{K+} (GeV);Events", 500, 5.0, 5.5);
+    TH1F *h = new TH1F("h", "B+ mass;M_{K+} (GeV);Events", 500, 5.2, 5.35);
 
     Long64_t nentries = t->GetEntries();
 
-    RooRealVar var("var", "Variable", 5.0, 5.5);
+    RooRealVar var("var", "Variable", 5.2, 5.35);
     RooArgSet vars(var);
     RooDataSet data("data", "dataset", vars);
 
@@ -132,7 +132,7 @@ void task3_4() {
 
     //RooDataHist data("data", "dataset", var, Import(*h));
 
-    RooRealVar mean1("mean1", "Mean1", 5.27, 5.2, 5.4);
+    RooRealVar mean1("mean1", "Mean1", 5.27, 5.2, 5.35);
     RooRealVar sigma1("sigma1", "Sigma1", 0.05, 0.005, 5.0);
     //RooRealVar sigma2("sigma2", "Sigma2", 0.02, 0.005, 5.0);
     RooRealVar frac("frac", "Fraction", 0.5, 0.0, 1.0);
