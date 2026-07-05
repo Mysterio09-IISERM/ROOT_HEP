@@ -1,64 +1,65 @@
-[#1] INFO:Fitting -- RooAbsPdf::fitTo(model) fixing normalization set foInfo in <Minuit2>: MnSeedGenerator Computing seed using NumericalGradient calculator
-Info in <Minuit2>: MnSeedGenerator Evaluated function and gradient in 2.239 ms
-Info in <Minuit2>: MnSeedGenerator Initial state: FCN =      -54482.48492 Edm =       776213538.7 NCalls =     19
-Info in <Minuit2>: NegativeG2LineSearch Doing a NegativeG2LineSearch since one of the G2 component is negative
-Info in <Minuit2>: NegatiMinuit2Minimizer : Valid minimum - status = 0
-FVAL  = -64534.0459871874918
-Edm   = 0.000197281234517853295
-Nfcn  = 182
-mean1	  = 5.28046	 +/-  0.000189117	(limited)
-nbkg	  = 108.71	 +/-  13.2477	(limited)
-nsig	  = 6066.8	 +/-  78.3177	(limited)
-sigma1	  = 0.0143949	 +/-  0.000154234	(limited)
-tau	  = -9.45627e-08	 +/-  0.0814167	(limited)
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(model) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- using generic CPU library compiled with no vectorizations
+[#1] INFO:Fitting -- Creation of NLL object took 50.2931 ms
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_model_data) Summation contains a RooInfo in <Minuit2>: MnSeedGenerator Computing seed using NumericalGradient calculator
+Info in <Minuit2>: MnSeedGenerator Evaluated function and gradient in 6.6576 ms
+Info in <Minuit2>: MnSeedGenerator Initial statMinuit2Minimizer : Valid minimum - status = 0
+FVAL  = -64758.316324576459
+Edm   = 0.00305024908680038035
+Nfcn  = 190
+mean1	  = 5.28043	 +/-  0.000183218	(limited)
+nbkg	  = 341.139	 +/-  29.4937	(limited)
+nsig	  = 5834.31	 +/-  79.765	(limited)
+sigma1	  = 0.0132412	 +/-  0.000154364	(limited)
+tau	  = -0.000887158	 +/-  0.146714	(limited)
 [#1] INFO:Plotting -- RooAbsPdf::plotOn(model) directly selected PDF components: (background)
 [#1] INFO:Plotting -- RooAbsPdf::plotOn(model) indirectly selected PDF components: ()
 [#1] INFO:Plotting -- RooAbsPdf::plotOn(model) directly selected PDF components: (signal)
 [#1] INFO:Plotting -- RooAbsPdf::plotOn(model) indirectly selected PDF components: ()
-[#1] INFO:Eval -- RooRealVar::setRange(var) new range named 'binRange' created with bounds [5,5.00833]
+[#1] INFO:Eval -- RooRealVar::setRange(var) new range named 'binRange' created with bounds [5.2,5.2025]
 ****************************************
 Minimizer is Minuit2 / Migrad
-Chi2                      =      30.7737
-NDf                       =           10
-Edm                       =  1.29558e-08
-NCalls                    =          381
-Constant                  =      2.82541   +/-   0.670696    
-Mean                      =      0.70581   +/-   1.16436     
-Sigma                     =      3.45587   +/-   1.43022      	 (limited)
+Chi2                      =      19.3051
+NDf                       =            9
+Edm                       =  9.45298e-07
+NCalls                    =           94
+Constant                  =      11.5773   +/-   2.41183     
+Mean                      =     0.334557   +/-   0.112794    
+Sigma                     =     0.701741   +/-   0.0970183    	 (limited)
 
-  RooFitResult: minimized FCN value: -64534, estimated distance to minimum: 0.000197259
+  RooFitResult: minimized FCN value: -64758.3, estimated distance to minimum: 0.00305245
                 covariance matrix quality: Full, accurate covariance matrix
                 Status : MINIMIZE=0 HESSE=0 
 
     Floating Parameter  InitialValue    FinalValue +/-  Error     GblCorr.
   --------------------  ------------  --------------------------  --------
-                 mean1    5.2700e+00    5.2805e+00 +/-  1.89e-04  <none>
-                  nbkg    1.0000e+03    1.0871e+02 +/-  1.33e+01  <none>
-                  nsig    1.0000e+03    6.0668e+03 +/-  7.83e+01  <none>
-                sigma1    5.0000e-02    1.4395e-02 +/-  1.54e-04  <none>
-                   tau   -1.0000e-01   -9.4563e-08 +/-  8.15e-02  <none>
+                 mean1    5.2700e+00    5.2804e+00 +/-  1.83e-04  <none>
+                  nbkg    1.0000e+03    3.4114e+02 +/-  2.95e+01  <none>
+                  nsig    1.0000e+03    5.8343e+03 +/-  7.98e+01  <none>
+                sigma1    5.0000e-02    1.3241e-02 +/-  1.54e-04  <none>
+                   tau   -1.0000e-01   -8.8716e-04 +/-  1.47e-01  <none>
 
 
 5x5 matrix is as follows
 
      |      0    |      1    |      2    |      3    |      4    |
 ----------------------------------------------------------------------
-   0 |          1   -0.007732    0.001308    0.008087  -0.0001667 
-   1 |  -0.007732           1    -0.06448     -0.2855   0.0004964 
-   2 |   0.001308    -0.06448           1      0.0483  -8.398e-05 
-   3 |   0.008087     -0.2855      0.0483           1    -0.00038 
-   4 | -0.0001667   0.0004964  -8.398e-05    -0.00038           1 
+   0 |          1    -0.01356    0.005016     0.01312   -0.003211 
+   1 |   -0.01356           1      -0.225     -0.3823    0.003154 
+   2 |   0.005016      -0.225           1      0.1414   -0.001167 
+   3 |    0.01312     -0.3823      0.1414           1   -0.002114 
+   4 |  -0.003211    0.003154   -0.001167   -0.002114           1 
 
-t2>: VariableMetricBuilder    7 - FCN =      -64534.02835 Edm =    0.006548363072 NCalls =    137
-Info in <Minuit2>: VariableMetricBuilder    8 - FCN =      -64534.04599 Edm =   0.0001819339802 NCalls =    149
-Info in <Minuit2>: MnHesse Done after 3.6532 ms
+ilder    5 - FCN =      -64757.12374 Edm =      0.6788177326 NCalls =    124
+Info in <Minuit2>: VariableMetricBuilder    6 - FCN =      -64758.17528 Edm =      0.1202872705 NCalls =    136
+Info in <Minuit2>: VariableMetricBuilder    7 - FCN =       -64758.3062 Edm =     0.01130084531 NCalls =    148
+Info in <Minuit2>: VariableMetricBuilder    8 - FCN =      -64758.31632 Edm =   0.0004351203578 NCalls =    159
+Info in <Minuit2>: MnHesse Done after 10.44 ms
 Info in <Minuit2>: VariableMetricBuilder After Hessian
-Info in <Minuit2>: VariableMetricBuilder    9 - FCN =      -64534.04599 Edm =   0.0001972812345 NCalls =    182
-Info in <Minuit2>: VariableMetricBuilder Stop iterating after 15.5661 ms
+Info in <Minuit2>: VariableMetricBuilder    9 - FCN =      -64758.31632 Edm =    0.003050249087 NCalls =    190
+Warning in <Minuit2>: VariableMetricBuilder Reached machine accuracy limit; Edm 0.00305025 is smaller than machine limit 0.0038599 while 0.001 was requested
+Info in <Minuit2>: VariableMetricBuilder Stop iterating after 48.0889 ms
 Info in <Minuit2>: Minuit2Minimizer::Hesse Using max-calls 2500
-Info in <Minuit2>: MnHesse Done after 3.5769 ms
+Info in <Minuit2>: MnHesse Done after 10.3746 ms
 Info in <Minuit2>: Minuit2Minimizer::Hesse Hesse is valid - matrix is accurate
-Warning in <TCanvas::Constructor>: Deleting canvas with same name: cmain
-Warning in <TROOT::Append>: Replacing existing TH1: hdata__var (Potential memory leak).
-Warning in <TROOT::Append>: Replacing existing TH1: hpull (Potential memory leak).
 Info in <TCanvas::Print>: file ../Png_files/task4_results.png has been created
