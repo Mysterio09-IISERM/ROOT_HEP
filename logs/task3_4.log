@@ -1,9 +1,9 @@
-[#1] INFO:Fitting -- RooAbsPdf::fitTo(model) fixing normalization set for coefficient determination to observables in data
-[#1] INFO:Fitting -- using generic CPU library compiled with no vectorizations
-[#1] INFO:Fitting -- Creation of NLL object took 50.2931 ms
-[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_model_data) Summation contains a RooInfo in <Minuit2>: MnSeedGenerator Computing seed using NumericalGradient calculator
-Info in <Minuit2>: MnSeedGenerator Evaluated function and gradient in 6.6576 ms
-Info in <Minuit2>: MnSeedGenerator Initial statMinuit2Minimizer : Valid minimum - status = 0
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(model) fixing normalization set foInfo in <Minuit2>: MnSeedGenerator Computing seed using NumericalGradient calculator
+Info in <Minuit2>: MnSeedGenerator Evaluated function and gradient in 2.0665 ms
+Info in <Minuit2>: MnSeedGenerator Initial state: FCN =      -57482.16779 Edm =        93795554.2 NCalls =     21
+Info in <Minuit2>: NegativeG2LineSearch Doing a NegativeG2LineSearch since one of the G2 component is negative
+Info in <Minuit2>: NegativeG2LineSearch Done after 2.6115 ms
+Info in <Minuit2>: MnSeedGenerator NegativMinuit2Minimizer : Valid minimum - status = 0
 FVAL  = -64758.316324576459
 Edm   = 0.00305024908680038035
 Nfcn  = 190
@@ -50,16 +50,15 @@ Sigma                     =     0.701741   +/-   0.0970183    	 (limited)
    3 |    0.01312     -0.3823      0.1414           1   -0.002114 
    4 |  -0.003211    0.003154   -0.001167   -0.002114           1 
 
-ilder    5 - FCN =      -64757.12374 Edm =      0.6788177326 NCalls =    124
-Info in <Minuit2>: VariableMetricBuilder    6 - FCN =      -64758.17528 Edm =      0.1202872705 NCalls =    136
-Info in <Minuit2>: VariableMetricBuilder    7 - FCN =       -64758.3062 Edm =     0.01130084531 NCalls =    148
+31 NCalls =    148
 Info in <Minuit2>: VariableMetricBuilder    8 - FCN =      -64758.31632 Edm =   0.0004351203578 NCalls =    159
-Info in <Minuit2>: MnHesse Done after 10.44 ms
+Info in <Minuit2>: MnHesse Done after 3.1612 ms
 Info in <Minuit2>: VariableMetricBuilder After Hessian
 Info in <Minuit2>: VariableMetricBuilder    9 - FCN =      -64758.31632 Edm =    0.003050249087 NCalls =    190
 Warning in <Minuit2>: VariableMetricBuilder Reached machine accuracy limit; Edm 0.00305025 is smaller than machine limit 0.0038599 while 0.001 was requested
-Info in <Minuit2>: VariableMetricBuilder Stop iterating after 48.0889 ms
+Info in <Minuit2>: VariableMetricBuilder Stop iterating after 14.7932 ms
 Info in <Minuit2>: Minuit2Minimizer::Hesse Using max-calls 2500
-Info in <Minuit2>: MnHesse Done after 10.3746 ms
+Info in <Minuit2>: MnHesse Done after 3.2036 ms
 Info in <Minuit2>: Minuit2Minimizer::Hesse Hesse is valid - matrix is accurate
 Info in <TCanvas::Print>: file ../Png_files/task4_results.png has been created
+Info in <TCanvas::Print>: file ../Png_files/task4_pull_gaus.png has been created

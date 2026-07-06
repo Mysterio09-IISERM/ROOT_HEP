@@ -1,9 +1,8 @@
 [#1] INFO:Fitting -- RooAbsPdf::fitTo(model) fixing normalization set foInfo in <Minuit2>: MnSeedGenerator Computing seed using NumericalGradient calculator
-Info in <Minuit2>: MnSeedGenerator Evaluated function and gradient in 10.2911 ms
+Info in <Minuit2>: MnSeedGenerator Evaluated function and gradient in 3.9704 ms
 Info in <Minuit2>: MnSeedGenerator Initial state: FCN =      -59980.94114 Edm =        3289083.41 NCalls =     35
 Info in <Minuit2>: NegativeG2LineSearch Doing a NegativeG2LineSearch since one of the G2 component is negative
-Info in <Minuit2>: NegativeG2LineSearch Done after 17.1287 ms
-Info in <Minuit2>: MnSeedGenerator NegatiMinuit2Minimizer : Valid minimum - status = 0
+Info in <Minuit2>: NegatMinuit2Minimizer : Valid minimum - status = 0
 FVAL  = -67132.7679498182843
 Edm   = 4.43194001221480002e-05
 Nfcn  = 793
@@ -25,11 +24,11 @@ sigma2	  = 0.00878083	 +/-  0.000154544	(limited)
 Minimizer is Minuit2 / Migrad
 Chi2                      =      9.99624
 NDf                       =            5
-Edm                       =  3.39447e-07
-NCalls                    =          226
-Constant                  =      44.4762   +/-   6.78771     
-Mean                      =    -0.281598   +/-   0.0380752   
-Sigma                     =     0.213471   +/-   0.0178576    	 (limited)
+Edm                       =  1.03836e-06
+NCalls                    =          220
+Constant                  =      44.4833   +/-   6.78797     
+Mean                      =    -0.281612   +/-   0.0380747   
+Sigma                     =     0.213467   +/-   0.0178566    	 (limited)
 
   RooFitResult: minimized FCN value: -67132.8, estimated distance to minimum: 4.24681e-05
                 covariance matrix quality: Full, accurate covariance matrix
@@ -75,7 +74,8 @@ Sigma                     =     0.213471   +/-   0.0178576    	 (limited)
    7 |     -0.357     0.01571           1        0.63 
    8 |    -0.1976    0.008695        0.63           1 
 
-9966 Edm =       378.3507122 NCalls =    156
+s =    127
+Info in <Minuit2>: VariableMetricBuilder    2 - FCN =      -66646.99966 Edm =       378.3507122 NCalls =    156
 Info in <Minuit2>: VariableMetricBuilder    3 - FCN =      -66848.57212 Edm =       104.4596286 NCalls =    180
 Info in <Minuit2>: VariableMetricBuilder    4 - FCN =      -66959.36879 Edm =       78.15840009 NCalls =    206
 Info in <Minuit2>: VariableMetricBuilder    5 - FCN =      -67043.97103 Edm =       31.72987488 NCalls =    230
@@ -103,13 +103,18 @@ Info in <Minuit2>: VariableMetricBuilder   26 - FCN =      -67132.76574 Edm =   
 Info in <Minuit2>: VariableMetricBuilder   27 - FCN =      -67132.76795 Edm =   3.287167048e-05 NCalls =    710
 Warning in <Minuit2>: MnPosDef non-positive diagonal element in covariance matrix[ 1 ] = -7.643e-05
 Warning in <Minuit2>: MnPosDef Added to diagonal of Error matrix a value 0.500076
-Info in <Minuit2>: MnHesse Done after 27.5575 ms
+Info in <Minuit2>: MnHesse Done after 10.2398 ms
 Info in <Minuit2>: VariableMetricBuilder After Hessian
 Info in <Minuit2>: VariableMetricBuilder   28 - FCN =      -67132.76795 Edm =   4.431940012e-05 NCalls =    793
-Info in <Minuit2>: VariableMetricBuilder Stop iterating after 217.789 ms
+Info in <Minuit2>: VariableMetricBuilder Stop iterating after 89.3131 ms
 Info in <Minuit2>: Minuit2Minimizer::Hesse Using max-calls 4500
 Warning in <Minuit2>: MnPosDef non-positive diagonal element in covariance matrix[ 1 ] = -7.643e-05
 Warning in <Minuit2>: MnPosDef Added to diagonal of Error matrix a value 0.500076
-Info in <Minuit2>: MnHesse Done after 31.9647 ms
+Info in <Minuit2>: MnHesse Done after 9.915 ms
 Info in <Minuit2>: Minuit2Minimizer::Hesse Hesse is valid - matrix is accurate
+Warning in <TCanvas::Constructor>: Deleting canvas with same name: cmain
+Warning in <TROOT::Append>: Replacing existing TH1: hdata__var (Potential memory leak).
+Warning in <TROOT::Append>: Replacing existing TH1: hpullbar (Potential memory leak).
+Warning in <TROOT::Append>: Replacing existing TH1: hpull (Potential memory leak).
 Info in <TCanvas::Print>: file ../Png_files/task2_results.png has been created
+Info in <TCanvas::Print>: file ../Png_files/task2_pull_gaus.png has been created

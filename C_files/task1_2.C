@@ -55,7 +55,7 @@ void task1_2() {
 
     t->SetBranchAddress("jpsi_InvM", &jpsi_InvM);
 
-    TH1F *h = new TH1F("h", "J/#psi mass;M_{#mu#mu} (GeV);Events", 300, 2.8, 3.4);
+    TH1F *h = new TH1F("h", "J/#psi mass;M_{J/#psi} (GeV);Events", 300, 2.8, 3.4);
 
     Long64_t nentries = t->GetEntries();
 
@@ -152,43 +152,37 @@ void task1_2() {
     double xhi = var.getMax();
     double binw = (xhi - xlo) / nbins;
 
-    TCanvas *cmain = new TCanvas("cmain", "Fit Result", 1600, 600);
+    // -----------------------------------------------------------------
+    // Canvas layout: single fit panel on top, single pull strip below
+    // (raw-data-only panel removed per feedback -- redundant since the
+    // fitted panel already overlays the data points).
+    // -----------------------------------------------------------------
+    TCanvas *cmain = new TCanvas("cmain", "Fit Result", 900, 700);
 
-    TPad *pad1 = new TPad("pad1", "Fit Result", 0, 0.25, 1, 1);
+    TPad *pad1 = new TPad("pad1", "Fit Result", 0, 0.28, 1, 1);
     pad1->SetBottomMargin(0.02);
     pad1->Draw();
 
-    TPad *pad2 = new TPad("pad2", "Pull Distribution", 0, 0, 1, 0.25);
+    TPad *pad2 = new TPad("pad2", "Pull Distribution", 0, 0, 1, 0.28);
     pad2->SetTopMargin(0.05);
-    pad2->SetBottomMargin(0.30);
+    pad2->SetBottomMargin(0.35);
     pad2->Draw();
 
-    pad1->Divide(2, 1);
-    pad2->Divide(2, 1);
-
-    pad1->cd(1);
-
-    RooPlot *frame1 = var.frame(Bins(nbins));
-    data.plotOn(frame1, Name("data"), Binning(nbins));
-    frame1->SetTitle("Raw Distribution");
-    frame1->Draw();
-
-    TLegend *leg1 = new TLegend(0.6, 0.85, 0.9, 0.9);
-    leg1->AddEntry(frame1->findObject("data"), "Data", "ep");
-    leg1->Draw();
-
-    pad1->cd(2);
+    pad1->cd();
     RooPlot *frame2 = var.frame(Bins(nbins));
     data.plotOn(frame2, Name("data2"), Binning(nbins));
     model.plotOn(frame2, Name("fullfit"));
-    model.plotOn(frame2, Components(background), LineColor(kGreen), Name("bkg"));
+    model.plotOn(frame2, Components(background), LineColor(kGreen), LineStyle(kDashed), Name("bkg"));
     model.plotOn(frame2, Components(signal), LineColor(kRed), Name("sig"));
     double nparams = fitres->floatParsFinal().getSize();
     double chi2ndf = frame2->chiSquare("fullfit", "data2", nparams);
-    frame2->SetTitle("Fitted Distribution");
+    frame2->SetTitle("J/#psi Mass Fit");
+    frame2->GetXaxis()->SetLabelSize(0);
+    frame2->GetXaxis()->SetTitleSize(0);
     frame2->Draw();
 
-    TLegend *leg2 = new TLegend(0.6, 0.65, 0.9, 0.9);
+    TLegend *leg2 = new TLegend(0.65, 0.65, 0.9, 0.85);
+    leg2->SetBorderSize(0);
     leg2->AddEntry(frame2->findObject("data2"), "Data", "ep");
     leg2->AddEntry(frame2->findObject("fullfit"), "Full Fit", "l");
     leg2->AddEntry(frame2->findObject("sig"), "Signal PDF", "l");
@@ -207,7 +201,8 @@ void task1_2() {
 
     TH1F* hdata = (TH1F*) data.createHistogram("hdata", var, Binning(nbins, xlo, xhi));
 
-    TGraphAsymmErrors* pullGraph = new TGraphAsymmErrors(nbins);
+    // Filled-bar pull histogram (signed), matching standard fit/pull layout
+    TH1F *hpullbar = new TH1F("hpullbar", ";Mass (GeV/c^{2});Pull", nbins, xlo, xhi);
     TH1F *hpull = new TH1F("hpull", "Pull Values; Pull; Bins", 20, -5, 5);
 
     for (int i = 0; i < nbins; i++) {
@@ -225,46 +220,47 @@ void task1_2() {
         double err = (observed > 0) ? sqrt(observed) : sqrt(expected);
         double pull = (err > 0) ? (observed - expected) / err : 0.0;
 
-        double center = lo + binw / 2.0;
-        pullGraph->SetPoint(i, center, pull);
-        pullGraph->SetPointError(i, binw / 2.0, binw / 2.0, 0, 0);
-
+        hpullbar->SetBinContent(i + 1, pull);
         hpull->Fill(pull);
 
         delete sigInt;
         delete bkgInt;
     }
 
-    pad2->cd(1);
-    RooPlot *frame3 = var.frame(Bins(nbins));
-    frame3->SetMinimum(-5);
-    frame3->SetMaximum(5);
-    frame3->SetTitle("Pull Distribution; Var; Pull");
-    frame3->Draw();
-    pullGraph->SetMarkerStyle(20);
-    pullGraph->SetMarkerSize(0.6);
-    pullGraph->Draw("P SAME");
+    pad2->cd();
+    hpullbar->SetFillColor(kAzure+1);
+    hpullbar->SetLineColor(kAzure+1);
+    hpullbar->SetLineWidth(1);
+    hpullbar->SetMinimum(-5);
+    hpullbar->SetMaximum(5);
+    hpullbar->SetStats(0);
+    hpullbar->GetYaxis()->SetTitle("Pull");
+    hpullbar->GetYaxis()->SetLabelSize(0.11);
+    hpullbar->GetYaxis()->SetTitleSize(0.12);
+    hpullbar->GetYaxis()->SetTitleOffset(0.35);
+    hpullbar->GetYaxis()->SetNdivisions(505);
+    hpullbar->GetXaxis()->SetLabelSize(0.11);
+    hpullbar->GetXaxis()->SetTitleSize(0.12);
+    hpullbar->GetXaxis()->SetTitleOffset(1.2);
+    hpullbar->Draw("HIST");
 
-    TLine *zero = new TLine(var.getMin(), 0, var.getMax(), 0);
-    TLine *plus = new TLine(var.getMin(), 3, var.getMax(), 3);
-    TLine *minus = new TLine(var.getMin(), -3, var.getMax(), -3);
-    zero->SetLineColor(kRed);
-    plus->SetLineColor(kBlue);
-    minus->SetLineColor(kBlue);
-    plus->SetLineStyle(2);
-    minus->SetLineStyle(2);
+    TLine *zero = new TLine(xlo, 0, xhi, 0);
+    zero->SetLineColor(kBlack);
+    zero->SetLineWidth(1);
     zero->Draw("same");
-    plus->Draw("same");
-    minus->Draw("same");
-
-    pad2->cd(2);
-    hpull->Fit("gaus");
 
     cmain->Modified();
     cmain->Update();
     gPad->Update();
 
     cmain->SaveAs("../Png_files/task2_results.png");
+
+    // Separate canvas for the pull-value Gaussian check (kept as its own
+    // diagnostic plot rather than crammed next to the raw distribution)
+    TCanvas *cpullgaus = new TCanvas("cpullgaus", "Pull Gaussian Check", 600, 500);
+    hpull->Fit("gaus");
+    hpull->Draw();
+    cpullgaus->SaveAs("../Png_files/task2_pull_gaus.png");
 
     /*cout << "Before PLC: "<< nsig.getVal() << endl;
 
