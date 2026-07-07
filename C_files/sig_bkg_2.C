@@ -1,26 +1,28 @@
-    #include "TFile.h"
-    #include "TTree.h"
-    #include "TH1F.h"
-    #include "TCanvas.h"
-    #include "TROOT.h"
-    #include "TRandom.h"
-    #include "TStyle.h"
-    #include "TF1.h"
-    #include "TMath.h"
-    #include "TSystem.h"
+#include "TFile.h"
+#include "TTree.h"
+#include "TH1F.h"
+#include "TCanvas.h"
+#include "TROOT.h"
+#include "TRandom.h"
+#include "TStyle.h"
+#include "TF1.h"
+#include "TMath.h"
+#include "TSystem.h"
+#include "TLine.h"
+#include "TLegend.h"
 
-    #include "RooRealVar.h"
-    #include "RooDataHist.h"
-    #include "RooBreitWigner.h"
-    #include "RooExponential.h"
-    #include "RooAddPdf.h"
-    #include "RooPlot.h"
-    #include "RooArgSet.h"
-    #include "RooGlobalFunc.h"
-    #include "RooChebychev.h"
-    #include <fstream>
+#include "RooRealVar.h"
+#include "RooDataHist.h"
+#include "RooBreitWigner.h"
+#include "RooExponential.h"
+#include "RooAddPdf.h"
+#include "RooPlot.h"
+#include "RooArgSet.h"
+#include "RooGlobalFunc.h"
+#include "RooChebychev.h"
+#include <fstream>
 
-    using namespace RooFit;
+using namespace RooFit;
 
 void sig_bkg_2(){
 
@@ -31,21 +33,12 @@ void sig_bkg_2(){
     TFile *f = new TFile("../Root_files/sig_bkg_2.root", "READ");
     TTree *t = (TTree*)f->Get("tree");
 
-    //CREATE HISTOGRAMS
-
-    //TH1F *h1 = new TH1F("h1", "Generated Distribution; Var; Counts", 150, 0.0, 100.0);
-    //t->Draw("x >>h1", "", "goff");
-    //h1->SetDirectory(0);
-    //f->Close();
-    //delete f;
-
     // ROOFIT VARIABLE
 
     RooRealVar var("x", "Variable", 0.0, 100.0);
 
     // IMPORT DATA
 
-    //RooDataHist data("data", "dataset", var, Import(*h1));
     RooDataSet data("data", "dataset",RooArgList(var), Import(*t));
     f->Close();
     delete f;
@@ -61,7 +54,6 @@ void sig_bkg_2(){
     mean.setConstant(kTRUE);
     sigma.setConstant(kTRUE);
 
-
     // BACKGROUND PARAMETERS
 
     RooRealVar tau("tau", "Expo Coeff", -0.05, -5.0, 0.0);
@@ -73,12 +65,10 @@ void sig_bkg_2(){
     RooGaussian signal("signal", "Signal PDF", var, mean, sigma);
     RooExponential background("background", "Background PDF", var, tau);
 
-    
-    // YEILD VARIABLES
+    // YIELD VARIABLES
 
     RooRealVar nsig("nsig", "Signal Yield", 10000, 0, 500000);
     RooRealVar nbkg("nbkg", "Background Yield", 10000, 0, 500000);
-    
 
     // COMBINED MODEL
 
@@ -91,91 +81,85 @@ void sig_bkg_2(){
     int nbins = (int)sqrt(data.numEntries());
     cout << "Using " << nbins << " bins for display" << endl;
 
-    //CANVAS CREATION
+    // ============================================================
+    // CANVAS CREATION -- single column: main fit (top) + pull (bottom)
+    // ============================================================
 
-    TCanvas *cmain1 = new TCanvas("cmain1", "Fit Result", 1600, 900);
-    TPad *pad1 = new TPad("pad1","",0,0.25,1,1);
+    TCanvas *cmain1 = new TCanvas("cmain1", "Fit Result", 900, 700);
+
+    TPad *pad1 = new TPad("pad1", "", 0, 0.28, 1, 1);
     pad1->SetBottomMargin(0.02);
     pad1->Draw();
 
-    TPad *pad2 = new TPad("pad2","",0,0,1,0.25);
-    pad2->SetTopMargin(0.05);
-    pad2->SetBottomMargin(0.30);
+    TPad *pad2 = new TPad("pad2", "", 0, 0, 1, 0.28);
+    pad2->SetTopMargin(0.06);
+    pad2->SetBottomMargin(0.35);
     pad2->Draw();
 
-    pad1->Divide(2,1);
-    pad2->Divide(2,1);
+    // ---------------- MAIN FIT PLOT ----------------
 
-    // RAW DISTRIBUTION
-
-    pad1->cd(1);
-    RooPlot *frame1 = var.frame(Bins(nbins));
-    data.plotOn(frame1, Name("data"),Binning(nbins));
-    frame1->SetTitle("Raw Distribution");
-    frame1->Draw();
-
-    TLegend *leg1 = new TLegend(0.1, 0.85, 0.4, 0.9);
-    leg1->AddEntry(frame1->findObject("data"), "Data", "ep");
-    leg1->Draw();
-
-
-    // FITTED DISTRIBUTION
-
-    pad1->cd(2);
+    pad1->cd();
     RooPlot *frame2 = var.frame(Bins(nbins));
+
     data.plotOn(frame2, Name("data2"), Binning(nbins));
-    model.plotOn(frame2, Name("fullfit"));
-    model.plotOn(frame2, Components(background), LineColor(kGreen), Name("bkg"));
-    model.plotOn(frame2, Components(signal), LineColor(kRed), Name("sig"));
+
+    model.plotOn(frame2, Components(background), LineColor(kGreen+2),
+                 LineStyle(kDashed), Name("bkg"));
+    model.plotOn(frame2, Components(signal), LineColor(kRed),
+                 LineWidth(2), Name("sig"));
+    model.plotOn(frame2, LineColor(kBlue), LineWidth(2), Name("fullfit"));
+
+    data.plotOn(frame2, Name("data"), Binning(nbins));
+
     double nparams = fitres->floatParsFinal().getSize();
     double chi2ndf = frame2->chiSquare("fullfit", "data2", nparams);
-    frame2->SetTitle("Fitted Distribution");
+
+    frame2->SetTitle("B^{+} Mass Fit");
+    frame2->GetYaxis()->SetTitle("Events / ( 0.0025 )");
+    frame2->GetXaxis()->SetLabelSize(0);
+    frame2->GetXaxis()->SetTitleSize(0);
     frame2->Draw();
 
-    TLegend *leg2 = new TLegend(0.6, 0.65, 0.9, 0.9);
-    leg2->AddEntry(frame2->findObject("data2"), "Data", "ep");
-    leg2->AddEntry(frame2->findObject("fullfit"), "Full Fit","l");
+    TLegend *leg2 = new TLegend(0.62, 0.65, 0.88, 0.88);
+    leg2->SetBorderSize(0);
+    leg2->SetFillStyle(0);
+    leg2->AddEntry(frame2->findObject("data"), "Data", "ep");
+    leg2->AddEntry(frame2->findObject("fullfit"), "Full Fit", "l");
     leg2->AddEntry(frame2->findObject("sig"), "Signal PDF", "l");
     leg2->AddEntry(frame2->findObject("bkg"), "Background PDF", "l");
     leg2->Draw();
 
-    // EXTRACTED SIGNAL COMPONENT
+    // ---------------- PULL DISTRIBUTION (bottom) ----------------
 
-    pad2->cd(1);
+    pad2->cd();
     RooPlot *frame3 = var.frame(Bins(nbins));
     frame3->SetMinimum(-5);
     frame3->SetMaximum(5);
-    RooHist *pullHist = frame2->pullHist("data2", "fullfit");   
-    for (int i=0; i<pullHist->GetN(); i++) 
-    {
-        pullHist->SetPointEYhigh(i,0);
-        pullHist->SetPointEYlow(i,0);
-    } 
 
-    frame3->addPlotable(pullHist, "P");
-    frame3->SetTitle("Pull Distribution; Var; Pull");
-    frame3->Draw();
+    RooHist *pullHist = frame2->pullHist("data2", "fullfit");
 
-    TLine *zero = new TLine(var.getMin(), 0, var.getMax(), 0);
-    TLine *plus = new TLine(var.getMin(), 3, var.getMax(), 3);
-    TLine *minus = new TLine(var.getMin(),-3, var.getMax(),-3);
-    zero->SetLineColor(kRed);
-    plus->SetLineColor(kBlue);
-    minus->SetLineColor(kBlue);
-    plus->SetLineStyle(2);
-    minus->SetLineStyle(2);
-    zero->Draw("same");
-    plus->Draw("same");
-    minus->Draw("same");
-
-    pad2->cd(2);
-    TH1F *hpull = new TH1F("hpull", "Pull Values; Pull; Bins",20, -5, 5);
+    // Convert pull points into a filled bar-style histogram (like a TH1)
+    TH1F *hpullbar = new TH1F("hpullbar", "", nbins, var.getMin(), var.getMax());
     for (int i = 0; i < pullHist->GetN(); i++) {
         double x, y;
         pullHist->GetPoint(i, x, y);
-        hpull->Fill(y);
+        hpullbar->SetBinContent(hpullbar->FindBin(x), y);
     }
-    hpull->Fit("gaus");
+    hpullbar->SetFillColor(kAzure+7);
+    hpullbar->SetLineColor(kAzure+7);
+    hpullbar->SetLineWidth(1);
+    hpullbar->SetTitle(";Mass (GeV/c^{2});Pull");
+    hpullbar->GetYaxis()->SetTitle("Pull");
+    hpullbar->GetYaxis()->SetNdivisions(505);
+    hpullbar->GetXaxis()->SetTitle("Mass (GeV/c^{2})");
+    hpullbar->SetMinimum(-5);
+    hpullbar->SetMaximum(5);
+    hpullbar->SetStats(0);
+    hpullbar->Draw("HIST");
+
+    TLine *zero = new TLine(var.getMin(), 0, var.getMax(), 0);
+    zero->SetLineColor(kBlack);
+    zero->Draw("same");
 
     cmain1->Modified();
     cmain1->Update();
@@ -185,33 +169,29 @@ void sig_bkg_2(){
 
     //Finding Upper Limit of signal data
 
-    cout << "Before PLC: "
-     << nsig.getVal() << endl;
+    cout << "Before PLC: " << nsig.getVal() << endl;
 
     RooArgSet poi(nsig);
     RooStats::ProfileLikelihoodCalculator plc(data, model, poi);
     plc.SetConfidenceLevel(0.90);
     RooStats::LikelihoodInterval *interval = plc.GetInterval();
     double upper_limit = interval->UpperLimit(nsig);
-    cout << "Upper limit on nsig at 90% CL: " 
+    cout << "Upper limit on nsig at 90% CL: "
          << upper_limit << " events" << endl;
-    
+
     TCanvas *c = new TCanvas("c", "Upper Limit", 800, 600);
     RooStats::LikelihoodIntervalPlot plot(interval);
     plot.SetRange(0, upper_limit * 2);
     plot.Draw();
 
-    // draw the 90% CL line
     TLine *cl_line = new TLine(upper_limit, 0, upper_limit, 5);
     cl_line->SetLineColor(kRed);
     cl_line->SetLineStyle(2);
     cl_line->Draw("same");
 
     cout << "\n=== Upper Limit Result ===" << endl;
-    cout << "nsig upper limit (90% CL) = " 
-         << upper_limit << endl;
-    cout << "After PLC: "
-     << nsig.getVal() << endl;
+    cout << "nsig upper limit (90% CL) = " << upper_limit << endl;
+    cout << "After PLC: " << nsig.getVal() << endl;
 
     delete interval;
 
@@ -228,14 +208,13 @@ void sig_bkg_2(){
     fitres->Print("v");
     fitres->correlationMatrix().Print();
 
-    out << "\nSignal Yield: "<< nsig.getVal()<< " ± "<< nsig.getError()<< endl;
+    out << "\nSignal Yield: " << nsig.getVal() << " ± " << nsig.getError() << endl;
     out << "Mean: " << mean.getVal() << " ± " << mean.getError() << endl;
     out << "Sigma: " << sigma.getVal() << " ± " << sigma.getError() << endl;
-    out << "\nBackground Yield: "<< nbkg.getVal()<< " ± "<< nbkg.getError()<< endl;
+    out << "\nBackground Yield: " << nbkg.getVal() << " ± " << nbkg.getError() << endl;
     out << "Tau: " << tau.getVal() << " ± " << tau.getError() << endl;
 
     out.close();
-    
 
     gSystem->RedirectOutput(0);
 }
